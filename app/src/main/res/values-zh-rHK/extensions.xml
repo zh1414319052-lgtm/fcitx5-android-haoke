@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="language_extensions">语言与扩展</string>
+    <string name="extensions_bundled_count">已内置 8 项扩展</string>
+    <string name="extensions_bundled_description">按需开启，无需单独安装</string>
+    <string name="extensions_input_engines">输入引擎</string>
+    <string name="extensions_clipboard">剪贴板增强</string>
+    <string name="extensions_keep_data">关闭扩展会保留配置与学习数据</string>
+    <string name="extensions_input_order">输入法顺序与详细设置</string>
+    <string name="extensions_external">外部插件与高级管理</string>
+    <string name="extensions_applying">正在应用“%1$s”…</string>
+    <string name="extensions_retry">更改未完成，点击重试</string>
+    <string name="extensions_loading">正在读取扩展状态…</string>
+    <string name="extensions_load_retry">无法读取扩展状态，点击重试</string>
+    <string name="extension_rime">中州韵 RIME</string>
+    <string name="extension_rime_desc">自定义输入方案与词库</string>
+    <string name="extension_jyutping">粤语拼音</string>
+    <string name="extension_jyutping_desc">使用粤拼输入粤语</string>
+    <string name="extension_chewing">新酷音注音</string>
+    <string name="extension_chewing_desc">注音输入与选词</string>
+    <string name="extension_anthy">日语</string>
+    <string name="extension_anthy_desc">Anthy 假名与汉字转换</string>
+    <string name="extension_hangul">韩语</string>
+    <string name="extension_hangul_desc">Hangul 韩文输入</string>
+    <string name="extension_unikey">越南语</string>
+    <string name="extension_unikey_desc">Telex、VNI 与 VIQR</string>
+    <string name="extension_sayura">僧伽罗语</string>
+    <string name="extension_sayura_desc">Sayura 输入引擎</string>
+    <string name="extension_clearurls">链接净化</string>
+    <string name="extension_clearurls_desc">移除网址中的跟踪参数</string>
+</resources>

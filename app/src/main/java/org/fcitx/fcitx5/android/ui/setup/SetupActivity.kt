@@ -29,6 +29,10 @@ import org.fcitx.fcitx5.android.utils.notificationManager
 
 class SetupActivity : FragmentActivity() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     private lateinit var viewPager: ViewPager2
 
     private val viewModel: SetupViewModel by viewModels()

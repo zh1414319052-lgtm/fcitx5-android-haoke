@@ -54,6 +54,10 @@ import java.io.File
 
 class CropImageActivity : AppCompatActivity() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     companion object {
         const val CROP_OPTIONS = "crop_options"
         const val CROP_RESULT = "crop_result"
@@ -151,12 +155,13 @@ class CropImageActivity : AppCompatActivity() {
 
     private fun setupRootView() {
         toolbar = view(::Toolbar) {
-            backgroundColor = styledColor(android.R.attr.colorPrimary)
+            title = getString(R.string.crop)
+            backgroundColor = androidx.core.content.ContextCompat.getColor(this@CropImageActivity, R.color.ui_background)
             elevation = dp(4f)
             navigationIcon = DrawerArrowDrawable(context).apply { progress = 1f }
             setupToolbarMenu(menu)
         }
-        cropView = CropImageView(this)
+        cropView = CropImageView(this).apply { setBackgroundColor(android.graphics.Color.rgb(22, 38, 58)) }
         root = constraintLayout {
             add(toolbar, lParams(matchParent, wrapContent) {
                 topOfParent()
@@ -204,7 +209,7 @@ class CropImageActivity : AppCompatActivity() {
             CropImageOptions(
                 // CropImageView
                 snapRadius = 0f,
-                guidelines = CropImageView.Guidelines.ON_TOUCH,
+                guidelines = CropImageView.Guidelines.ON,
                 showProgressBar = true,
                 progressBarColor = styledColor(android.R.attr.colorAccent),
                 // CropOverlayView

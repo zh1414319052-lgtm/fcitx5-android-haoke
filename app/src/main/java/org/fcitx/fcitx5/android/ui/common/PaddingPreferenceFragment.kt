@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.annotation.CallSuper
 import org.fcitx.fcitx5.android.ui.main.modified.MyPreferenceFragment
 import org.fcitx.fcitx5.android.utils.applyNavBarInsetsBottomPadding
+import org.fcitx.fcitx5.android.R
 
 abstract class PaddingPreferenceFragment : MyPreferenceFragment() {
 
@@ -19,6 +20,13 @@ abstract class PaddingPreferenceFragment : MyPreferenceFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ) = super.onCreateView(inflater, container, savedInstanceState).apply {
-        listView.applyNavBarInsetsBottomPadding()
+        listView.apply {
+            val margin = SettingsUi.dp(context, 16)
+            setPadding(margin, SettingsUi.dp(context, 8), margin, margin)
+            clipToPadding = false
+            setBackgroundColor(SettingsUi.color(context, R.color.ui_background))
+            addItemDecoration(SettingsUi.PreferenceSurfaces(context))
+            SettingsUi.applyBottomInset(this)
+        }
     }
 }

@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageButton
+import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
 import androidx.annotation.CallSuper
@@ -56,6 +58,8 @@ abstract class DynamicListAdapter<T>(
 
     abstract fun showEntry(x: T): String
 
+    open fun secondaryEntry(x: T): String? = null
+
     private var mainViewModel: MainViewModel? = null
 
     fun setViewModel(model: MainViewModel) {
@@ -67,6 +71,7 @@ abstract class DynamicListAdapter<T>(
         val handleImage = entryUi.handleImage
         val checkBox = entryUi.checkBox
         val nameText = entryUi.nameText
+        val secondaryText = entryUi.secondaryText
         val editButton = entryUi.editButton
         val settingsButton = entryUi.settingsButton
     }
@@ -86,6 +91,11 @@ abstract class DynamicListAdapter<T>(
                 else false
             }
             nameText.text = showEntry(item)
+            secondaryText.text = secondaryEntry(item)
+            secondaryText.isVisible = !secondaryText.text.isNullOrBlank()
+            secondaryText.setOnClickListener { nameText.performClick() }
+            editButton.contentDescription = "${itemView.context.getString(org.fcitx.fcitx5.android.R.string.ui_edit_item)}: ${showEntry(item)}"
+            settingsButton.contentDescription = "${itemView.context.getString(org.fcitx.fcitx5.android.R.string.ui_configure_item)}: ${showEntry(item)}"
 
             if (multiselect) {
                 handleImage.visibility = View.GONE

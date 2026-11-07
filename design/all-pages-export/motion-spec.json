@@ -1,0 +1,716 @@
+{
+  "project": "fcitx5-bundled-extensions",
+  "revision": 10,
+  "designTokens": {
+    "primary": "#2465D8",
+    "background": "#F7F9FC",
+    "soft": "#E7F0FF",
+    "text": "#17263D",
+    "muted": "#58677D",
+    "line": "#DCE3EF",
+    "motion.toggle": 150,
+    "motion.navigation": 220
+  },
+  "motion": {
+    "version": 1,
+    "initial": "home",
+    "states": [
+      {
+        "id": "rime-on",
+        "name": "RIME 已开启",
+        "board": "extensions",
+        "overrides": {}
+      },
+      {
+        "id": "rime-off",
+        "name": "RIME 已关闭",
+        "board": "extensions",
+        "overrides": {
+          "rime-thumb": {
+            "translateX": -18
+          },
+          "rime-track-on": {
+            "opacity": 0
+          }
+        }
+      },
+      {
+        "id": "home",
+        "name": "小企鹅输入法",
+        "board": "home",
+        "overrides": {}
+      },
+      {
+        "id": "theme",
+        "name": "主题",
+        "board": "theme",
+        "overrides": {}
+      },
+      {
+        "id": "im",
+        "name": "输入法",
+        "board": "im",
+        "overrides": {}
+      },
+      {
+        "id": "keyboard",
+        "name": "虚拟键盘",
+        "board": "keyboard",
+        "overrides": {}
+      },
+      {
+        "id": "candidates",
+        "name": "候选词窗口",
+        "board": "candidates",
+        "overrides": {}
+      },
+      {
+        "id": "clipboard-settings",
+        "name": "剪贴板",
+        "board": "clipboard-settings",
+        "overrides": {}
+      },
+      {
+        "id": "symbols-settings",
+        "name": "表情与符号",
+        "board": "symbols-settings",
+        "overrides": {}
+      },
+      {
+        "id": "advanced",
+        "name": "高级",
+        "board": "advanced",
+        "overrides": {}
+      },
+      {
+        "id": "global",
+        "name": "全局选项",
+        "board": "global",
+        "overrides": {}
+      },
+      {
+        "id": "addons",
+        "name": "附加组件",
+        "board": "addons",
+        "overrides": {}
+      },
+      {
+        "id": "about",
+        "name": "关于",
+        "board": "about",
+        "overrides": {}
+      },
+      {
+        "id": "theme-config",
+        "name": "主题",
+        "board": "theme-config",
+        "overrides": {}
+      },
+      {
+        "id": "theme-mode-picker-0",
+        "name": "键盘配色选择",
+        "board": "theme-mode-dialog",
+        "overrides": {}
+      },
+      {
+        "id": "theme-config-light",
+        "name": "手动日间配色",
+        "board": "theme-config-light-view",
+        "overrides": {}
+      },
+      {
+        "id": "theme-mode-picker-1",
+        "name": "键盘配色选择",
+        "board": "theme-mode-picker-1-view",
+        "overrides": {}
+      },
+      {
+        "id": "theme-config-dark",
+        "name": "手动深色配色",
+        "board": "theme-config-dark-view",
+        "overrides": {}
+      },
+      {
+        "id": "theme-mode-picker-2",
+        "name": "键盘配色选择",
+        "board": "theme-mode-picker-2-view",
+        "overrides": {}
+      }
+    ],
+    "transitions": [
+      {
+        "id": "turn-off",
+        "from": "rime-on",
+        "to": "rime-off",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": 150,
+        "easing": "outCubic"
+      },
+      {
+        "id": "turn-on",
+        "from": "rime-off",
+        "to": "rime-on",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": 150,
+        "easing": "outCubic"
+      },
+      {
+        "id": "home-theme",
+        "from": "home",
+        "to": "theme",
+        "trigger": "click",
+        "node": "home-theme-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "theme-home",
+        "from": "theme",
+        "to": "home",
+        "trigger": "click",
+        "node": "theme-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-im",
+        "from": "home",
+        "to": "im",
+        "trigger": "click",
+        "node": "home-im-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "im-home",
+        "from": "im",
+        "to": "home",
+        "trigger": "click",
+        "node": "im-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-extensions",
+        "from": "home",
+        "to": "rime-on",
+        "trigger": "click",
+        "node": "home-extensions-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "extensions-home-on",
+        "from": "rime-on",
+        "to": "home",
+        "trigger": "click",
+        "node": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "extensions-home-off",
+        "from": "rime-off",
+        "to": "home",
+        "trigger": "click",
+        "node": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-keyboard",
+        "from": "home",
+        "to": "keyboard",
+        "trigger": "click",
+        "node": "home-keyboard-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "keyboard-home",
+        "from": "keyboard",
+        "to": "home",
+        "trigger": "click",
+        "node": "keyboard-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-candidates",
+        "from": "home",
+        "to": "candidates",
+        "trigger": "click",
+        "node": "home-candidates-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "candidates-home",
+        "from": "candidates",
+        "to": "home",
+        "trigger": "click",
+        "node": "candidates-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-clipboard-settings",
+        "from": "home",
+        "to": "clipboard-settings",
+        "trigger": "click",
+        "node": "home-clipboard-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "clipboard-settings-home",
+        "from": "clipboard-settings",
+        "to": "home",
+        "trigger": "click",
+        "node": "clipboard-settings-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-symbols-settings",
+        "from": "home",
+        "to": "symbols-settings",
+        "trigger": "click",
+        "node": "home-symbols-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "symbols-settings-home",
+        "from": "symbols-settings",
+        "to": "home",
+        "trigger": "click",
+        "node": "symbols-settings-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-advanced",
+        "from": "home",
+        "to": "advanced",
+        "trigger": "click",
+        "node": "home-advanced-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "advanced-home",
+        "from": "advanced",
+        "to": "home",
+        "trigger": "click",
+        "node": "advanced-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-global",
+        "from": "home",
+        "to": "global",
+        "trigger": "click",
+        "node": "home-global-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "global-home",
+        "from": "global",
+        "to": "home",
+        "trigger": "click",
+        "node": "global-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-addons",
+        "from": "home",
+        "to": "addons",
+        "trigger": "click",
+        "node": "home-addons-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "addons-home",
+        "from": "addons",
+        "to": "home",
+        "trigger": "click",
+        "node": "addons-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "home-about",
+        "from": "home",
+        "to": "about",
+        "trigger": "click",
+        "node": "home-about-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "about-home",
+        "from": "about",
+        "to": "home",
+        "trigger": "click",
+        "node": "about-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "theme-config-tab",
+        "from": "theme",
+        "to": "theme-config",
+        "trigger": "click",
+        "node": "theme-tab2",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "theme-gallery-tab",
+        "from": "theme-config",
+        "to": "theme",
+        "trigger": "click",
+        "node": "tc-tab1",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideLeft"
+      },
+      {
+        "id": "system-back-rime-on",
+        "from": "rime-on",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-rime-off",
+        "from": "rime-off",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-theme",
+        "from": "theme",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-im",
+        "from": "im",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-keyboard",
+        "from": "keyboard",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-candidates",
+        "from": "candidates",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-clipboard-settings",
+        "from": "clipboard-settings",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-symbols-settings",
+        "from": "symbols-settings",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-advanced",
+        "from": "advanced",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-global",
+        "from": "global",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-addons",
+        "from": "addons",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-about",
+        "from": "about",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "system-back-theme-config",
+        "from": "theme-config",
+        "to": "home",
+        "trigger": "back",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "theme-config-home",
+        "from": "theme-config",
+        "to": "home",
+        "trigger": "click",
+        "node": "theme-config-back-action",
+        "duration": 220,
+        "easing": "outCubic",
+        "pageEffect": "slideRight"
+      },
+      {
+        "id": "open-theme-mode-picker-0",
+        "from": "theme-config",
+        "to": "theme-mode-picker-0",
+        "trigger": "click",
+        "node": "theme-config-686-action",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-0-choose-0",
+        "from": "theme-mode-picker-0",
+        "to": "theme-config",
+        "trigger": "click",
+        "node": "mode-action-0",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-0-choose-1",
+        "from": "theme-mode-picker-0",
+        "to": "theme-config-light",
+        "trigger": "click",
+        "node": "mode-action-1",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-0-choose-2",
+        "from": "theme-mode-picker-0",
+        "to": "theme-config-dark",
+        "trigger": "click",
+        "node": "mode-action-2",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-0-cancel-click",
+        "from": "theme-mode-picker-0",
+        "to": "theme-config",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade",
+        "node": "mode-cancel"
+      },
+      {
+        "id": "theme-mode-picker-0-cancel-back",
+        "from": "theme-mode-picker-0",
+        "to": "theme-config",
+        "trigger": "back",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-theme-mode-picker-1",
+        "from": "theme-config-light",
+        "to": "theme-mode-picker-1",
+        "trigger": "click",
+        "node": "theme-config-light--theme-config-686-action",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-1-choose-0",
+        "from": "theme-mode-picker-1",
+        "to": "theme-config",
+        "trigger": "click",
+        "node": "theme-mode-picker-1--mode-action-0",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-1-choose-1",
+        "from": "theme-mode-picker-1",
+        "to": "theme-config-light",
+        "trigger": "click",
+        "node": "theme-mode-picker-1--mode-action-1",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-1-choose-2",
+        "from": "theme-mode-picker-1",
+        "to": "theme-config-dark",
+        "trigger": "click",
+        "node": "theme-mode-picker-1--mode-action-2",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-1-cancel-click",
+        "from": "theme-mode-picker-1",
+        "to": "theme-config-light",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade",
+        "node": "theme-mode-picker-1--mode-cancel"
+      },
+      {
+        "id": "theme-mode-picker-1-cancel-back",
+        "from": "theme-mode-picker-1",
+        "to": "theme-config-light",
+        "trigger": "back",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "open-theme-mode-picker-2",
+        "from": "theme-config-dark",
+        "to": "theme-mode-picker-2",
+        "trigger": "click",
+        "node": "theme-config-dark--theme-config-686-action",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-2-choose-0",
+        "from": "theme-mode-picker-2",
+        "to": "theme-config",
+        "trigger": "click",
+        "node": "theme-mode-picker-2--mode-action-0",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-2-choose-1",
+        "from": "theme-mode-picker-2",
+        "to": "theme-config-light",
+        "trigger": "click",
+        "node": "theme-mode-picker-2--mode-action-1",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-2-choose-2",
+        "from": "theme-mode-picker-2",
+        "to": "theme-config-dark",
+        "trigger": "click",
+        "node": "theme-mode-picker-2--mode-action-2",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      },
+      {
+        "id": "theme-mode-picker-2-cancel-click",
+        "from": "theme-mode-picker-2",
+        "to": "theme-config-dark",
+        "trigger": "click",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade",
+        "node": "theme-mode-picker-2--mode-cancel"
+      },
+      {
+        "id": "theme-mode-picker-2-cancel-back",
+        "from": "theme-mode-picker-2",
+        "to": "theme-config-dark",
+        "trigger": "back",
+        "duration": 180,
+        "easing": "outCubic",
+        "pageEffect": "fade"
+      }
+    ]
+  },
+  "boundary": "Web prototype is not native Android acceptance. Business logic stays in application state."
+}

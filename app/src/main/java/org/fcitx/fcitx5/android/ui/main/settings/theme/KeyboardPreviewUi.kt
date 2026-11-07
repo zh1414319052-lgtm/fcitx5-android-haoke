@@ -39,7 +39,9 @@ import splitties.views.dsl.core.lParams
 import splitties.views.dsl.core.view
 import splitties.views.imageDrawable
 
-class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
+class KeyboardPreviewUi(override val ctx: Context, val theme: Theme, val compact: Boolean = false) : Ui {
+
+    private var presentationSize: Pair<Int, Int>? = null
 
     var intrinsicWidth: Int = -1
         private set
@@ -84,7 +86,7 @@ class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
         scaleType = ImageView.ScaleType.CENTER_CROP
     }
 
-    private val barHeight = ctx.dp(40)
+    private val barHeight = if (compact) 0 else ctx.dp(40)
     private val fakeKawaiiBar = view(::View)
 
     private var keyboardWidth = -1
@@ -92,10 +94,10 @@ class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
     private lateinit var fakeKeyboardWindow: TextKeyboard
 
     private val fakeInputView = constraintLayout {
-        add(bkg, lParams {
+        add(bkg, lParams(matchConstraints, matchConstraints) {
             centerInParent()
         })
-        add(fakeKawaiiBar, lParams(height = dp(40)) {
+        add(fakeKawaiiBar, lParams(height = barHeight) {
             centerHorizontally()
         })
     }
@@ -125,6 +127,7 @@ class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
     var onSizeMeasured: ((Int, Int) -> Unit)? = null
 
     private fun keyboardWindowAspectRatio(): Pair<Int, Int> {
+        presentationSize?.let { return it }
         val resources = ctx.resources
         val displayMetrics = resources.displayMetrics
         val w = displayMetrics.widthPixels
@@ -143,21 +146,30 @@ class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
         setTheme(theme)
     }
 
+    /** Reflows only the theme-gallery sample; actual IME geometry and image crop dimensions stay intact. */
+    fun setPresentationSize(width: Int, height: Int) {
+        check(compact)
+        val size = width.coerceAtLeast(1) to height.coerceAtLeast(1)
+        if (presentationSize == size) return
+        presentationSize = size
+        recalculateSize()
+    }
+
     fun recalculateSize() {
         val (w, h) = keyboardWindowAspectRatio()
         keyboardWidth = w
         keyboardHeight = h
         fakeKeyboardWindow.updateLayoutParams<ConstraintLayout.LayoutParams> {
             height = keyboardHeight
-            horizontalMargin = keyboardSidePaddingPx
+            horizontalMargin = if (compact) 0 else keyboardSidePaddingPx
         }
         intrinsicWidth = keyboardWidth
         // KawaiiBar height + WindowManager view height
         intrinsicHeight = barHeight + keyboardHeight
         // extra bottom padding
-        intrinsicHeight += keyboardBottomPaddingPx
+        if (!compact) intrinsicHeight += keyboardBottomPaddingPx
         // windowInsets navbar padding
-        if (navbarBackground.getValue() == NavbarBackground.Full) {
+        if (!compact && navbarBackground.getValue() == NavbarBackground.Full) {
             ViewCompat.getRootWindowInsets(root)?.also {
                 // IME window has different navbar height when system navigation in "gesture navigation" mode
                 // thus the inset from Activity root window is unreliable
@@ -191,7 +203,7 @@ class KeyboardPreviewUi(override val ctx: Context, val theme: Theme) : Ui {
         fakeInputView.apply {
             add(fakeKeyboardWindow, lParams(matchConstraints, keyboardHeight) {
                 below(fakeKawaiiBar)
-                centerHorizontally(keyboardSidePaddingPx)
+                centerHorizontally(if (compact) 0 else keyboardSidePaddingPx)
             })
         }
     }

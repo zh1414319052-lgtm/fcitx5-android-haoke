@@ -23,6 +23,7 @@ import org.fcitx.fcitx5.android.ui.main.DeveloperFragment
 import org.fcitx.fcitx5.android.ui.main.LicensesFragment
 import org.fcitx.fcitx5.android.ui.main.MainFragment
 import org.fcitx.fcitx5.android.ui.main.PluginFragment
+import org.fcitx.fcitx5.android.ui.main.BundledExtensionsFragment
 import org.fcitx.fcitx5.android.ui.main.settings.addon.AddonConfigFragment
 import org.fcitx.fcitx5.android.ui.main.settings.addon.AddonListFragment
 import org.fcitx.fcitx5.android.ui.main.settings.behavior.AdvancedSettingsFragment
@@ -82,6 +83,9 @@ sealed class SettingsRoute : Parcelable {
 
     @Serializable
     data object Plugin : SettingsRoute()
+
+    @Serializable
+    data object Extensions : SettingsRoute()
 
     @Serializable
     data object Advanced : SettingsRoute()
@@ -220,7 +224,10 @@ sealed class SettingsRoute : Parcelable {
                 label = ctx.getString(R.string.emoji_and_symbols)
             }
             fragment<PluginFragment, Plugin> {
-                label = ctx.getString(R.string.plugins)
+                label = ctx.getString(R.string.ui_external_plugins)
+            }
+            fragment<BundledExtensionsFragment, Extensions> {
+                label = ctx.getString(R.string.language_extensions)
             }
             fragment<AdvancedSettingsFragment, Advanced> {
                 label = ctx.getString(R.string.advanced)

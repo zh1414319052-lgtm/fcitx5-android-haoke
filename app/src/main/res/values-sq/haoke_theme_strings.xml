@@ -1,0 +1,10 @@
+<resources>
+    <string name="haoke_keyboard_color_mode">Keyboard color mode</string>
+    <string name="haoke_mode_system">Follow system</string>
+    <string name="haoke_mode_light">Manual light</string>
+    <string name="haoke_mode_dark">Manual dark</string>
+    <string name="haoke_mode_light_state">light</string>
+    <string name="haoke_mode_dark_state">dark</string>
+    <string name="haoke_mode_system_summary">Following your phone: %1$s. This follows system appearance, not the clock.</string>
+    <string name="haoke_mode_manual_summary">%1$s · Choose another palette on the Themes tab.</string>
+</resources>

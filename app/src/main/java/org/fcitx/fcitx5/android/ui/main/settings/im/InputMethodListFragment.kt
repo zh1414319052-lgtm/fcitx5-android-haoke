@@ -50,6 +50,7 @@ class InputMethodListFragment : ProgressFragment(), OnItemChangedListener<InputM
                     )
                 }
             },
+            secondary = { it.uniqueName },
             show = { it.displayName }
         )
         ui.addOnItemChangedListener(this@InputMethodListFragment)

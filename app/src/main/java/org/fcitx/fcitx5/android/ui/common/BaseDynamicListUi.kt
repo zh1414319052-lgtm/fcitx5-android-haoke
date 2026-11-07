@@ -74,6 +74,7 @@ abstract class BaseDynamicListUi<T>(
     protected var shouldShowFab = false
 
     protected val fab = view(::FloatingActionButton) {
+        contentDescription = ctx.getText(R.string.add)
         imageDrawable = drawable(R.drawable.ic_baseline_plus_24)!!.apply {
             setTint(styledColor(android.R.attr.colorForegroundInverse))
         }
@@ -275,7 +276,18 @@ abstract class BaseDynamicListUi<T>(
         adapter = this@BaseDynamicListUi
         layoutManager = verticalLayoutManager()
         clipToPadding = false
+        setPadding(ctx.dp(16), ctx.dp(12), ctx.dp(16), ctx.dp(88))
     }
+
+    private val emptyView = SettingsUi.text(ctx, ctx.getText(R.string.ui_empty_list), 16f, true).apply {
+        gravity = android.view.Gravity.CENTER
+        setPadding(ctx.dp(24), ctx.dp(32), ctx.dp(24), ctx.dp(32))
+        isVisible = entries.isEmpty()
+    }
+
+    var emptyText: CharSequence
+        get() = emptyView.text
+        set(value) { emptyView.text = value }
 
     fun addTouchCallback(
         touchCallback: DynamicListTouchCallback<T> = DynamicListTouchCallback(ctx, this)
@@ -291,14 +303,19 @@ abstract class BaseDynamicListUi<T>(
         fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
             bottomMargin = navBars.bottom + ctx.dp(16)
         }
-        recyclerView.bottomPadding = navBars.bottom
+        recyclerView.bottomPadding = navBars.bottom + ctx.dp(88)
     }
 
     override val root = coordinatorLayout {
-        backgroundColor = styledColor(android.R.attr.colorBackground)
+        backgroundColor = SettingsUi.color(ctx, R.color.ui_background)
         add(recyclerView, defaultLParams {
             height = matchParent
             width = matchParent
+        })
+        add(emptyView, defaultLParams {
+            width = matchParent
+            height = wrapContent
+            gravity = android.view.Gravity.CENTER
         })
         add(fab, defaultLParams {
             gravity = gravityEndBottom
@@ -369,6 +386,12 @@ abstract class BaseDynamicListUi<T>(
             windowInsets
         }
         updateFAB()
+        registerAdapterDataObserver(object : androidx.recyclerview.widget.RecyclerView.AdapterDataObserver() {
+            private fun refresh() { emptyView.isVisible = entries.isEmpty() }
+            override fun onChanged() = refresh()
+            override fun onItemRangeInserted(positionStart: Int, itemCount: Int) = refresh()
+            override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) = refresh()
+        })
     }
 
 }

@@ -1,0 +1,12 @@
+<resources>
+    <style name="Haoke.PlatformAlertDialog" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:fontFamily">@font/noto_sans_sc</item>
+        <item name="android:windowBackground">@drawable/ui_dialog_background</item>
+        <item name="android:colorAccent">@color/ui_primary</item>
+        <item name="android:textColorPrimary">@color/ui_text</item>
+        <item name="android:textColorSecondary">@color/ui_muted</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/Haoke.PlatformDialogButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Haoke.PlatformDialogButton</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/Haoke.PlatformDialogButton</item>
+    </style>
+</resources>

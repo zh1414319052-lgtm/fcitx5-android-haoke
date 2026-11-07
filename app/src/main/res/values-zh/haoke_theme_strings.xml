@@ -1,0 +1,10 @@
+<resources>
+    <string name="haoke_keyboard_color_mode">键盘配色模式</string>
+    <string name="haoke_mode_system">跟随系统</string>
+    <string name="haoke_mode_light">手动日间</string>
+    <string name="haoke_mode_dark">手动深色</string>
+    <string name="haoke_mode_light_state">日间</string>
+    <string name="haoke_mode_dark_state">深色</string>
+    <string name="haoke_mode_system_summary">当前跟随手机系统：%1$s。按系统外观切换，不按时钟判断。</string>
+    <string name="haoke_mode_manual_summary">%1$s · 也可在“主题”页选择其他配色。</string>
+</resources>

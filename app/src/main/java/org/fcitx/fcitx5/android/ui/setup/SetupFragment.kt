@@ -28,7 +28,10 @@ class SetupFragment : Fragment() {
                 viewModel.isAllDone.value = true
             }
             with(binding) {
+                setupTitle.setText(if (page == SetupPage.Enable) org.fcitx.fcitx5.android.R.string.ui_setup_enable_title else org.fcitx.fcitx5.android.R.string.ui_setup_select_title)
+                setupStep.setText(if (page == SetupPage.Enable) org.fcitx.fcitx5.android.R.string.ui_setup_step_enable else org.fcitx.fcitx5.android.R.string.ui_setup_step_select)
                 hintText.text = page.getHintText(requireContext())
+                doneIcon.visibility = if (value) View.VISIBLE else View.GONE
                 actionButton.visibility = if (value) View.GONE else View.VISIBLE
                 actionButton.text = page.getButtonText(requireContext())
                 actionButton.setOnClickListener { page.getButtonAction(requireContext()) }

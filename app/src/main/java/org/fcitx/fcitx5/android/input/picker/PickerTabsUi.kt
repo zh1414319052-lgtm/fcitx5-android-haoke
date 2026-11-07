@@ -44,7 +44,7 @@ class PickerTabsUi(override val ctx: Context, val theme: Theme) : Ui {
 
         val label = textView {
             textSize = 16f // sp
-            typeface = Typeface.DEFAULT_BOLD
+            typeface = Typeface.create(typeface, Typeface.BOLD)
             setTextColor(theme.keyTextColor)
         }
 

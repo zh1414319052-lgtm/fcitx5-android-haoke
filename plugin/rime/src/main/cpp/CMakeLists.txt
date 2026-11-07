@@ -35,7 +35,12 @@ set_target_properties(Rime_static PROPERTIES
 # https://github.com/rime/librime/blob/1.9.0/src/rime_api.h#L663
 # https://stackoverflow.com/questions/805555/ld-linker-question-the-whole-archive-option
 # https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html#link-features
-set(RIME_TARGET $<LINK_LIBRARY:WHOLE_ARCHIVE,Rime_static>)
+if(CMAKE_VERSION VERSION_LESS 3.24)
+    # Android/Clang equivalent for the supported SDK CMake 3.22.1 toolchain.
+    set(RIME_TARGET "-Wl,--whole-archive" Rime_static "-Wl,--no-whole-archive")
+else()
+    set(RIME_TARGET $<LINK_LIBRARY:WHOLE_ARCHIVE,Rime_static>)
+endif()
 set(RIME_DATA_DIR "${CMAKE_INSTALL_DATADIR}/rime-data")
 add_subdirectory(fcitx5-rime)
 

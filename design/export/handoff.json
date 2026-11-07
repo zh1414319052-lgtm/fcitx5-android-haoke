@@ -1,0 +1,2539 @@
+{
+  "format": "haoke-ui-design",
+  "version": 1,
+  "project": "fcitx5-bundled-extensions",
+  "name": "小企鹅输入法 · 语言与扩展",
+  "revision": 2,
+  "source": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\source.haoke-ui.json",
+  "font": {
+    "family": "Noto Sans SC",
+    "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+    "license": "SIL OFL 1.1; commercial use allowed",
+    "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+  },
+  "tokens": {
+    "primary": "#2465D8",
+    "background": "#F7F9FC",
+    "soft": "#E7F0FF",
+    "text": "#17263D",
+    "muted": "#58677D",
+    "line": "#DCE3EF",
+    "motion.toggle": 150
+  },
+  "boards": [
+    {
+      "board": {
+        "id": "extensions",
+        "name": "语言与扩展",
+        "width": 360,
+        "height": 816,
+        "unit": "dp",
+        "scale": 3,
+        "code": "BundledExtensionsFragment",
+        "state": "三项已启用的合成示例"
+      },
+      "objects": [
+        {
+          "id": "time",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 0,
+            "width": 70,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "time",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              16.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 29.953125,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 1.0625,
+              "y": 7.953125,
+              "width": 28.515625,
+              "height": 9.109375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "back",
+          "type": "text",
+          "bounds": {
+            "x": 16,
+            "y": 28,
+            "width": 32,
+            "height": 48
+          },
+          "parentId": null,
+          "sourceId": "back",
+          "instancePath": [],
+          "code": "toolbar.navigateUp",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              65.609375
+            ],
+            "contentHeight": 47.0,
+            "naturalWidth": 9.65625,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 1.59375,
+              "y": 21.9375,
+              "width": 6.15625,
+              "height": 13.296875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 32.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 44.8,
+            "glyphOutlines": true,
+            "renderFontSize": 32
+          }
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "bounds": {
+            "x": 54,
+            "y": 28,
+            "width": 278,
+            "height": 48
+          },
+          "parentId": null,
+          "sourceId": "title",
+          "instancePath": [],
+          "code": "R.string.language_extensions",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              60.859375
+            ],
+            "contentHeight": 31.0,
+            "naturalWidth": 104.921875,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.734375,
+              "y": 14.90625,
+              "width": 103.546875,
+              "height": 20.015625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 21.0,
+            "fontWeight": 700,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 29.4,
+            "glyphOutlines": true,
+            "renderFontSize": 21
+          }
+        },
+        {
+          "id": "summary",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 90,
+            "width": 328,
+            "height": 68
+          },
+          "parentId": null,
+          "sourceId": "summary",
+          "instancePath": [],
+          "code": "extensions.summary",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "summary-icon",
+          "type": "text",
+          "bounds": {
+            "x": 30,
+            "y": 98,
+            "width": 34,
+            "height": 48
+          },
+          "parentId": null,
+          "sourceId": "summary-icon",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              133.15625
+            ],
+            "contentHeight": 38.0,
+            "naturalWidth": 26.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 2.59375,
+              "y": 14.875,
+              "width": 20.8125,
+              "height": 20.796875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 26.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 36.4,
+            "glyphOutlines": true,
+            "renderFontSize": 26
+          }
+        },
+        {
+          "id": "summary-title",
+          "type": "text",
+          "bounds": {
+            "x": 80,
+            "y": 100,
+            "width": 244,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "summary-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              119.71875
+            ],
+            "contentHeight": 25.0,
+            "naturalWidth": 119.609375,
+            "overflow": false,
+            "lineBoxOverflow": true,
+            "inkBounds": {
+              "x": 1.546875,
+              "y": 5.265625,
+              "width": 117.546875,
+              "height": 16.125
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 17.0,
+            "fontWeight": 700,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 23.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 17
+          }
+        },
+        {
+          "id": "summary-description",
+          "type": "text",
+          "bounds": {
+            "x": 80,
+            "y": 126,
+            "width": 244,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "summary-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              142.578125
+            ],
+            "contentHeight": 19.0,
+            "naturalWidth": 143.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.390625,
+              "y": 5.59375,
+              "width": 142.109375,
+              "height": 12.375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 13.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 18.2,
+            "glyphOutlines": true,
+            "renderFontSize": 13
+          }
+        },
+        {
+          "id": "input-heading",
+          "type": "text",
+          "bounds": {
+            "x": 18,
+            "y": 174,
+            "width": 300,
+            "height": 28
+          },
+          "parentId": null,
+          "sourceId": "input-heading",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              193.734375
+            ],
+            "contentHeight": 21.0,
+            "naturalWidth": 55.9375,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.515625,
+              "y": 7.84375,
+              "width": 54.953125,
+              "height": 13.068749999999998
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 14.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 19.599999999999998,
+            "glyphOutlines": true,
+            "renderFontSize": 14
+          }
+        },
+        {
+          "id": "rime-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 207,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "rime-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.rime",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 220,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "rime-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 220,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "rime-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              241.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 8.890625,
+              "y": 8.734375,
+              "width": 12.21875,
+              "height": 13.90625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "rime-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 211,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "rime-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              230.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 89.875,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 1.484375,
+              "y": 5.40625,
+              "width": 87.484375,
+              "height": 14.993055555555557
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "rime-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 235,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "rime-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              250.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 120.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 1.953125,
+              "y": 5.75,
+              "width": 117.484375,
+              "height": 11.171875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "rime-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 226,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "rime-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 226,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "rime-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 314,
+            "y": 228,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "rime-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 262,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "rime-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 263,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "jyutping-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.jyutping",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 276,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "jyutping-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 276,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "jyutping-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              297.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 8.34375,
+              "y": 8.59375,
+              "width": 13.296875,
+              "height": 13.921875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "jyutping-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 267,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "jyutping-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              286.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 64.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.890625,
+              "y": 5.390625,
+              "width": 62.28125,
+              "height": 15.078125
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "jyutping-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 291,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "jyutping-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              306.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 96.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.25,
+              "y": 5.734375,
+              "width": 95.234375,
+              "height": 11.1875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "jyutping-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 282,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "jyutping-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 282,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "jyutping-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 314,
+            "y": 284,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "jyutping-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "jyutping-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 318,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "jyutping-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 319,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "chewing-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.chewing",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 332,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "chewing-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 332,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "chewing-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              353.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 8.078125,
+              "y": 8.65625,
+              "width": 13.90625,
+              "height": 13.84375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "chewing-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 323,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "chewing-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              342.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 80.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.5625,
+              "y": 5.390625,
+              "width": 78.609375,
+              "height": 15.015625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "chewing-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 347,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "chewing-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              362.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 84.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.5,
+              "y": 5.734375,
+              "width": 82.5625,
+              "height": 11.140625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "chewing-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 338,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "chewing-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 338,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "chewing-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 296,
+            "y": 340,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "chewing-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "chewing-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 374,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "chewing-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 375,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "anthy-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.anthy",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 388,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "anthy-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 388,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "anthy-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              409.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 10.0,
+              "y": 9.6875,
+              "width": 10.109375,
+              "height": 12.796875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "anthy-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 379,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "anthy-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              398.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 32.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 2.671875,
+              "y": 5.890625,
+              "width": 28.75,
+              "height": 14.5
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "anthy-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 403,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "anthy-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              418.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 119.328125,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.046875,
+              "y": 5.75,
+              "width": 118.90625,
+              "height": 12.96875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "anthy-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 394,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "anthy-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 394,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "anthy-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 296,
+            "y": 396,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "anthy-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "anthy-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 430,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "anthy-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 431,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "hangul-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.hangul",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 444,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "hangul-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 444,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "hangul-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              465.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 8.046875,
+              "y": 8.71875,
+              "width": 13.9375,
+              "height": 13.984375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "hangul-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 435,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "hangul-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              454.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 32.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.578125,
+              "y": 5.515625,
+              "width": 30.84375,
+              "height": 14.921875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "hangul-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 459,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "hangul-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              474.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 90.9375,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 1.21875,
+              "y": 5.75,
+              "width": 89.28125,
+              "height": 13.15625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "hangul-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 450,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "hangul-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 450,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "hangul-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 296,
+            "y": 452,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "hangul-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "hangul-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 486,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "hangul-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 487,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "unikey-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.unikey",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 500,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "unikey-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 500,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "unikey-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              521.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 7.796875,
+              "y": 8.734375,
+              "width": 14.328125,
+              "height": 13.890625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "unikey-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 491,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "unikey-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              510.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 48.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.3125,
+              "y": 5.53125,
+              "width": 47.109375,
+              "height": 14.859375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "unikey-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 515,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "unikey-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              530.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 104.4375,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.375,
+              "y": 6.09375,
+              "width": 103.734375,
+              "height": 12.015625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "unikey-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 506,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "unikey-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 506,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "unikey-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 296,
+            "y": 508,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "unikey-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "unikey-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 542,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "unikey-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 543,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "sayura-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.sayura",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 556,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "sayura-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 556,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "sayura-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              577.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 7.859375,
+              "y": 8.6875,
+              "width": 13.421875,
+              "height": 13.953125
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "sayura-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 547,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "sayura-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              566.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 64.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.390625,
+              "y": 5.484375,
+              "width": 63.03125,
+              "height": 14.96875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "sayura-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 571,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "sayura-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              586.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 89.234375,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.578125,
+              "y": 5.796875,
+              "width": 88.171875,
+              "height": 12.921875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "sayura-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 562,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "sayura-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 562,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "sayura-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 296,
+            "y": 564,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "sayura-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "sayura-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 598,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "sayura-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard-heading",
+          "type": "text",
+          "bounds": {
+            "x": 18,
+            "y": 610,
+            "width": 300,
+            "height": 28
+          },
+          "parentId": null,
+          "sourceId": "clipboard-heading",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              629.734375
+            ],
+            "contentHeight": 21.0,
+            "naturalWidth": 69.921875,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.65625,
+              "y": 7.84375,
+              "width": 68.875,
+              "height": 13.1875
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 14.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 19.599999999999998,
+            "glyphOutlines": true,
+            "renderFontSize": 14
+          }
+        },
+        {
+          "id": "clipboard_filter-row",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 645,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-row",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.clipboard_filter",
+          "state": "",
+          "tokens": {
+            "fill": "$background"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard_filter-badge",
+          "type": "rect",
+          "bounds": {
+            "x": 20,
+            "y": 658,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-badge",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$soft"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard_filter-badge-text",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 658,
+            "width": 30,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-badge-text",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              679.390625
+            ],
+            "contentHeight": 22.0,
+            "naturalWidth": 15.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 7.84375,
+              "y": 8.6875,
+              "width": 14.296875,
+              "height": 13.890625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 15.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 21.0,
+            "glyphOutlines": true,
+            "renderFontSize": 15
+          }
+        },
+        {
+          "id": "clipboard_filter-title",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 649,
+            "width": 222,
+            "height": 25
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-title",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              668.046875
+            ],
+            "contentHeight": 24.0,
+            "naturalWidth": 64.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.375,
+              "y": 5.484375,
+              "width": 63.09375,
+              "height": 14.9375
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 16.0,
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 22.4,
+            "glyphOutlines": true,
+            "renderFontSize": 16
+          }
+        },
+        {
+          "id": "clipboard_filter-description",
+          "type": "text",
+          "bounds": {
+            "x": 64,
+            "y": 673,
+            "width": 222,
+            "height": 22
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-description",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              688.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 120.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.390625,
+              "y": 5.75,
+              "width": 119.265625,
+              "height": 11.15625
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "clipboard_filter-track-off",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 664,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-track-off",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard_filter-track-on",
+          "type": "rect",
+          "bounds": {
+            "x": 294,
+            "y": 664,
+            "width": 44,
+            "height": 24
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-track-on",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard_filter-thumb",
+          "type": "rect",
+          "bounds": {
+            "x": 314,
+            "y": 666,
+            "width": 20,
+            "height": 20
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-thumb",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "clipboard_filter-divider",
+          "type": "rect",
+          "bounds": {
+            "x": 18,
+            "y": 700,
+            "width": 326,
+            "height": 1
+          },
+          "parentId": null,
+          "sourceId": "clipboard_filter-divider",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$line"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "retention-note",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 718,
+            "width": 320,
+            "height": 32
+          },
+          "parentId": null,
+          "sourceId": "retention-note",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$muted"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              738.90625
+            ],
+            "contentHeight": 18.0,
+            "naturalWidth": 168.0,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.578125,
+              "y": 10.71875,
+              "width": 166.90625,
+              "height": 11.203125
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 12.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 16.799999999999997,
+            "glyphOutlines": true,
+            "renderFontSize": 12
+          }
+        },
+        {
+          "id": "external-entry",
+          "type": "text",
+          "bounds": {
+            "x": 20,
+            "y": 754,
+            "width": 320,
+            "height": 30
+          },
+          "parentId": null,
+          "sourceId": "external-entry",
+          "instancePath": [],
+          "code": "SettingsRoute.Plugin",
+          "state": "",
+          "tokens": {
+            "fill": "$primary"
+          },
+          "hidden": false,
+          "locked": false,
+          "font": {
+            "baselines": [
+              774.578125
+            ],
+            "contentHeight": 19.0,
+            "naturalWidth": 126.734375,
+            "overflow": false,
+            "lineBoxOverflow": false,
+            "inkBounds": {
+              "x": 0.5,
+              "y": 9.609375,
+              "width": 125.59375,
+              "height": 12.03125
+            },
+            "lineCount": 1,
+            "fontFamily": "Noto Sans SC",
+            "fontSize": 13.0,
+            "fontWeight": 400,
+            "lineHeight": 1.4,
+            "lineHeightPixels": 18.2,
+            "glyphOutlines": true,
+            "renderFontSize": 13
+          }
+        },
+        {
+          "id": "gesture",
+          "type": "rect",
+          "bounds": {
+            "x": 127,
+            "y": 798,
+            "width": 106,
+            "height": 4
+          },
+          "parentId": null,
+          "sourceId": "gesture",
+          "instancePath": [],
+          "code": "",
+          "state": "",
+          "tokens": {
+            "fill": "$text"
+          },
+          "hidden": false,
+          "locked": false
+        },
+        {
+          "id": "rime-action",
+          "type": "rect",
+          "bounds": {
+            "x": 16,
+            "y": 207,
+            "width": 328,
+            "height": 56
+          },
+          "parentId": null,
+          "sourceId": "rime-action",
+          "instancePath": [],
+          "code": "BundledExtensionsFragment.rime.rowClick",
+          "state": "",
+          "tokens": {},
+          "hidden": false,
+          "locked": false
+        }
+      ],
+      "warnings": [],
+      "font": {
+        "family": "Noto Sans SC",
+        "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+        "license": "SIL OFL 1.1; commercial use allowed",
+        "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+      }
+    }
+  ],
+  "motion": {
+    "version": 1,
+    "initial": "rime-on",
+    "states": [
+      {
+        "id": "rime-on",
+        "name": "RIME 已开启",
+        "board": "extensions",
+        "overrides": {}
+      },
+      {
+        "id": "rime-off",
+        "name": "RIME 已关闭",
+        "board": "extensions",
+        "overrides": {
+          "rime-thumb": {
+            "translateX": -18
+          },
+          "rime-track-on": {
+            "opacity": 0
+          }
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "id": "turn-off",
+        "from": "rime-on",
+        "to": "rime-off",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": "$motion.toggle",
+        "easing": "outCubic"
+      },
+      {
+        "id": "turn-on",
+        "from": "rime-off",
+        "to": "rime-on",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": "$motion.toggle",
+        "easing": "outCubic"
+      }
+    ]
+  }
+}

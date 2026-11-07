@@ -99,6 +99,12 @@ object DataManager {
             pm.queryIntentActivities(Intent(PLUGIN_INTENT), PackageManager.MATCH_ALL)
         }.map {
             it.activityInfo.packageName
+        }.filterNot {
+            // The host owns these providers now. Never merge duplicate dictionaries
+            // or start a second clipboard service from an older external package.
+            it.removePrefix(PluginDescriptor.pluginPackagePrefix)
+                .removeSuffix(PluginDescriptor.pluginPackageSuffix) in
+                org.fcitx.fcitx5.android.extensions.BundledExtensions.ids
         }
 
         Timber.d("Detected plugin packages: ${pluginPackages.joinToString()}")

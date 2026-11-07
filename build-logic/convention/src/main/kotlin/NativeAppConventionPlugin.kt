@@ -17,6 +17,9 @@ class NativeAppConventionPlugin : NativeBaseConventionPlugin() {
         target.pluginManager.apply(target.libs.plugins.android.application.get().pluginId)
 
         target.extensions.configure<ApplicationExtension> {
+            // Opt in for local QA delivery; keep upstream per-ABI release builds intact.
+            splits.abi.isUniversalApk = target.providers.gradleProperty("buildUniversalApk")
+                .orElse("false").get().toBooleanStrict()
             packaging {
                 jniLibs {
                     useLegacyPackaging = true

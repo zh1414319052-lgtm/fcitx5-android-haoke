@@ -1,0 +1,16 @@
+<resources>
+<string name="label__update__check">Check for Haoke updates</string>
+  <string name="text__update__checking">Checking for updates…</string>
+  <string name="text__update__current">Current version: %1$s. No compatible newer version is available.</string>
+  <string name="text__update__failed">Could not safely check for updates. Please try again later.</string>
+  <string name="text__update__storage_failed">Could not save your update choice. Please try again.</string>
+  <string name="text__update__cancelled">Update check stopped.</string>
+  <string name="text__update__title">Haoke update %1$s</string>
+  <string name="text__update__empty_notes">A newer Haoke version is available.</string>
+  <string name="text__update__notes">%1$s\n\nThe version page opens in your browser. Nothing is downloaded or installed automatically.</string>
+  <string name="label__update__view">View version</string>
+  <string name="label__update__later">Later</string>
+  <string name="label__update__ignore">Ignore this version</string>
+  <string name="text__update__browser_failed">No browser could open the version page.</string>
+  
+</resources>

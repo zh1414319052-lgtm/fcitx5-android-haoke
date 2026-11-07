@@ -6,6 +6,32 @@ package org.fcitx.fcitx5.android.data.theme
 
 object ThemePreset {
 
+    // New defaults apply only where a preference has no stored value.
+    // Existing built-in/custom theme names and user selections remain available.
+    val HaokeLight by lazy { MaterialLight.copy(
+        name = "HaokeLight", backgroundColor = 0xffe5edfa.toInt(),
+        barColor = 0xffe5edfa.toInt(), keyboardColor = 0xffe5edfa.toInt(),
+        keyBackgroundColor = 0xffffffff.toInt(), keyTextColor = 0xff17263d.toInt(),
+        candidateTextColor = 0xff17263d.toInt(), candidateLabelColor = 0xff58677d.toInt(),
+        candidateCommentColor = 0xff58677d.toInt(), altKeyBackgroundColor = 0xffd6e2f4.toInt(),
+        altKeyTextColor = 0xff425670.toInt(), accentKeyBackgroundColor = 0xff2465d8.toInt(),
+        popupBackgroundColor = 0xfff7f9fc.toInt(), popupTextColor = 0xff17263d.toInt(),
+        spaceBarColor = 0xffd6e2f4.toInt(), clipboardEntryColor = 0xffffffff.toInt(),
+        genericActiveBackgroundColor = 0xff2465d8.toInt(), genericActiveForegroundColor = 0xffffffff.toInt()
+    ) }
+    val HaokeDark by lazy { MaterialDark.copy(
+        name = "HaokeDark", backgroundColor = 0xff101824.toInt(),
+        barColor = 0xff101824.toInt(), keyboardColor = 0xff101824.toInt(),
+        keyBackgroundColor = 0xff26364d.toInt(), keyTextColor = 0xfff0f4fb.toInt(),
+        candidateTextColor = 0xfff0f4fb.toInt(), candidateLabelColor = 0xffb3c0d4.toInt(),
+        candidateCommentColor = 0xffb3c0d4.toInt(), altKeyBackgroundColor = 0xff1b2b43.toInt(),
+        altKeyTextColor = 0xffb3c0d4.toInt(), accentKeyBackgroundColor = 0xffa6c8ff.toInt(),
+        accentKeyTextColor = 0xff102a4e.toInt(), popupBackgroundColor = 0xff233c5c.toInt(),
+        popupTextColor = 0xfff0f4fb.toInt(), spaceBarColor = 0xff34465f.toInt(),
+        clipboardEntryColor = 0xff1a2638.toInt(), genericActiveBackgroundColor = 0xffa6c8ff.toInt(),
+        genericActiveForegroundColor = 0xff102a4e.toInt()
+    ) }
+
     val MaterialLight = Theme.Builtin(
         name = "MaterialLight",
         isDark = false,

@@ -1,0 +1,63 @@
+<resources>
+    <!-- Noto CJK's font-wide bounding box includes stacked marks far beyond
+         normal ascent/descent. Use normal line metrics for compact UI labels. -->
+    <style name="Haoke.TextView" parent="@android:style/Widget.TextView">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/noto_sans_sc</item>
+    </style>
+    <!-- Noto Sans SC / CJK SC: SIL OFL 1.1; commercial use allowed. -->
+    <style name="Haoke.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/ui_background</item>
+        <item name="titleTextAppearance">@style/Haoke.ToolbarTitle</item>
+        <item name="titleTextColor">@color/ui_text</item>
+        <item name="subtitleTextColor">@color/ui_muted</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+    <style name="Haoke.ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/noto_sans_sc</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ui_text</item>
+    </style>
+    <style name="Haoke.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:textViewStyle">@style/Haoke.TextView</item>
+        <item name="fontFamily">@font/noto_sans_sc</item>
+        <item name="android:fontFamily">@font/noto_sans_sc</item>
+        <item name="android:windowBackground">@drawable/ui_dialog_background</item>
+        <item name="colorPrimary">@color/ui_primary</item>
+        <item name="colorAccent">@color/ui_primary</item>
+        <item name="colorSurface">@color/ui_surface</item>
+        <item name="android:textColorPrimary">@color/ui_text</item>
+        <item name="android:textColorSecondary">@color/ui_muted</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Haoke.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Haoke.DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Haoke.DialogButton</item>
+    </style>
+    <style name="Haoke.DialogButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/ui_dialog_action</item>
+        <item name="android:fontFamily">@font/noto_sans_sc</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Haoke.PreferenceThemeOverlay" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceStyle">@style/Haoke.Preference</item>
+        <item name="preferenceCategoryStyle">@style/Haoke.Category</item>
+        <item name="switchPreferenceStyle">@style/Haoke.SwitchPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/Haoke.SwitchPreferenceCompat</item>
+        <item name="checkBoxPreferenceStyle">@style/Haoke.CheckBoxPreference</item>
+        <item name="dialogPreferenceStyle">@style/Haoke.DialogPreference</item>
+        <item name="editTextPreferenceStyle">@style/Haoke.EditTextPreference</item>
+        <item name="preferenceScreenStyle">@style/Haoke.Preference</item>
+        <item name="dropdownPreferenceStyle">@style/Haoke.DropdownPreference</item>
+    </style>
+    <style name="Haoke.Preference" parent="Preference.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.SwitchPreference" parent="Preference.SwitchPreference.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.SwitchPreferenceCompat" parent="Preference.SwitchPreferenceCompat.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.CheckBoxPreference" parent="Preference.CheckBoxPreference.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.DialogPreference" parent="Preference.DialogPreference.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.EditTextPreference" parent="Preference.DialogPreference.EditTextPreference.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.DropdownPreference" parent="Preference.DropDown.Material"><item name="android:layout">@layout/ui_preference</item></style>
+    <style name="Haoke.Category" parent="Preference.Category.Material"><item name="android:layout">@layout/ui_preference_category</item></style>
+</resources>

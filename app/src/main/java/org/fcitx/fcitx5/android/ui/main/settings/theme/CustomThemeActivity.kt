@@ -82,6 +82,10 @@ import java.io.File
 
 class CustomThemeActivity : AppCompatActivity() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     sealed interface BackgroundResult : Parcelable {
         @Parcelize
         data class Updated(val theme: Theme.Custom) : BackgroundResult
@@ -105,12 +109,14 @@ class CustomThemeActivity : AppCompatActivity() {
 
     private val toolbar by lazy {
         view(::Toolbar) {
-            backgroundColor = styledColor(android.R.attr.colorPrimary)
+            backgroundColor = color(R.color.ui_background)
             elevation = dp(4f)
         }
     }
 
     private lateinit var previewUi: KeyboardPreviewUi
+
+    private val previewContainer by lazy { FittedKeyboardPreviewView(this, previewUi) }
 
     private fun createTextView(@StringRes string: Int? = null, ripple: Boolean = false) = textView {
         if (string != null) {
@@ -151,48 +157,34 @@ class CustomThemeActivity : AppCompatActivity() {
     }
 
     private val scrollView by lazy {
-        val lineHeight = dp(48)
-        val itemMargin = dp(30)
-        constraintLayout {
-            bottomPadding = dp(24)
-            add(previewUi.root, lParams(wrapContent, wrapContent) {
-                topOfParent()
-                centerHorizontally()
-                above(cropLabel, dp(8))
-                verticalChainStyle = packed
-            })
-            add(cropLabel, lParams(matchConstraints, lineHeight) {
-                below(previewUi.root)
-                centerHorizontally(itemMargin)
-                above(variantLabel)
-            })
-            add(variantLabel, lParams(matchConstraints, lineHeight) {
-                below(cropLabel)
-                startOfParent(itemMargin)
-                before(variantSwitch)
-                above(brightnessLabel)
-            })
-            add(variantSwitch, lParams(wrapContent, lineHeight) {
-                topToTopOf(variantLabel)
-                endOfParent(itemMargin)
-            })
-            add(brightnessLabel, lParams(matchConstraints, lineHeight) {
-                below(variantLabel)
-                startOfParent(itemMargin)
-                before(brightnessValue)
-                above(brightnessSeekBar)
-            })
-            add(brightnessValue, lParams(wrapContent, lineHeight) {
-                topToTopOf(brightnessLabel)
-                endOfParent(itemMargin)
-            })
-            add(brightnessSeekBar, lParams(matchConstraints, wrapContent) {
-                below(brightnessLabel)
-                centerHorizontally(itemMargin)
-                bottomOfParent()
-            })
-        }.wrapInScrollView {
-            isFillViewport = true
+        val controls = android.widget.LinearLayout(this).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            background = org.fcitx.fcitx5.android.ui.common.SettingsUi.surface(this@CustomThemeActivity)
+            setPadding(0, dp(4), 0, dp(12))
+            addView(cropLabel, android.widget.LinearLayout.LayoutParams(-1, dp(64)))
+            addView(android.widget.LinearLayout(this@CustomThemeActivity).apply {
+                gravity = android.view.Gravity.CENTER_VERTICAL
+                visibility = variantLabel.visibility
+                addView(variantLabel, android.widget.LinearLayout.LayoutParams(0, dp(64), 1f))
+                addView(variantSwitch, android.widget.LinearLayout.LayoutParams(dp(56), dp(48)).apply { marginEnd = dp(12) })
+            }, android.widget.LinearLayout.LayoutParams(-1, -2))
+            addView(android.widget.LinearLayout(this@CustomThemeActivity).apply {
+                gravity = android.view.Gravity.CENTER_VERTICAL
+                visibility = brightnessLabel.visibility
+                addView(brightnessLabel, android.widget.LinearLayout.LayoutParams(0, dp(48), 1f))
+                addView(brightnessValue, android.widget.LinearLayout.LayoutParams(-2, dp(48)))
+            }, android.widget.LinearLayout.LayoutParams(-1, -2))
+            addView(brightnessSeekBar, android.widget.LinearLayout.LayoutParams(-1, dp(48)).apply { marginStart = dp(16); marginEnd = dp(16) })
+        }
+        val content = android.widget.LinearLayout(this).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            setPadding(dp(16), dp(12), dp(16), dp(24))
+            addView(previewContainer, android.widget.LinearLayout.LayoutParams(-1, -2))
+            addView(controls, android.widget.LinearLayout.LayoutParams(-1, -2).apply { topMargin = dp(20) })
+        }
+        android.widget.ScrollView(this).apply {
+            isFillViewport = false
+            addView(content, android.view.ViewGroup.LayoutParams(-1, -2))
         }
     }
 
@@ -468,7 +460,7 @@ class CustomThemeActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         if (!newCreated) {
             val iconTint = color(R.color.red_400)
-            menu.item(R.string.save, R.drawable.ic_baseline_delete_24, iconTint, true) {
+            menu.item(R.string.delete_theme, R.drawable.ic_baseline_delete_24, iconTint, true) {
                 promptDelete()
             }
         }

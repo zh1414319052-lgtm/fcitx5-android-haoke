@@ -252,6 +252,7 @@ abstract class KeyView(ctx: Context, val theme: Theme, val def: KeyDef.Appearanc
 open class TextKeyView(ctx: Context, theme: Theme, def: KeyDef.Appearance.Text) :
     KeyView(ctx, theme, def) {
     val mainText = view(::AutoScaleTextView) {
+        includeFontPadding = false
         isClickable = false
         isFocusable = false
         background = null
@@ -282,6 +283,7 @@ open class TextKeyView(ctx: Context, theme: Theme, def: KeyDef.Appearance.Text) 
 class AltTextKeyView(ctx: Context, theme: Theme, def: KeyDef.Appearance.AltText) :
     TextKeyView(ctx, theme, def) {
     val altText = view(::AutoScaleTextView) {
+        includeFontPadding = false
         isClickable = false
         isFocusable = false
         // TODO hardcoded alt text size

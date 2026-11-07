@@ -1,0 +1,291 @@
+[
+  {
+    "uniqueId": "boostorg/boost",
+    "artifactVersion": "1.90.0",
+    "description": "Free peer-reviewed portable C++ source libraries",
+    "name": "boostorg/boost",
+    "website": "https://www.boost.org/",
+    "tag": "native",
+    "licenses": [
+      "BSL-1.0"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-rime",
+    "artifactVersion": "5.1.14",
+    "description": "Rime Wrapper for Fcitx",
+    "name": "fcitx/fcitx5-rime",
+    "website": "https://github.com/fcitx/fcitx5-rime",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "google/glog",
+    "artifactVersion": "0.7.1",
+    "description": "C++ implementation of the Google logging module",
+    "name": "google/glog",
+    "website": "https://github.com/google/glog",
+    "tag": "native",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "uniqueId": "google/leveldb",
+    "artifactVersion": "1.23",
+    "description": "A fast key-value storage library written at Google that provides an ordered mapping from string keys to string values",
+    "name": "google/leveldb",
+    "website": "https://github.com/google/leveldb",
+    "tag": "native",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "uniqueId": "hchunhui/librime-lua",
+    "artifactVersion": "68f9c36",
+    "description": "Extending RIME with Lua scripts",
+    "name": "hchunhui/librime-lua",
+    "website": "https://github.com/hchunhui/librime-lua",
+    "tag": "native",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "uniqueId": "lotem/librime-octagram",
+    "artifactVersion": "dfcc151",
+    "description": "RIME octagram plugin",
+    "name": "lotem/librime-octagram",
+    "website": "https://github.com/lotem/librime-octagram",
+    "tag": "native",
+    "licenses": [
+      "GPL-3.0-only"
+    ]
+  },
+  {
+    "uniqueId": "rime/librime-predict",
+    "artifactVersion": "920bd41",
+    "description": "librime plugin. predict next word.",
+    "name": "rime/librime-predict",
+    "website": "https://github.com/rime/librime-predict",
+    "tag": "native",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "uniqueId": "rime/librime",
+    "artifactVersion": "1.16.1",
+    "description": "Rime Input Method Engine",
+    "name": "rime/librime",
+    "website": "https://github.com/rime/librime",
+    "tag": "native",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "uniqueId": "lua/lua",
+    "artifactVersion": "5.4.7",
+    "description": "Powerful lightweight programming language designed for extending applications",
+    "name": "lua/lua",
+    "website": "https://www.lua.org/",
+    "tag": "native",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "uniqueId": "rime/marisa-trie",
+    "artifactVersion": "0.3.1",
+    "description": "Matching Algorithm with Recursively Implemented StorAge",
+    "name": "rime/marisa-trie",
+    "website": "https://github.com/s-yata/marisa-trie",
+    "tag": "native",
+    "licenses": [
+      "BSD-2-Clause",
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "BYVoid/OpenCC",
+    "artifactVersion": "1.2.0",
+    "description": "opensource project for conversions between Traditional Chinese, Simplified Chinese and Japanese Kanji (Shinjitai).",
+    "name": "BYVoid/OpenCC",
+    "website": "https://opencc.byvoid.com/",
+    "tag": "native",
+    "licenses": [
+      "Apache-2.0"
+    ]
+  },
+  {
+    "uniqueId": "rime/rime-essay",
+    "artifactVersion": "816b9ee",
+    "description": "The shared vocabulary and language model",
+    "name": "rime/rime-essay",
+    "website": "https://github.com/rime/rime-essay",
+    "tag": "native",
+    "licenses": [
+      "LGPL-3.0-only"
+    ]
+  },
+  {
+    "uniqueId": "rime/rime-luna-pinyin",
+    "artifactVersion": "0c6d8e3",
+    "description": "Rime 預設的拼音輸入方案",
+    "name": "rime/rime-luna-pinyin",
+    "website": "https://github.com/rime/rime-luna-pinyin",
+    "tag": "native",
+    "licenses": [
+      "LGPL-3.0-or-later"
+    ]
+  },
+  {
+    "uniqueId": "rime/rime-prelude",
+    "artifactVersion": "541e03e",
+    "description": "Essential files for building up your Rime configuration",
+    "name": "rime/rime-prelude",
+    "website": "https://github.com/rime/rime-prelude",
+    "tag": "native",
+    "licenses": [
+      "LGPL-3.0-only"
+    ]
+  },
+  {
+    "uniqueId": "rime/rime-stroke",
+    "artifactVersion": "3a4b0f4",
+    "description": "Rime 五筆畫輸入方案",
+    "name": "rime/rime-stroke",
+    "website": "https://github.com/rime/rime-stroke",
+    "tag": "native",
+    "licenses": [
+      "LGPL-3.0-or-later"
+    ]
+  },
+  {
+    "uniqueId": "jbeder/yaml-cpp",
+    "artifactVersion": "0.9.0",
+    "description": "A YAML parser and emitter in C++",
+    "name": "jbeder/yaml-cpp",
+    "website": "https://github.com/jbeder/yaml-cpp",
+    "tag": "native",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/libime-jyutping",
+    "artifactVersion": "1.0.17",
+    "description": "Jyutping (Cantonese Input Method) engine support for libime",
+    "name": "fcitx/libime-jyutping",
+    "website": "https://github.com/fcitx/libime-jyutping",
+    "tag": "native",
+    "licenses": [
+      "GPL-2.0-or-later",
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-chewing",
+    "artifactVersion": "5.1.12",
+    "description": "Chewing Wrapper for Fcitx",
+    "name": "fcitx/fcitx5-chewing",
+    "website": "https://github.com/fcitx/fcitx5-chewing",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "chewing/libchewing",
+    "artifactVersion": "0.11.0",
+    "description": "An intelligent phonetic (Zhuyin/Bopomofo) input method",
+    "name": "chewing/libchewing",
+    "website": "https://github.com/chewing/libchewing",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-only"
+    ]
+  },
+  {
+    "uniqueId": "fujiwarat/anthy-unicode",
+    "artifactVersion": "1.0.0.20260213",
+    "description": "Anthy Unicode - Another Anthy",
+    "name": "fujiwarat/anthy-unicode",
+    "website": "https://github.com/fujiwarat/anthy-unicode",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-anthy",
+    "artifactVersion": "5.1.10",
+    "description": "Anthy Wrapper for Fcitx",
+    "name": "fcitx/fcitx5-anthy",
+    "website": "https://github.com/fcitx/fcitx5-anthy",
+    "tag": "native",
+    "licenses": [
+      "GPL-2.0-or-later"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-hangul",
+    "artifactVersion": "5.1.10",
+    "description": "Hangul Wrapper for Fcitx",
+    "name": "fcitx/fcitx5-hangul",
+    "website": "https://github.com/fcitx/fcitx5-hangul",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "libhangul/libhangul",
+    "artifactVersion": "0.2.0",
+    "description": "A library to support hangul input method logic",
+    "name": "libhangul/libhangul",
+    "website": "https://github.com/libhangul/libhangul",
+    "tag": "native",
+    "licenses": [
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-unikey",
+    "artifactVersion": "5.1.11",
+    "description": "Unikey (Vietnamese Input Method) engine support for Fcitx",
+    "name": "fcitx/fcitx5-unikey",
+    "website": "https://github.com/fcitx/fcitx5-unikey",
+    "tag": "native",
+    "licenses": [
+      "GPL-2.0-or-later",
+      "LGPL-2.1-or-later"
+    ]
+  },
+  {
+    "uniqueId": "fcitx/fcitx5-sayura",
+    "artifactVersion": "5.1.6",
+    "description": "Sinhala input method for Fcitx",
+    "name": "fcitx/fcitx5-sayura",
+    "website": "https://github.com/fcitx/fcitx5-sayura",
+    "tag": "native",
+    "licenses": [
+      "GPL-2.0-only"
+    ]
+  },
+  {
+    "uniqueId": "ClearURLs/Rules",
+    "artifactVersion": "11086f4",
+    "description": "Rules database of the ClearURLs WebExtension.",
+    "name": "ClearURLs/Rules",
+    "website": "https://github.com/ClearURLs/Rules",
+    "tag": "native",
+    "licenses": [
+      "LGPL-3.0-or-later"
+    ]
+  }
+]

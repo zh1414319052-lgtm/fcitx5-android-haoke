@@ -1,0 +1,25 @@
+<resources>
+  <string name="ui_home_heading">随心输入，自由定制</string>
+  <string name="ui_home_subtitle">多语言引擎 · 键盘与外观</string>
+  <string name="ui_home_im_summary">管理已启用的输入方案</string>
+  <string name="ui_home_extension_summary">8 项内置扩展，按需开关</string>
+  <string name="ui_appearance">外观与体验</string>
+  <string name="ui_more_settings">更多设置</string>
+  <string name="ui_input_language">输入与语言</string>
+  <string name="ui_blue_light">清爽蓝</string>
+  <string name="ui_blue_dark">深海蓝</string>
+  <string name="ui_setup_enable_title">启用小企鹅输入法</string>
+  <string name="ui_setup_select_title">选择小企鹅输入法</string>
+  <string name="ui_setup_step_enable">1  启用输入法</string>
+  <string name="ui_setup_step_select">2  选择输入法</string>
+  <string name="ui_about_attribution">Fcitx5 for Android Contributors</string>
+  <string name="ui_plugin_empty_note">已内置的语言和链接净化，可在“语言与扩展”中管理。</string>
+  <string name="ui_im_list_hint">拖动调整顺序，点击设置配置输入法。</string>
+  <string name="ui_edit_item">编辑条目</string>
+  <string name="ui_configure_item">配置条目</string>
+  <string name="ui_reorder_item">拖动调整顺序</string>
+  <string name="ui_plugin_empty_title">未检测到外部插件</string>
+  <string name="ui_external_plugins">外部插件</string>
+  <string name="ui_empty_list">暂无条目</string>
+  <string name="ui_empty_table">暂无自定义码表，点击 + 从文件导入。</string>
+</resources>

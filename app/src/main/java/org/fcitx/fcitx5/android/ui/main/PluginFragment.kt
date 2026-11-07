@@ -27,6 +27,8 @@ import org.fcitx.fcitx5.android.daemon.FcitxDaemon
 import org.fcitx.fcitx5.android.ui.common.PaddingPreferenceFragment
 import org.fcitx.fcitx5.android.utils.addCategory
 import org.fcitx.fcitx5.android.utils.addPreference
+import org.fcitx.fcitx5.android.utils.navigateWithAnim
+import org.fcitx.fcitx5.android.ui.main.settings.SettingsRoute
 
 class PluginFragment : PaddingPreferenceFragment() {
 
@@ -116,13 +118,13 @@ class PluginFragment : PaddingPreferenceFragment() {
             }
             val (loaded, failed) = synced
             if (loaded.isEmpty() && failed.isEmpty()) {
-                // use PreferenceCategory to show a divider below the "reload" preference
-                addCategory(R.string.no_plugins) {
+                addPreference(androidx.preference.Preference(context).apply {
+                    layoutResource = R.layout.ui_plugin_empty
+                    isSelectable = false
                     isIconSpaceReserved = false
-                    @SuppressLint("PrivateResource")
-                    // we can't hide PreferenceCategory's title,
-                    // but we can make it looks like a normal preference
-                    layoutResource = androidx.preference.R.layout.preference_material
+                })
+                addPreference(R.string.language_extensions) {
+                    navigateWithAnim(SettingsRoute.Extensions)
                 }
                 return@apply
             }

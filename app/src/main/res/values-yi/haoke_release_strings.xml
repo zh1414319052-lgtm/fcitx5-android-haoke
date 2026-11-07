@@ -1,0 +1,11 @@
+<resources>
+    <string name="haoke_upstream_commit">Upstream baseline commit</string>
+    <string name="haoke_upstream_source">Upstream source code</string>
+    <string name="haoke_upstream_license">Upstream application license</string>
+    <string name="haoke_edition">Haoke edition</string>
+    <string name="haoke_tools">Haoke Tools</string>
+    <string name="haoke_check_updates">Check for Haoke updates</string>
+    <string name="haoke_update_privacy">Settings can contact haoke.org for signed version notices. Typed text, dictionaries and clipboard contents are not uploaded; the server receives normal connection metadata such as your IP address.</string>
+    <string name="haoke_distribution_license">Integrated distribution license</string>
+    <string name="haoke_license_explanation">This integrated distribution follows GPL version 3. Original files and components retain their copyright notices and individual licenses, including the upstream LGPL license. Corresponding source and build materials accompany this edition.</string>
+</resources>

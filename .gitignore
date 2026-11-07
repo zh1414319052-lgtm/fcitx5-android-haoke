@@ -64,6 +64,18 @@ captures/
 #*.iml
 
 # Keystore files
+*.p12
+*.jks
+*.keystore
+*.dpapi
+credential-reference.json
+signing-identity.json
+# Local design collaboration runtime and transient acceptance evidence are not public source.
+/design/actual/
+/design/*.sqlite3*
+/design/*.lock
+/docs/QA4_BUILD_CHECKS.json
+/docs/HAOKE_HANDOFF.json
 # Uncomment the following lines if you do not want to check your keystore files in.
 #*.jks
 #*.keystore
@@ -102,3 +114,8 @@ lint/tmp/
 
 ### Kotlin ###
 .kotlin/
+
+# Large corresponding-source/data archives are matching GitHub Release assets.
+/third-party/corresponding-source/*
+!/third-party/corresponding-source/manifest.json
+!/third-party/corresponding-source/README.md

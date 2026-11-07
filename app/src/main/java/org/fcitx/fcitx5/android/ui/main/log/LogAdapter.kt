@@ -11,6 +11,8 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.view.textclassifier.TextClassifier
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.core.content.res.ResourcesCompat
+import org.fcitx.fcitx5.android.R
 import splitties.dimensions.dp
 import splitties.views.dsl.core.textView
 import splitties.views.dsl.core.wrapContent
@@ -38,13 +40,15 @@ class LogAdapter(private val entries: ArrayList<CharSequence> = ArrayList()) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = Holder(
         parent.textView {
             textSize = 12f
-            typeface = Typeface.MONOSPACE
+            typeface = ResourcesCompat.getFont(context, R.font.noto_sans_sc)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 setTextClassifier(TextClassifier.NO_OP)
             }
             layoutParams = MarginLayoutParams(wrapContent, wrapContent).apply {
-                marginStart = dp(4)
-                marginEnd = dp(4)
+                marginStart = dp(16)
+                marginEnd = dp(16)
+                topMargin = dp(3)
+                bottomMargin = dp(3)
             }
         }
     )

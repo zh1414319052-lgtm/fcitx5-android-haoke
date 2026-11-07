@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import org.fcitx.fcitx5.android.core.Fcitx
 import org.fcitx.fcitx5.android.core.FcitxEvent
 import org.fcitx.fcitx5.android.core.RawConfig
@@ -30,7 +31,8 @@ class FcitxTest {
     private companion object {
 
         lateinit var fcitx: Fcitx
-        val fcitxEventChannel = Channel<FcitxEvent<*>>(capacity = Channel.CONFLATED)
+        // Commit events must not be overwritten by the following candidate update.
+        val fcitxEventChannel = Channel<FcitxEvent<*>>(capacity = Channel.UNLIMITED)
         val scope = MainScope()
 
         @BeforeClass
@@ -48,6 +50,10 @@ class FcitxTest {
             // wait fcitx started
             runBlocking {
                 receiveFirst<FcitxEvent.ReadyEvent>()
+                // Current native frontend uses per-editor contexts. Headless tests
+                // need the same activation/focus sequence as onBindInput/onStartInput.
+                fcitx.activate(android.os.Process.myUid(), context.packageName)
+                fcitx.focus(true)
                 fcitx.setEnabledIme(arrayOf("pinyin"))
                 fcitx.setGlobalConfig(
                     RawConfig(
@@ -77,7 +83,9 @@ class FcitxTest {
         }
 
         private suspend inline fun <reified T : FcitxEvent<*>> receiveFirst(): T? =
-            fcitxEventChannel.receiveAsFlow().mapNotNull { it as? T }.firstOrNull()
+            withTimeout(15_000) {
+                fcitxEventChannel.receiveAsFlow().mapNotNull { it as? T }.firstOrNull()
+            }
 
         private suspend fun receiveFirstCandidateList() =
             receiveFirst<FcitxEvent.CandidateListEvent>()
@@ -110,7 +118,7 @@ class FcitxTest {
         sendString("wqvb")
         val expected = "你好"
         fcitx.select(0)
-        val commitString = receiveFirstCommitString()?.data
+        val commitString = receiveFirstCommitString()?.data?.text
         Timber.i("commitString is $commitString")
         Assert.assertEquals(expected, commitString)
         fcitx.reset()
@@ -121,8 +129,23 @@ class FcitxTest {
         fcitx.setEnabledIme(arrayOf("pinyin"))
         sendString("nihaoshijie")
         val expected = "你好世界"
-        fcitx.select(0)
-        val commitString = receiveFirstCommitString()?.data
+        // Dictionary revisions and learning can change rank; verify the intended
+        // phrase is offered and can be committed, without assuming it ranks first.
+        val candidates = fcitx.getCandidates(0, 100)
+        val index = candidates.indexOfFirst { it.text == expected }
+        if (index >= 0) {
+            fcitx.select(index)
+        } else {
+            // The sentence candidate is model-dependent. Selecting its two words
+            // from the same preedit must still commit the exact original sentence.
+            val hello = candidates.indexOfFirst { it.text == "你好" }
+            Assert.assertTrue("你好 must be offered", hello >= 0)
+            fcitx.select(hello)
+            val world = fcitx.getCandidates(0, 100).indexOfFirst { it.text == "世界" }
+            Assert.assertTrue("世界 must be offered after 你好", world >= 0)
+            fcitx.select(world)
+        }
+        val commitString = receiveFirstCommitString()?.data?.text
         Timber.i("commitString is $commitString")
         Assert.assertEquals(expected, commitString)
         fcitx.reset()
@@ -136,7 +159,7 @@ class FcitxTest {
         fcitx.sendKey('a')
         do {
             val list = receiveFirstCandidateList()
-        } while (list!!.data.candidates.isNotEmpty())
+        } while (list!!.data.candidates.isEmpty())
         Timber.i("after sending 'a': ${fcitx.isEmpty()}")
         Assert.assertEquals(false, fcitx.isEmpty())
         fcitx.reset()

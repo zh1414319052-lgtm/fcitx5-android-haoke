@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="language_extensions">Languages &amp; extensions</string>
+    <string name="extensions_bundled_count">8 extensions included</string>
+    <string name="extensions_bundled_description">Enable what you need. No separate installs.</string>
+    <string name="extensions_input_engines">Input engines</string>
+    <string name="extensions_clipboard">Clipboard enhancements</string>
+    <string name="extensions_keep_data">Turning an extension off keeps its settings and learned data.</string>
+    <string name="extensions_input_order">Input order &amp; detailed settings</string>
+    <string name="extensions_external">External plugins &amp; advanced management</string>
+    <string name="extensions_applying">Applying %1$s…</string>
+    <string name="extensions_retry">Change could not be completed. Tap to retry.</string>
+    <string name="extensions_loading">Loading extension status…</string>
+    <string name="extensions_load_retry">Could not read extension status. Tap to retry.</string>
+    <string name="extension_rime">RIME</string>
+    <string name="extension_rime_desc">Custom input schemes and dictionaries</string>
+    <string name="extension_jyutping">Cantonese</string>
+    <string name="extension_jyutping_desc">Cantonese input with Jyutping</string>
+    <string name="extension_chewing">Chewing</string>
+    <string name="extension_chewing_desc">Zhuyin input and phrase selection</string>
+    <string name="extension_anthy">Japanese</string>
+    <string name="extension_anthy_desc">Kana and kanji conversion with Anthy</string>
+    <string name="extension_hangul">Korean</string>
+    <string name="extension_hangul_desc">Korean input with Hangul</string>
+    <string name="extension_unikey">Vietnamese</string>
+    <string name="extension_unikey_desc">Telex, VNI and VIQR input</string>
+    <string name="extension_sayura">Sinhala</string>
+    <string name="extension_sayura_desc">Sinhala input with Sayura</string>
+    <string name="extension_clearurls">Link cleaner</string>
+    <string name="extension_clearurls_desc">Remove tracking parameters from URLs</string>
+</resources>

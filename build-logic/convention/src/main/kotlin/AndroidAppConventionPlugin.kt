@@ -122,6 +122,12 @@ class AndroidAppConventionPlugin : AndroidBaseConventionPlugin() {
                         tasks.findByName("merge${variantName}Assets")?.dependsOn(it)
                         tasks.findByName("lintVitalAnalyzeRelease")?.dependsOn(it)
                         tasks.findByName("generateReleaseLintVitalReportModel")?.dependsOn(it)
+                        val descriptor = it
+                        tasks.matching { task ->
+                            task.name.startsWith("generate${variantName}Lint") ||
+                                task.name == "lintAnalyze$variantName" ||
+                                task.name == "lintReport$variantName"
+                        }.configureEach { dependsOn(descriptor) }
                     }
                 }
             }
@@ -146,6 +152,8 @@ class AndroidAppConventionPlugin : AndroidBaseConventionPlugin() {
         target.pluginManager.apply(target.libs.plugins.aboutlibraries.get().pluginId)
 
         target.configure<AboutLibrariesExtension> {
+            // Build reproducibly without SPDX network calls; attribution metadata is retained.
+            offlineMode.set(true)
             collect {
                 configPath.set(target.file("licenses").takeIf { it.exists() })
                 fetchRemoteLicense.set(false)

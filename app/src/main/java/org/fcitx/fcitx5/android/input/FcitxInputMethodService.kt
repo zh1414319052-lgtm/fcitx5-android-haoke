@@ -81,6 +81,10 @@ import kotlin.math.max
 
 class FcitxInputMethodService : LifecycleInputMethodService() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     private lateinit var fcitx: FcitxConnection
 
     private var jobs = Channel<Job>(capacity = Channel.UNLIMITED)
@@ -554,8 +558,9 @@ class FcitxInputMethodService : LifecycleInputMethodService() {
          * https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-15.0.0_r36/core/java/android/inputmethodservice/InputMethodService.java#1876
          */
         if (diff and f != diff) {
-            super.onConfigurationChanged(newConfig)
+            super.onConfigurationChanged(org.fcitx.fcitx5.android.utils.UiLanguage.configuration(newConfig))
         }
+        org.fcitx.fcitx5.android.utils.UiLanguage.refresh(this)
         lastKnownConfig = newConfig
     }
 

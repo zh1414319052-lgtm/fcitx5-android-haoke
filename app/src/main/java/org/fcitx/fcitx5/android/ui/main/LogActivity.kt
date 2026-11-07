@@ -33,6 +33,10 @@ import splitties.views.topPadding
 
 class LogActivity : AppCompatActivity() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     private var fromCrash = false
 
     private lateinit var launcher: ActivityResultLauncher<String>

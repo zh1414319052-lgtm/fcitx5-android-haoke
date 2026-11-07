@@ -1,0 +1,59 @@
+{
+  "project": "fcitx5-bundled-extensions",
+  "revision": 2,
+  "designTokens": {
+    "primary": "#2465D8",
+    "background": "#F7F9FC",
+    "soft": "#E7F0FF",
+    "text": "#17263D",
+    "muted": "#58677D",
+    "line": "#DCE3EF",
+    "motion.toggle": 150
+  },
+  "motion": {
+    "version": 1,
+    "initial": "rime-on",
+    "states": [
+      {
+        "id": "rime-on",
+        "name": "RIME 已开启",
+        "board": "extensions",
+        "overrides": {}
+      },
+      {
+        "id": "rime-off",
+        "name": "RIME 已关闭",
+        "board": "extensions",
+        "overrides": {
+          "rime-thumb": {
+            "translateX": -18
+          },
+          "rime-track-on": {
+            "opacity": 0
+          }
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "id": "turn-off",
+        "from": "rime-on",
+        "to": "rime-off",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": 150,
+        "easing": "outCubic"
+      },
+      {
+        "id": "turn-on",
+        "from": "rime-off",
+        "to": "rime-on",
+        "trigger": "click",
+        "node": "rime-action",
+        "duration": 150,
+        "easing": "outCubic"
+      }
+    ]
+  },
+  "boundary": "Web prototype is not native Android acceptance. Business logic stays in application state."
+}

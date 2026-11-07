@@ -37,16 +37,22 @@ import splitties.views.dsl.core.wrapContent
 
 class ThemeFragment : Fragment() {
 
+    private var mediator: TabLayoutMediator? = null
+
     private lateinit var previewUi: KeyboardPreviewUi
 
     private lateinit var tabLayout: TabLayout
 
     private lateinit var viewPager: ViewPager2
+    private var selectedTab = 0
+    private val pageCallback = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) { selectedTab = position }
+    }
 
     @Keep
-    private val onThemeChangeListener = ThemeManager.OnThemeChangeListener {
-        lifecycleScope.launch {
-            previewUi.setTheme(it)
+    private val onThemeChangeListener = ThemeManager.OnThemeChangeListener { theme ->
+        viewLifecycleOwnerLiveData.value?.lifecycleScope?.launch {
+            previewUi.setTheme(theme)
         }
     }
 
@@ -55,18 +61,14 @@ class ThemeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View = with(requireContext()) {
-        previewUi = KeyboardPreviewUi(this, ThemeManager.activeTheme)
+        previewUi = KeyboardPreviewUi(this, ThemeManager.activeTheme, compact = true)
         ThemeManager.addOnChangedListener(onThemeChangeListener)
-        val preview = previewUi.root.apply {
-            scaleX = 0.5f
-            scaleY = 0.5f
-            outlineProvider = ViewOutlineProvider.BOUNDS
-            elevation = dp(4f)
+        val context = this
+        tabLayout = TabLayout(context).apply {
+            setBackgroundColor(org.fcitx.fcitx5.android.ui.common.SettingsUi.color(context, R.color.ui_background))
         }
-
-        tabLayout = TabLayout(this)
-
-        viewPager = ViewPager2(this).apply {
+        viewPager = ViewPager2(context).apply {
+            id = R.id.settings_theme_pager
             adapter = object : FragmentStateAdapter(this@ThemeFragment) {
                 override fun getItemCount() = 2
                 override fun createFragment(position: Int): Fragment = when (position) {
@@ -74,44 +76,37 @@ class ThemeFragment : Fragment() {
                     else -> ThemeSettingsFragment()
                 }
             }
+            setCurrentItem(savedInstanceState?.getInt(STATE_TAB) ?: selectedTab, false)
+            registerOnPageChangeCallback(pageCallback)
         }
-
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = getString(
-                when (position) {
-                    0 -> R.string.theme
-                    else -> R.string.configure
-                }
-            )
-        }.attach()
-
-        val previewWrapper = constraintLayout {
-            add(preview, lParams(wrapContent, wrapContent) {
-                topOfParent(dp(-52))
-                startOfParent()
-                endOfParent()
+        mediator = TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = getString(if (position == 0) R.string.theme else R.string.configure)
+        }.also { it.attach() }
+        android.widget.LinearLayout(context).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            setBackgroundColor(org.fcitx.fcitx5.android.ui.common.SettingsUi.color(context, R.color.ui_background))
+            addView(FittedKeyboardPreviewView(context, previewUi), android.widget.LinearLayout.LayoutParams(-1, -2).apply {
+                val margin = context.dp(16)
+                setMargins(margin, context.dp(12), margin, context.dp(8))
             })
-            add(tabLayout, lParams(matchParent, wrapContent) {
-                centerHorizontally()
-                bottomOfParent()
-            })
-            backgroundColor = styledColor(android.R.attr.colorPrimary)
-            elevation = dp(4f)
+            addView(tabLayout, android.widget.LinearLayout.LayoutParams(-1, -2))
+            addView(viewPager, android.widget.LinearLayout.LayoutParams(-1, 0, 1f))
         }
+    }
 
-        constraintLayout {
-            add(previewWrapper, lParams(height = wrapContent) {
-                topOfParent()
-                startOfParent()
-                endOfParent()
-            })
-            add(viewPager, lParams {
-                below(previewWrapper)
-                startOfParent()
-                endOfParent()
-                bottomOfParent()
-            })
-        }
+    override fun onDestroyView() {
+        selectedTab = viewPager.currentItem
+        viewPager.unregisterOnPageChangeCallback(pageCallback)
+        ThemeManager.removeOnChangedListener(onThemeChangeListener)
+        mediator?.detach()
+        mediator = null
+        viewPager.adapter = null
+        super.onDestroyView()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(STATE_TAB, if (::viewPager.isInitialized) viewPager.currentItem else selectedTab)
+        super.onSaveInstanceState(outState)
     }
 
     override fun onStop() {
@@ -125,4 +120,6 @@ class ThemeFragment : Fragment() {
         ThemeManager.removeOnChangedListener(onThemeChangeListener)
         super.onDestroy()
     }
+
+    companion object { private const val STATE_TAB = "theme-selected-tab" }
 }

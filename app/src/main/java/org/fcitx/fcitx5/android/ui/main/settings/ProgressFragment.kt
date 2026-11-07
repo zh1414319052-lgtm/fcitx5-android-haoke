@@ -14,6 +14,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import org.fcitx.fcitx5.android.ui.common.withLoadingDialog
 import org.fcitx.fcitx5.android.ui.main.MainViewModel
+import org.fcitx.fcitx5.android.data.prefs.AppPrefs
 import splitties.views.dsl.core.frameLayout
 
 abstract class ProgressFragment : Fragment() {
@@ -40,12 +41,19 @@ abstract class ProgressFragment : Fragment() {
     }
 
     final override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        lifecycleScope.withLoadingDialog(requireContext()) {
-            val newView = initialize().apply { alpha = 0f }
+        viewLifecycleOwner.lifecycleScope.withLoadingDialog(requireContext()) {
+            val reduceMotion = AppPrefs.getInstance().advanced.disableAnimation.getValue()
+            val newView = initialize().apply { alpha = if (reduceMotion) 1f else 0f }
             isInitialized = true
             root.removeAllViews()
             root.addView(newView)
-            newView.animate().setDuration(150L).alphaBy(1f)
+            if (!reduceMotion) newView.animate().setDuration(150L).alpha(1f)
         }
+    }
+
+    override fun onDestroyView() {
+        isInitialized = false
+        for (index in 0 until root.childCount) root.getChildAt(index).animate().cancel()
+        super.onDestroyView()
     }
 }

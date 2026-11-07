@@ -17,6 +17,7 @@ fun <T> Context.DynamicListUi(
     enableOrder: Boolean = false,
     initCheckBox: (CheckBox.(T) -> Unit) = { visibility = View.GONE },
     initSettingsButton: (ImageButton.(T) -> Unit) = { visibility = View.GONE },
+    secondary: (T) -> String? = { null },
     show: (T) -> String
 ): BaseDynamicListUi<T> = object :
     BaseDynamicListUi<T>(
@@ -32,6 +33,7 @@ fun <T> Context.DynamicListUi(
     }
 
     override fun showEntry(x: T): String = show(x)
+    override fun secondaryEntry(x: T): String? = secondary(x)
 }
 
 @Suppress("FunctionName")
@@ -46,5 +48,5 @@ fun <T> Context.CheckBoxListUi(
     false,
     initCheckBox,
     initSettingsButton,
-    show
+    show = show
 )

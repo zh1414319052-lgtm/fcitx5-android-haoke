@@ -1,0 +1,127 @@
+{
+  "prebuiltCommit": "86ce2c95d42f1132746fbf60c278193aa1f4b758",
+  "prebuilderCommit": "eb156443de3b387089e51f9bd19df4e3ddce1732",
+  "submodules": [
+    "504ef66d500fa1fb4f1684b6617b01342eee704a Lua (v5.4.7)",
+    " 907bfcbbd3aae86ff04bc8eaca67c8af03108ddf OpenCC (907bfcb)",
+    " 924994eebf13d87022ddcf07eac485f784c4e17d anthy-unicode (924994e)",
+    " ac7a6b937d69acf812a58eea6926182ceb3e502c fcitx5 (ac7a6b9)",
+    " 042f5013152eb81c1552dec945b88f7b95ca350f fcitx5/third_party/yoga (042f501)",
+    " 7b134a5c82c0c0b5698bb6bf7a835b230c5638e4 glog (7b134a5)",
+    " 99b3c03b3284f5886f9ef9a4ef703d57373e61be leveldb (99b3c03)",
+    " bf585a2789e30585b4e3ce6baf11ef2750b54677 leveldb/third_party/benchmark (bf585a2)",
+    " c27acebba3b3c7d94209e0467b0a801db4af73ed leveldb/third_party/googletest (c27aceb)",
+    " a6a8fa4abd3f215e3ba89a7b61702eaf8ca68f5c libchewing (a6a8fa4)",
+    " ea74f76dd2548b1d65d0ff70c3ae66057a6ad97d libchewing/data (ea74f76)",
+    " 41c702f5d3581325b646ef6249f1f641b0427ae0 libhangul (41c702f)",
+    " ed5a57cfedda75a6abbe4d0fb89a6f7b832f073e libiconv (ed5a57c)",
+    " c16d4e52c21d98ae71ffce355b395631a05acc42 libime (c16d4e5)",
+    " 4cb443e60b7bf2c0ddf3c745378f76cb59e254e5 libime/src/libime/core/kenlm (heads/master)",
+    " af6ac38153345718c182cc5e27e5a1c2662a6f16 libime-jyutping (af6ac38)",
+    " edbb3064b2ee7ed42ffc5a4b9e0b8c3616d54cbf libintl-lite (edbb306)",
+    " de4700e9f6b75b109910613df907965e3cbe0567 librime (de4700e)",
+    " 7b134a5c82c0c0b5698bb6bf7a835b230c5638e4 librime/deps/glog (7b134a5)",
+    " f8d7d77c06936315286eb55f8de22cd23c188571 librime/deps/googletest (f8d7d77)",
+    " 99b3c03b3284f5886f9ef9a4ef703d57373e61be librime/deps/leveldb (99b3c03)",
+    " bf585a2789e30585b4e3ce6baf11ef2750b54677 librime/deps/leveldb/third_party/benchmark (bf585a2)",
+    " c27acebba3b3c7d94209e0467b0a801db4af73ed librime/deps/leveldb/third_party/googletest (c27aceb)",
+    " 3e87d53b78e15f2f43783d5e376561a8c9722051 librime/deps/marisa-trie (3e87d53)",
+    " 556ed22496d650bd0b13b6c163be9814637970ae librime/deps/opencc (556ed22)",
+    " 2f86d13775d119edbb69af52e5f566fd65c6953b librime/deps/yaml-cpp (2f86d13)",
+    " 68f9c364a2d25a04c7d4794981d7c796b05ab627 librime-lua (68f9c36)",
+    " dfcc15115788c828d9dd7b4bff68067d3ce2ffb8 librime-octagram (dfcc151)",
+    " 920bd41ebf6f9bf6855d14fbe80212e54e749791 librime-predict (heads/master)",
+    " e10e6af55634a993e60e80521ab03b1947044f38 libthai (e10e6af)",
+    " b556c0629d0fd250b5feefbc91b84c6f5e3dae48 libuv (b556c06)",
+    " 3e87d53b78e15f2f43783d5e376561a8c9722051 marisa-trie (3e87d53)",
+    " 56e3bb550c91fd7005566f19c079cb7a503223cf yaml-cpp (56e3bb5)",
+    " f8745da6ff1ad1e7bab384bd1f9d742439278e99 zstd (f8745da)"
+  ],
+  "archives": [
+    {
+      "file": "en_dict-20121020.tar.gz",
+      "url": "https://download.fcitx-im.org/data/en_dict-20121020.tar.gz",
+      "bytes": 630491,
+      "sha256": "c44a5d7847925eea9e4d2d04748d442cd28dd9299a0b572ef7d91eac4f5a6ceb",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "lm_sc.arpa-20260606.tar.zst",
+      "url": "https://download.fcitx-im.org/data/lm_sc.arpa-20260606.tar.zst",
+      "bytes": 42788758,
+      "sha256": "8c7da1b03770060269b92c0e6172552a2a9041cb74ef0be0b2659e10f0a703f1",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "dict-20260430.tar.zst",
+      "url": "https://download.fcitx-im.org/data/dict-20260430.tar.zst",
+      "bytes": 2314701,
+      "sha256": "3edc008d90fcd61b9967b9e590f396189d7a00fa74c45ecde0d9850a0fdd6241",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "table-20240108.tar.gz",
+      "url": "https://download.fcitx-im.org/data/table-20240108.tar.gz",
+      "bytes": 4144659,
+      "sha256": "729c596d86907de727c74d0fc3fd241c406c5debd2b4cb74eefe022387ee9dae",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "py_stroke-20250329.tar.gz",
+      "url": "https://download.fcitx-im.org/data/py_stroke-20250329.tar.gz",
+      "bytes": 445984,
+      "sha256": "c1a7ca7225d3614ab83353fc827503006a980447762018f53760425d7b5303a6",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "py_table-20121124.tar.gz",
+      "url": "https://download.fcitx-im.org/data/py_table-20121124.tar.gz",
+      "bytes": 186822,
+      "sha256": "42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "jyutping-dict-20180104.tar.xz",
+      "url": "https://download.fcitx-im.org/data/jyutping-dict-20180104.tar.xz",
+      "bytes": 1987632,
+      "sha256": "e3a5b13edb8efa2f764245a3232f99ba7e7670e22b8cbe666a4fffa84b35f35b",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "jyutping-model-20180103.tar.xz",
+      "url": "https://download.fcitx-im.org/data/jyutping-model-20180103.tar.xz",
+      "bytes": 11006680,
+      "sha256": "4f07229e2080f0ee30ce51b016409f260af82a58dd406a01ea5981b59ca87071",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "boost-1.90.0-cmake.tar.xz",
+      "url": "https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-cmake.tar.xz",
+      "bytes": 101592940,
+      "sha256": "aca59f889f0f32028ad88ba6764582b63c916ce5f77b31289ad19421a96c555f",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "chaizi.txt",
+      "url": "https://raw.githubusercontent.com/fcitx/fcitx5-chinese-addons/5.0.0/im/pinyin/chaizi.txt",
+      "bytes": 184940,
+      "sha256": "cd659605360120f7390fda1a278eea12c4df6d763a95c8099068ab09cfafd058",
+      "recipeHashVerified": true
+    },
+    {
+      "file": "bcprov-jdk18on-1.86-sources.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.86/bcprov-jdk18on-1.86-sources.jar",
+      "bytes": 4909869,
+      "sha256": "34a8b7dcb030a08ddd5356d3d5be962f9299ca5275e1460273186f8fdbe44c34",
+      "recipeHashVerified": false
+    },
+    {
+      "file": "prebuilder-eb156443-complete-source.tar.gz",
+      "url": "https://github.com/fcitx5-android/prebuilder/tree/eb156443de3b387089e51f9bd19df4e3ddce1732",
+      "bytes": 48421613,
+      "sha256": "95392aa595b225cdaf715cb97fe8d481bb2124db486139c2d18e4c6f90e839dd",
+      "includesRecursiveSubmodules": true
+    }
+  ],
+  "note": "Native libraries are reproduced using the original pinned recipes and patches. Source snapshots have no Git metadata; initialize clean local Git baselines before invoking recipes that reset/apply patches."
+}

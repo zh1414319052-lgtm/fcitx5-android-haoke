@@ -33,6 +33,10 @@ import kotlin.system.exitProcess
 
 class FcitxApplication : Application() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     val coroutineScope = MainScope() + CoroutineName("FcitxApplication")
 
     private val shutdownReceiver = object : BroadcastReceiver() {
@@ -153,8 +157,9 @@ class FcitxApplication : Application() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
+        org.fcitx.fcitx5.android.utils.UiLanguage.refresh(this)
         ThemeManager.onSystemPlatteChange(newConfig)
-        Locales.onLocaleChange(newConfig)
+        Locales.onLocaleChange(resources.configuration)
     }
 
     companion object {

@@ -82,6 +82,7 @@ class QuickPhraseListFragment : Fragment(), OnItemChangedListener<QuickPhrase> {
             },
             initSettingsButton = { entry ->
                 visibility = if (!entry.isEnabled) View.GONE else View.VISIBLE
+                contentDescription = "${getString(R.string.edit)}: ${entry.name}"
                 fun edit() {
                     navigateWithAnim(SettingsRoute.QuickPhraseEdit(entry))
                     parentFragmentManager.setFragmentResultListener(

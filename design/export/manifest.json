@@ -1,0 +1,220 @@
+{
+  "project": "fcitx5-bundled-extensions",
+  "revision": 2,
+  "source_sha256": "4462f055709237a8f60c066caa65d3737ec07743a91c3e8154f12da8d76bbe16",
+  "scale": 3.0,
+  "files": [
+    {
+      "board": "extensions",
+      "format": "png",
+      "file": "extensions.png",
+      "bytes": 241329,
+      "sha256": "0992aa6309bc417d5f4687f5f0d3f21bbc58819cb0e1a3179c5ab2b1895782db",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\extensions.png",
+        "format": "png",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "extensions",
+      "format": "svg",
+      "file": "extensions.svg",
+      "bytes": 474133,
+      "sha256": "bde1a3ec73ae285b194cb7c18b6fa0ad67c482f6d99be839fc997f2043c7b687",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\extensions.svg",
+        "format": "svg",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "rime-on",
+      "format": "png",
+      "file": "state-rime-on.png",
+      "bytes": 241329,
+      "sha256": "0992aa6309bc417d5f4687f5f0d3f21bbc58819cb0e1a3179c5ab2b1895782db",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\state-rime-on.png",
+        "format": "png",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "rime-on",
+      "format": "svg",
+      "file": "state-rime-on.svg",
+      "bytes": 474133,
+      "sha256": "bde1a3ec73ae285b194cb7c18b6fa0ad67c482f6d99be839fc997f2043c7b687",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\state-rime-on.svg",
+        "format": "svg",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "rime-off",
+      "format": "png",
+      "file": "state-rime-off.png",
+      "bytes": 241193,
+      "sha256": "e3102490614db8329adcd4bb11f2ee8ade71d68823815ef6fa6de408d1b527ee",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\state-rime-off.png",
+        "format": "png",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "rime-off",
+      "format": "svg",
+      "file": "state-rime-off.svg",
+      "bytes": 472446,
+      "sha256": "40c3e59c4bb3cf1ced52b31209605427cc28f773984edbfb535a0e5ee9d29557",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r2-98cff7b70455\\state-rime-off.svg",
+        "format": "svg",
+        "width": 1080,
+        "height": 2448,
+        "scale": 3.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "file": "prototype.html",
+      "format": "prototype",
+      "bytes": 1335,
+      "sha256": "31790d68849650d212616727326a75a6f42d925c3822d3e09cdeb371b11b3ff7"
+    },
+    {
+      "file": "prototype-data.js",
+      "format": "prototype",
+      "bytes": 38780,
+      "sha256": "c96baeac00fd49fe1f6d2610545eace64ad8b2a69d24b507e553beb64361cb83"
+    },
+    {
+      "file": "prototype-app.js",
+      "format": "prototype",
+      "bytes": 839,
+      "sha256": "229594a97d9824fb4461bb61890a00287736ce89b91f1940128c8e4971f1edee"
+    },
+    {
+      "file": "motion-runtime.js",
+      "format": "prototype",
+      "bytes": 12589,
+      "sha256": "0766e401a89976844601f247af5af611970e3489018441a27d342fb6bb284d69"
+    },
+    {
+      "file": "anime.js",
+      "format": "prototype",
+      "bytes": 118043,
+      "sha256": "8d5b3a58a1f64023a04a4cedeef135a2263b18da04b35177ac13438a0bad033b"
+    },
+    {
+      "file": "xstate.js",
+      "format": "prototype",
+      "bytes": 47486,
+      "sha256": "0c0886f61d9ba134d096ef0aa5b6b0baaff1c3e2cca934f4ff253109826310fb"
+    },
+    {
+      "file": "prototype.css",
+      "format": "prototype",
+      "bytes": 823,
+      "sha256": "576d3b8e73a6c8a3bba2c573aa6422b91808a503420a96b8320e9eaf02cba0e9"
+    },
+    {
+      "file": "NotoSansSC-VF.ttf",
+      "format": "prototype",
+      "bytes": 17773244,
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "file": "NotoSansSC-OFL.txt",
+      "format": "prototype",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "file": "animejs-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1075,
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+    },
+    {
+      "file": "xstate-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1083,
+      "sha256": "542d926d7bbb099785e322d1d5574c539d51942e52ec8adce2be4629ba81fc7f"
+    },
+    {
+      "file": "motion-spec.json",
+      "format": "prototype",
+      "bytes": 1360,
+      "sha256": "303d3c6c7bb55f62338e6f23981bde0eac3175046adc7790013a362919b5ea5f"
+    },
+    {
+      "file": "MotionTokens.kt",
+      "format": "kotlin",
+      "bytes": 367,
+      "sha256": "46eb1d29a95741936d78b34459c8745284369ea300eaeb9f157ce2a4477be14d"
+    }
+  ],
+  "handoff": "handoff.json",
+  "note": "SVG/PNG 是实际渲染；可编辑源是 .haoke-ui.json。目标程序仍需独立运行验证。"
+}

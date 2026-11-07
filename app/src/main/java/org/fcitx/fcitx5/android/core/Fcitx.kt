@@ -156,7 +156,31 @@ class Fcitx(private val context: Context) : FcitxAPI, FcitxLifecycleOwner {
 
     override suspend fun addons() = withFcitxContext { getFcitxAddons() ?: emptyArray() }
     override suspend fun setAddonState(name: Array<String>, state: BooleanArray) =
-        withFcitxContext { setFcitxAddonState(name, state) }
+        withFcitxContext {
+            require(name.size == state.size)
+            // The advanced addon page uses this API too. Disabling a bundled
+            // engine there must not leave a selected but unavailable language.
+            val disabled = name.zip(state.toTypedArray()).filter { !it.second }
+                .map { it.first }.toSet().intersect(org.fcitx.fcitx5.android.extensions.BundledExtensions.ids)
+            if (disabled.isNotEmpty()) {
+                val current = listInputMethods().orEmpty().toList()
+                if (current.any { it.addon in disabled }) {
+                    val remaining = current.filterNot { it.addon in disabled }.map { it.uniqueName }.toMutableList()
+                    if (remaining.isEmpty()) {
+                        val available = availableInputMethods().orEmpty()
+                        remaining += (available.firstOrNull { it.uniqueName == "pinyin" }
+                            ?: available.first { it.uniqueName == "keyboard-us" }).uniqueName
+                    }
+                    resetInputContext()
+                    setEnabledInputMethods(remaining.toTypedArray())
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                        val currentMethods: List<InputMethodEntry> = listInputMethods().orEmpty().toList()
+                        SubtypeManager.syncWith(currentMethods.toTypedArray())
+                    }
+                }
+            }
+            setFcitxAddonState(name, state)
+        }
 
     override suspend fun triggerQuickPhrase() = withFcitxContext { triggerQuickPhraseInput() }
     override suspend fun triggerUnicode() = withFcitxContext { triggerUnicodeInput() }
@@ -427,7 +451,7 @@ class Fcitx(private val context: Context) : FcitxAPI, FcitxLifecycleOwner {
             val dataDir = DataManager.dataDir.absolutePath
             val plugins = DataManager.getLoadedPlugins()
             val nativeLibDir = StringBuilder(context.applicationInfo.nativeLibraryDir)
-            val extDomains = arrayListOf<String>()
+            val extDomains = ArrayList(org.fcitx.fcitx5.android.extensions.BundledExtensions.domains)
             plugins.forEach {
                 if (it.nativeLibraryDir.isNotBlank()) {
                     nativeLibDir.append(':')

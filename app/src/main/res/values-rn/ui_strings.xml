@@ -1,0 +1,25 @@
+<resources>
+  <string name="ui_home_heading">Type your way</string>
+  <string name="ui_home_subtitle">Language engines · Keyboard &amp; appearance</string>
+  <string name="ui_home_im_summary">Manage enabled input methods</string>
+  <string name="ui_home_extension_summary">8 bundled extensions, enabled as needed</string>
+  <string name="ui_appearance">Look &amp; feel</string>
+  <string name="ui_more_settings">More settings</string>
+  <string name="ui_input_language">Input &amp; languages</string>
+  <string name="ui_blue_light">Clear Blue</string>
+  <string name="ui_blue_dark">Midnight Blue</string>
+  <string name="ui_setup_enable_title">Enable Fcitx5 for Android</string>
+  <string name="ui_setup_select_title">Choose Fcitx5 for Android</string>
+  <string name="ui_setup_step_enable">1  Enable keyboard</string>
+  <string name="ui_setup_step_select">2  Choose keyboard</string>
+  <string name="ui_about_attribution">Fcitx5 for Android Contributors</string>
+  <string name="ui_plugin_empty_note">Bundled languages and link cleaning are managed in Language &amp; extensions.</string>
+  <string name="ui_im_list_hint">Drag to reorder. Use settings to configure an input method.</string>
+  <string name="ui_edit_item">Edit item</string>
+  <string name="ui_configure_item">Configure item</string>
+  <string name="ui_reorder_item">Drag to reorder</string>
+  <string name="ui_plugin_empty_title">No external plugins found</string>
+  <string name="ui_external_plugins">External plugins</string>
+  <string name="ui_empty_list">No items yet</string>
+  <string name="ui_empty_table">No custom tables yet. Use + to import a file.</string>
+</resources>

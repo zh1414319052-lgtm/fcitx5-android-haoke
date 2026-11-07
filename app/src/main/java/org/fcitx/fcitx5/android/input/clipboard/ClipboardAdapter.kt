@@ -16,7 +16,6 @@ import org.fcitx.fcitx5.android.data.theme.Theme
 import org.fcitx.fcitx5.android.utils.DeviceUtil
 import org.fcitx.fcitx5.android.utils.item
 import splitties.resources.styledColor
-import kotlin.math.min
 
 abstract class ClipboardAdapter(
     private val theme: Theme,
@@ -53,32 +52,7 @@ abstract class ClipboardAdapter(
             mask: Boolean = false,
             lines: Int = 4,
             chars: Int = 128
-        ): String = buildString {
-            val length = str.length
-            var lineBreak = -1
-            for (i in 1..lines) {
-                val start = lineBreak + 1   // skip previous '\n'
-                val excerptEnd = min(start + chars, length)
-                lineBreak = str.indexOf('\n', start)
-                if (lineBreak < 0) {
-                    // no line breaks remaining, substring to end of text
-                    if (mask) {
-                        append(ClipboardEntry.BULLET.repeat(excerptEnd - start))
-                    } else {
-                        append(str.substring(start, excerptEnd))
-                    }
-                    break
-                } else {
-                    val end = min(excerptEnd, lineBreak)
-                    // append one line exactly
-                    if (mask) {
-                        append(ClipboardEntry.BULLET.repeat(end - start))
-                    } else {
-                        appendLine(str.substring(start, end))
-                    }
-                }
-            }
-        }
+        ): String = ClipboardPreview.excerpt(str, mask, lines, chars)
     }
 
     private var popupMenu: PopupMenu? = null

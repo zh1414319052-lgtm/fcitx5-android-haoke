@@ -9,11 +9,17 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+val haokeUpdatesEnabled = providers.gradleProperty("haokeUpdatesEnabled").orElse("true").get().toBooleanStrict()
+
 android {
     namespace = "org.fcitx.fcitx5.android"
 
     defaultConfig {
         applicationId = "org.fcitx.fcitx5.android"
+        val releaseCertificate = providers.gradleProperty("haokeCertificateSha256").orElse("").get()
+        require(releaseCertificate.isEmpty() || releaseCertificate.matches(Regex("[a-f0-9]{64}")))
+        buildConfigField("String", "HAOKE_CERT_SHA256", "\"$releaseCertificate\"")
+        buildConfigField("boolean", "HAOKE_UPDATES_ENABLED", haokeUpdatesEnabled.toString())
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         @Suppress("UnstableApiUsage")
@@ -27,7 +33,9 @@ android {
                     // android specific modules
                     "androidfrontend",
                     "androidkeyboard",
-                    "androidnotification"
+                    "androidnotification",
+                    "anthy", "chewing", "hangul", "unikey", "sayura", "rime",
+                    "jyutping", "IMEJyutping", "libime_jyutpingdict"
                 )
             }
         }
@@ -40,6 +48,8 @@ android {
 
     buildTypes {
         release {
+            // Independent Haoke distribution; coexist with the official signature/package.
+            applicationIdSuffix = ".haoke"
             resValue("mipmap", "app_icon", "@mipmap/ic_launcher")
             resValue("mipmap", "app_icon_round", "@mipmap/ic_launcher_round")
             resValue("string", "app_name", "@string/app_name_release")
@@ -54,7 +64,21 @@ android {
 
     androidResources {
         @Suppress("UnstableApiUsage")
-        generateLocaleConfig = true
+        // The app follows the primary system language. Host-label fallback resources
+        // must not become hundreds of selectable in-app language overrides.
+        generateLocaleConfig = false
+    }
+    sourceSets.getByName("release").manifest.srcFile(
+        if (haokeUpdatesEnabled) "src/release/AndroidManifest.xml" else "src/releaseOffline/AndroidManifest.xml"
+    )
+}
+
+androidComponents {
+    onVariants(selector().withBuildType("debug")) { variant ->
+        variant.outputs.forEach { it.versionCode.set(11205) }
+    }
+    onVariants(selector().withBuildType("release")) { variant ->
+        variant.outputs.forEach { it.versionCode.set(11301) }
     }
 }
 
@@ -72,11 +96,18 @@ fcitxComponent {
     installPrebuiltAssets = true
 }
 
+generateDataDescriptor {
+    symlinks.put("usr/share/rime-data/opencc", "usr/share/opencc")
+}
+
 ksp {
     arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 dependencies {
+    // Direct Ed25519 verification works on minSdk 23 without changing platform providers.
+    implementation("org.bouncycastle:bcprov-jdk18on:1.86")
+    testImplementation("org.json:json:20240303")
     ksp(project(":codegen"))
     implementation(project(":lib:fcitx5"))
     implementation(project(":lib:fcitx5-lua"))

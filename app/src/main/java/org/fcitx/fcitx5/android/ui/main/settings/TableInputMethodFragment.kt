@@ -84,6 +84,7 @@ class TableInputMethodFragment : Fragment(), OnItemChangedListener<TableBasedInp
             }
         ) {
             init {
+                emptyText = getString(R.string.ui_empty_table)
                 addTouchCallback()
                 shouldShowFab = true
                 fab.setOnClickListener {

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AGP 9 propagates generated debug resValues into the test APK. These names
+     belong to that separate APK; production resources and identity are unchanged. -->
+<resources>
+    <item type="mipmap" name="ic_launcher_debug">@android:drawable/sym_def_app_icon</item>
+    <item type="mipmap" name="ic_launcher_round_debug">@android:drawable/sym_def_app_icon</item>
+    <string name="app_name_debug">Fcitx5 test runner</string>
+</resources>

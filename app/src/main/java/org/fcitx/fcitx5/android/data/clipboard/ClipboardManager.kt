@@ -74,7 +74,14 @@ object ClipboardManager : ClipboardManager.OnPrimaryClipChangedListener,
 
     @Keep
     private val limitListener = ManagedPreference.OnChangeListener<Int> { _, _ ->
-        launch { removeOutdated() }
+        launch {
+            mutex.withLock {
+                clbDb.withTransaction {
+                    removeOutdated()
+                    updateItemCount()
+                }
+            }
+        }
     }
 
     var lastEntry: ClipboardEntry? = null
@@ -104,9 +111,15 @@ object ClipboardManager : ClipboardManager.OnPrimaryClipChangedListener,
 
     fun allEntries() = clbDao.allEntries()
 
-    suspend fun pin(id: Int) = clbDao.updatePinStatus(id, true)
+    suspend fun pin(id: Int) = mutex.withLock { clbDao.updatePinStatus(id, true) }
 
-    suspend fun unpin(id: Int) = clbDao.updatePinStatus(id, false)
+    suspend fun unpin(id: Int) = mutex.withLock {
+        clbDb.withTransaction {
+            clbDao.updatePinStatus(id, false)
+            removeOutdated()
+            updateItemCount()
+        }
+    }
 
     suspend fun updateText(id: Int, text: String) {
         lastEntry?.let {
@@ -169,7 +182,10 @@ object ClipboardManager : ClipboardManager.OnPrimaryClipChangedListener,
         }
         launch {
             mutex.withLock {
-                val entry = ClipboardEntry.fromClipData(clip, transformer) ?: return@withLock
+                val entry = ClipboardEntry.fromClipData(clip) { source ->
+                    val cleaned = org.fcitx.fcitx5.android.extensions.BundledLinkCleaner.transform(source)
+                    transformer?.invoke(cleaned) ?: cleaned
+                } ?: return@withLock
                 if (entry.text.isBlank()) return@withLock
                 try {
                     clbDao.find(entry.text, entry.sensitive)?.let {
@@ -194,16 +210,7 @@ object ClipboardManager : ClipboardManager.OnPrimaryClipChangedListener,
     }
 
     private suspend fun removeOutdated() {
-        val limit = limitPref.getValue()
-        val unpinned = clbDao.getAllUnpinned()
-        if (unpinned.size > limit) {
-            // the last one we will keep
-            val last = unpinned
-                .sortedBy { it.id }
-                .getOrNull(unpinned.size - limit)
-            // delete all unpinned before that, or delete all when limit <= 0
-            clbDao.markUnpinnedAsDeletedEarlierThan(last?.timestamp ?: System.currentTimeMillis())
-        }
+        clbDao.pruneUnpinned(limitPref.getValue().coerceAtLeast(0))
     }
 
 }

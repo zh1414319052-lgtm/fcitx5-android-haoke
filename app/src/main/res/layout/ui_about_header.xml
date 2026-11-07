@@ -1,0 +1,6 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:padding="24dp" android:background="@color/ui_background">
+    <ImageView android:layout_width="56dp" android:layout_height="56dp" android:src="@mipmap/app_icon" android:importantForAccessibility="no"/>
+    <TextView android:includeFontPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:text="@string/app_name" android:textColor="@color/ui_text" android:textSize="24sp" android:textStyle="bold"/>
+    <TextView android:includeFontPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="Fcitx5 for Android" android:textColor="@color/ui_muted" android:textSize="14sp"/>
+    <TextView android:includeFontPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:text="@string/ui_about_attribution" android:textColor="@color/ui_muted" android:textSize="12sp"/>
+</LinearLayout>

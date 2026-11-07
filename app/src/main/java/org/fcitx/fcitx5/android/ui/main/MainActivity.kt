@@ -27,6 +27,7 @@ import org.fcitx.fcitx5.android.data.prefs.AppPrefs
 import org.fcitx.fcitx5.android.databinding.ActivityMainBinding
 import org.fcitx.fcitx5.android.ui.main.settings.SettingsRoute
 import org.fcitx.fcitx5.android.ui.setup.SetupActivity
+import org.fcitx.fcitx5.android.updates.UpdateUiController
 import org.fcitx.fcitx5.android.utils.navigateWithAnim
 import org.fcitx.fcitx5.android.utils.parcelable
 import org.fcitx.fcitx5.android.utils.startActivity
@@ -35,9 +36,14 @@ import splitties.views.topPadding
 
 class MainActivity : AppCompatActivity() {
 
+    override fun attachBaseContext(base: android.content.Context) {
+        super.attachBaseContext(org.fcitx.fcitx5.android.utils.UiLanguage.wrap(base))
+    }
+
     private val viewModel: MainViewModel by viewModels()
 
     private lateinit var navController: NavController
+    private var haokeUpdates: UpdateUiController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             supportActionBar!!.title = it
         }
         viewModel.toolbarShadow.observe(this) {
-            binding.toolbar.elevation = dp(if (it) 4f else 0f)
+            binding.toolbar.elevation = dp(if (it) 1f else 0f)
         }
         navController.addOnDestinationChangedListener { _, dest, _ ->
             dest.label?.let { viewModel.setToolbarTitle(it.toString()) }
@@ -72,9 +78,41 @@ class MainActivity : AppCompatActivity() {
             } else {
                 viewModel.enableToolbarShadow()
             }
+            haokeUpdates?.onRouteChanged()
         }
         processIntent(intent)
         checkNotificationPermission()
+        if (!BuildConfig.DEBUG && BuildConfig.HAOKE_UPDATES_ENABLED) {
+            haokeUpdates = UpdateUiController(this)
+        }
+    }
+
+    // Update requests belong to settled settings routes, never to the input service.
+    fun isHaokeUpdatePageSafe(): Boolean = ::navController.isInitialized &&
+        (navController.currentDestination?.hasRoute<SettingsRoute.Index>() == true ||
+            navController.currentDestination?.hasRoute<SettingsRoute.About>() == true)
+
+    fun checkHaokeUpdates() { haokeUpdates?.checkManually() }
+
+    override fun onResume() {
+        super.onResume()
+        haokeUpdates?.onResume()
+    }
+
+    override fun onPause() {
+        haokeUpdates?.onPause()
+        super.onPause()
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        haokeUpdates?.onWindowFocusChanged(hasFocus)
+    }
+
+    override fun onDestroy() {
+        haokeUpdates?.close()
+        haokeUpdates = null
+        super.onDestroy()
     }
 
     override fun onNewIntent(intent: Intent) {

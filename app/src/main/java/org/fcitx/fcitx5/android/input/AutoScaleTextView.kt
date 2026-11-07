@@ -48,6 +48,11 @@ class AutoScaleTextView @JvmOverloads constructor(
     private val fontMetrics = Paint.FontMetrics()
     private val textBounds = Rect()
 
+    // Match TextView's includeFontPadding contract. Font-wide top/bottom may
+    // include rare stacked marks far outside the normal line (notably Noto CJK).
+    private val lineTop get() = if (includeFontPadding) fontMetrics.top else fontMetrics.ascent
+    private val lineBottom get() = if (includeFontPadding) fontMetrics.bottom else fontMetrics.descent
+
     private var needsCalculateTransform = true
     private var baselineX = 0.0f
     private var baselineY = 0.0f
@@ -70,7 +75,7 @@ class AutoScaleTextView @JvmOverloads constructor(
         val heightMode = MeasureSpec.getMode(heightMeasureSpec)
         val heightSize = MeasureSpec.getSize(heightMeasureSpec)
         val width = measureTextBounds().width() + paddingLeft + paddingRight
-        val height = ceil(fontMetrics.bottom - fontMetrics.top + paddingTop + paddingBottom).toInt()
+        val height = ceil(lineBottom - lineTop + paddingTop + paddingBottom).toInt()
         val maxHeight = if (maxHeight >= 0) maxHeight else Int.MAX_VALUE
         val maxWidth = if (maxWidth >= 0) maxWidth else Int.MAX_VALUE
         setMeasuredDimension(
@@ -97,9 +102,9 @@ class AutoScaleTextView @JvmOverloads constructor(
             } else {
                 textBounds.set(
                     /* left = */ 0,
-                    /* top = */ floor(fontMetrics.top).toInt(),
+                    /* top = */ floor(lineTop).toInt(),
                     /* right = */ ceil(paint.measureText(text.toString())).toInt(),
-                    /* bottom = */ ceil(fontMetrics.bottom).toInt()
+                    /* bottom = */ ceil(lineBottom).toInt()
                 )
             }
             needsMeasureText = false
@@ -120,8 +125,8 @@ class AutoScaleTextView @JvmOverloads constructor(
         measureTextBounds()
         val textLeft: Float = textBounds.left.toFloat()
         val textWidth: Float = textBounds.width().toFloat()
-        val textTop: Float = fontMetrics.top
-        val textHeight: Float = fontMetrics.bottom - fontMetrics.top
+        val textTop: Float = lineTop
+        val textHeight: Float = lineBottom - lineTop
         if (textWidth > contentWidth) {
             when (scaleMode) {
                 Mode.None -> {

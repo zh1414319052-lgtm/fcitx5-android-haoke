@@ -21,6 +21,11 @@ class AboutFragment : PaddingPreferenceFragment() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         preferenceScreen = preferenceManager.createPreferenceScreen(requireContext()).apply {
+            addPreference(androidx.preference.Preference(context).apply {
+                layoutResource = R.layout.ui_about_header
+                isSelectable = false
+                isIconSpaceReserved = false
+            })
             addPreference(R.string.privacy_policy) {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Const.privacyPolicyUrl)))
             }
@@ -30,21 +35,38 @@ class AboutFragment : PaddingPreferenceFragment() {
             ) {
                 navigateWithAnim(SettingsRoute.License)
             }
-            addPreference(R.string.source_code, R.string.github_repo) {
+            addPreference(R.string.haoke_upstream_source, R.string.github_repo) {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Const.githubRepo)))
             }
-            addPreference(R.string.license, Const.licenseSpdxId) {
+            addPreference(R.string.haoke_upstream_license, Const.licenseSpdxId) {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Const.licenseUrl)))
             }
             addCategory(R.string.version) {
                 isIconSpaceReserved = false
                 addPreference(R.string.current_version, Const.versionName)
-                addPreference(R.string.build_git_hash, BuildConfig.BUILD_GIT_HASH) {
+                addPreference(R.string.haoke_upstream_commit, BuildConfig.BUILD_GIT_HASH) {
                     val commit = BuildConfig.BUILD_GIT_HASH.substringBefore('-')
                     val uri = Uri.parse("${Const.githubRepo}/commit/${commit}")
                     startActivity(Intent(Intent.ACTION_VIEW, uri))
                 }
                 addPreference(R.string.build_time, formatDateTime(BuildConfig.BUILD_TIME))
+            }
+            addCategory(R.string.haoke_edition) {
+                isIconSpaceReserved = false
+                addPreference(R.string.haoke_tools) {
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://haoke.org/software/d000c19470bc74b6")))
+                }
+                addPreference(R.string.haoke_distribution_license, "GPL-3.0-only") {
+                    androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                        .setTitle(R.string.haoke_distribution_license)
+                        .setMessage(R.string.haoke_license_explanation)
+                        .setPositiveButton(android.R.string.ok, null).show()
+                }
+                if (!BuildConfig.DEBUG && BuildConfig.HAOKE_UPDATES_ENABLED) {
+                    addPreference(R.string.haoke_check_updates, R.string.haoke_update_privacy) {
+                        (requireActivity() as MainActivity).checkHaokeUpdates()
+                    }
+                }
             }
         }
     }

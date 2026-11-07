@@ -1,0 +1,11 @@
+<resources>
+    <string name="haoke_upstream_commit">上游基线提交</string>
+    <string name="haoke_upstream_source">上游源码</string>
+    <string name="haoke_upstream_license">上游应用许可</string>
+    <string name="haoke_edition">浩科优化版</string>
+    <string name="haoke_tools">浩科工具站</string>
+    <string name="haoke_check_updates">检查浩科版更新</string>
+    <string name="haoke_update_privacy">设置页可连接 haoke.org 检查签名版本通知。不上传输入内容、词库或剪贴板；服务端会接收到 IP 等正常连接信息。</string>
+    <string name="haoke_distribution_license">整合发行许可</string>
+    <string name="haoke_license_explanation">本整合发行版遵循 GPL 第 3 版。原有文件和各组件保留各自版权及许可，包括上游 LGPL 许可；本版同时提供对应源码与构建材料。</string>
+</resources>

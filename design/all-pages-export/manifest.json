@@ -1,0 +1,3168 @@
+{
+  "project": "fcitx5-bundled-extensions",
+  "revision": 10,
+  "source_sha256": "f7a12bf2ef5dc9a22843c5a303b09a88bee391f53d8b1d9149236e415f79d0e9",
+  "scale": 1.0,
+  "files": [
+    {
+      "board": "home",
+      "format": "png",
+      "file": "home.png",
+      "bytes": 56575,
+      "sha256": "d08a8c0a2926d7a0a434dd1d1dbcbc769dc173235303350c8d85748080e9c28e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\home.png",
+        "format": "png",
+        "width": 360,
+        "height": 1008,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "home",
+      "format": "svg",
+      "file": "home.svg",
+      "bytes": 336293,
+      "sha256": "4e53fca5978bce75e846a4e5c2b581d5b1ea29a6177f1999b9088249a2d877a4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\home.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 1008,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme",
+      "format": "png",
+      "file": "theme.png",
+      "bytes": 37530,
+      "sha256": "a37f372cdccd3d3ecf811e17c810b823ac9d501b320313003a192021a80f6164",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme",
+      "format": "svg",
+      "file": "theme.svg",
+      "bytes": 499792,
+      "sha256": "c95579342de1202a18a84a971b449d13c2f29aa8b3196db5a41ce5e708c04187",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "im",
+      "format": "png",
+      "file": "im.png",
+      "bytes": 33992,
+      "sha256": "04b6c7298ab6274abb8d59f5a5bed760039d8cda20f0d62465a1ee486d4129ce",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\im.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "im",
+      "format": "svg",
+      "file": "im.svg",
+      "bytes": 188043,
+      "sha256": "57a324dc0345735736660651e9aa2c0e642fe3dc94599ce48006ba83cd4fb8f3",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\im.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "extensions",
+      "format": "png",
+      "file": "extensions.png",
+      "bytes": 75015,
+      "sha256": "181c205c0d784cf79d31aa5cfa8f104fb31b2b9d5ae40634e6acc2eb561ba2da",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\extensions.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "extensions",
+      "format": "svg",
+      "file": "extensions.svg",
+      "bytes": 474131,
+      "sha256": "0b51d44836b4bb6296ed4320d1088919591424641c184b9f4f264c7560ee07b0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\extensions.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "setup-enable",
+      "format": "png",
+      "file": "setup-enable.png",
+      "bytes": 31774,
+      "sha256": "a525bf7a171cbd252bb0c8caac2357973ae298f3b66dc1d540c04303b7b7affb",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\setup-enable.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "setup-enable",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "setup-enable",
+      "format": "svg",
+      "file": "setup-enable.svg",
+      "bytes": 150920,
+      "sha256": "869824b8b73c073aafb425a795273177bbb411f22ea86e289104c20cbfb85e8a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\setup-enable.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "setup-enable",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "setup-select",
+      "format": "png",
+      "file": "setup-select.png",
+      "bytes": 32639,
+      "sha256": "f7928cd6e4c219476aad680195d5d7f24ef1457b633299aab69965fdadd6780d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\setup-select.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "setup-select",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "setup-select",
+      "format": "svg",
+      "file": "setup-select.svg",
+      "bytes": 152947,
+      "sha256": "3f54edd8c8a273e4cf58b4c97673512806d9986f1eed9c05b0f3e14b6788b28a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\setup-select.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "setup-select",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "global",
+      "format": "png",
+      "file": "global.png",
+      "bytes": 34682,
+      "sha256": "edca39dbe539488ce74d27fe8ed8163b59b2b565fcef8424aeb6915a0dc7d95e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\global.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "global",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "global",
+      "format": "svg",
+      "file": "global.svg",
+      "bytes": 202459,
+      "sha256": "9b49d1e27d7ca10f68b8e6e1df70185e293694ddb30255bb012d6013dbf23c3e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\global.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "global",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "im-config",
+      "format": "png",
+      "file": "im-config.png",
+      "bytes": 19804,
+      "sha256": "965888964d21040f8f4bfe8cc7cb7dba07896a04cd6971ea33c2eb3b1139850f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\im-config.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "im-config",
+      "format": "svg",
+      "file": "im-config.svg",
+      "bytes": 111807,
+      "sha256": "fc710c62f4c8fce4f9e7bc2fc94c6905615c5a195e6299e5e2f60f323890a939",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\im-config.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "addons",
+      "format": "png",
+      "file": "addons.png",
+      "bytes": 29768,
+      "sha256": "cf210cf2a15b6c0183a3db3903174f76e3c9b6dd51a31f7159d16cbf22fcb58a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\addons.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addons",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "addons",
+      "format": "svg",
+      "file": "addons.svg",
+      "bytes": 180290,
+      "sha256": "7d34bedd0a7eab7d9179cd0d351f58c54b89f0d64fc99952bfcf14d3e751938a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\addons.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addons",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "addon-config",
+      "format": "png",
+      "file": "addon-config.png",
+      "bytes": 16263,
+      "sha256": "a4f000b2246b34f924893c2f7470fdf7142e3a5b16e9d1a9b54567dd5cc448ef",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\addon-config.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addon-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "addon-config",
+      "format": "svg",
+      "file": "addon-config.svg",
+      "bytes": 79797,
+      "sha256": "88a697a3d8bbd54af41e14875e50c2fe5e8632dc6d73d69cce0e6aa9640d62c4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\addon-config.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addon-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "keyboard",
+      "format": "png",
+      "file": "keyboard.png",
+      "bytes": 53532,
+      "sha256": "0ec2e54b4794d7bb086288cd42d926256f83d72c5559f489d8ffb5761b540a67",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\keyboard.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "keyboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "keyboard",
+      "format": "svg",
+      "file": "keyboard.svg",
+      "bytes": 317706,
+      "sha256": "0ed67f2fe34a6ab94abed449348f50de909c60db25617f6766a8a9ec4bc37916",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\keyboard.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "keyboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "candidates",
+      "format": "png",
+      "file": "candidates.png",
+      "bytes": 38661,
+      "sha256": "b0a9d22ca977d55bc3959d5d73c8b7eb5ad5c7def3a5556c255667e34945d9b7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\candidates.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "candidates",
+      "format": "svg",
+      "file": "candidates.svg",
+      "bytes": 223596,
+      "sha256": "59ecae935812e6c9eebbc836c81dedeafbb15171d730c913deff48c9aef247ad",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\candidates.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "clipboard-settings",
+      "format": "png",
+      "file": "clipboard-settings.png",
+      "bytes": 38244,
+      "sha256": "5d23b9ae280bd5f725a3346157158dc799c21c640bc6ae4922b675329f966c79",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\clipboard-settings.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "clipboard-settings",
+      "format": "svg",
+      "file": "clipboard-settings.svg",
+      "bytes": 210087,
+      "sha256": "d345ff0188d2623f1fa5427a64566aa7c19e5cdd884cb2f1b6786dfda08e929d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\clipboard-settings.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "symbols-settings",
+      "format": "png",
+      "file": "symbols-settings.png",
+      "bytes": 18885,
+      "sha256": "634444f5fbeda33ea86fd871265c33a404859c970caed722d42e2507cbac1cff",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\symbols-settings.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "symbols-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "symbols-settings",
+      "format": "svg",
+      "file": "symbols-settings.svg",
+      "bytes": 94918,
+      "sha256": "795885ef3d3504820af266f8f7a1a35657a5a8c66e75785d6ccab2b6b0d6cf90",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\symbols-settings.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "symbols-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "advanced",
+      "format": "png",
+      "file": "advanced.png",
+      "bytes": 37985,
+      "sha256": "1b80f81f8379556a16f51cb7c51e6a8b9a4218cbb6c7287bd94817fbb641630e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\advanced.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "advanced",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "advanced",
+      "format": "svg",
+      "file": "advanced.svg",
+      "bytes": 205910,
+      "sha256": "75652a7332bcf03793041b9227f5c38f8b2bbd2adab774673b973faea68d8a3a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\advanced.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "advanced",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "developer",
+      "format": "png",
+      "file": "developer.png",
+      "bytes": 34327,
+      "sha256": "06a9b92833bebad3a8cba994ec2ce0b8d634efd16661aec8bc02c9a0d03bc696",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\developer.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "developer",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "developer",
+      "format": "svg",
+      "file": "developer.svg",
+      "bytes": 189516,
+      "sha256": "7cabf9a3e8de8aeb992510a67e55ac1821737dc128f02344a81e4620ee35d59f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\developer.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "developer",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "config-list",
+      "format": "png",
+      "file": "config-list.png",
+      "bytes": 22683,
+      "sha256": "7ce2de0e31f3572298fdfe184206977019312572a43851cc55bccff46325888d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\config-list.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "config-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "config-list",
+      "format": "svg",
+      "file": "config-list.svg",
+      "bytes": 119817,
+      "sha256": "15bd2548cf5a322beac0a2c203f424876f96ac13ba5f48f37ec383f33431c6fa",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\config-list.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "config-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "pinyin-dict",
+      "format": "png",
+      "file": "pinyin-dict.png",
+      "bytes": 19208,
+      "sha256": "1e46b9cd28a1c9528b1a2163cdead65ff3d89b7d6965240a494ab288d78a4264",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\pinyin-dict.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "pinyin-dict",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "pinyin-dict",
+      "format": "svg",
+      "file": "pinyin-dict.svg",
+      "bytes": 103720,
+      "sha256": "17a0264e7a56dede73d0b365de2dac22a08b00b58cf3e902b6ae4c691666d62f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\pinyin-dict.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "pinyin-dict",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "punctuation",
+      "format": "png",
+      "file": "punctuation.png",
+      "bytes": 19000,
+      "sha256": "b31b840676ed9ac9794c3f160099a3ae31ccc5df7015b347ff7462b4c688536f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\punctuation.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "punctuation",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "punctuation",
+      "format": "svg",
+      "file": "punctuation.svg",
+      "bytes": 117757,
+      "sha256": "34c953a414236a865b6d669aea05c06c30b19d5f56d851e8bcc5af447e662959",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\punctuation.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "punctuation",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "quickphrase-list",
+      "format": "png",
+      "file": "quickphrase-list.png",
+      "bytes": 23696,
+      "sha256": "d67e5b50f4e959be2771fe1fd0387bb82ec6214f7d95f31b22baac702f09cbb8",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\quickphrase-list.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "quickphrase-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "quickphrase-list",
+      "format": "svg",
+      "file": "quickphrase-list.svg",
+      "bytes": 123500,
+      "sha256": "ab4d657ddc9f875a2b1e253a692236e53324174f8aeab917ce1d7b0c7a7c9857",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\quickphrase-list.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "quickphrase-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "quickphrase-edit",
+      "format": "png",
+      "file": "quickphrase-edit.png",
+      "bytes": 18489,
+      "sha256": "cc01ca8a27d223e748ecd45766ec35804fde05f595e2a863e61207990764675d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\quickphrase-edit.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "quickphrase-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "quickphrase-edit",
+      "format": "svg",
+      "file": "quickphrase-edit.svg",
+      "bytes": 95311,
+      "sha256": "a7b12713a8a38acb14b3440bd06a4e68cd1324fa0555bb0f70111462db01e7b3",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\quickphrase-edit.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "quickphrase-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "pinyin-custom",
+      "format": "png",
+      "file": "pinyin-custom.png",
+      "bytes": 21326,
+      "sha256": "56b8626cc707aee748a9a036a0a346916ed8a82eda6466fd992971d9b0b7f6f2",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\pinyin-custom.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "pinyin-custom",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "pinyin-custom",
+      "format": "svg",
+      "file": "pinyin-custom.svg",
+      "bytes": 126534,
+      "sha256": "ebadb9a3d7205575e9a96ddb4d9ce88493e08931a1c4355e1db0195135636075",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\pinyin-custom.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "pinyin-custom",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "table",
+      "format": "png",
+      "file": "table.png",
+      "bytes": 15282,
+      "sha256": "74aca1c29165a295376e836bcbcb6afa12042bf16df68a022292af0be2081fc1",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\table.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "table",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "table",
+      "format": "svg",
+      "file": "table.svg",
+      "bytes": 65808,
+      "sha256": "0fffcd2fe1f2ef41d77eeb30e9ef27e5e71b0f8d5ff51ea543b202fe9f3190cc",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\table.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "table",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-config",
+      "format": "png",
+      "file": "theme-config.png",
+      "bytes": 55898,
+      "sha256": "1227aa2603287af85bd3e09af5cdd3f8ee22490a5140ee368190f5d534a76c42",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-config",
+      "format": "svg",
+      "file": "theme-config.svg",
+      "bytes": 390207,
+      "sha256": "9d095a4ce84e5b872c0767e0d9bf983626a1dbe73e72245154a066ac72bb38b7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "custom-theme",
+      "format": "png",
+      "file": "custom-theme.png",
+      "bytes": 33128,
+      "sha256": "e7811b1db4173a63c835ab20a24982cc29fd35828e9b11efd33de25b40f22d20",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\custom-theme.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "custom-theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "custom-theme",
+      "format": "svg",
+      "file": "custom-theme.svg",
+      "bytes": 243833,
+      "sha256": "f518120bdc685bb7753eeeeaabe5896d81e232d62a48e1e02dc788213a5a493e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\custom-theme.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "custom-theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "crop",
+      "format": "png",
+      "file": "crop.png",
+      "bytes": 14898,
+      "sha256": "1d4f02de8e413d623564c11e17234902ffb047ac0d9a980144e4114d63dcec6f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\crop.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "crop",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "crop",
+      "format": "svg",
+      "file": "crop.svg",
+      "bytes": 80260,
+      "sha256": "b227cd07f03a6fea2ad805eb66fa663fcd8ac17efb89f916be832e1cdcf44a0c",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\crop.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "crop",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "plugins",
+      "format": "png",
+      "file": "plugins.png",
+      "bytes": 21889,
+      "sha256": "1a8eb6f5b7ea368e750b1f6dda144f99cb63858af9abcb1cba194709c98b9b0f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\plugins.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "plugins",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "plugins",
+      "format": "svg",
+      "file": "plugins.svg",
+      "bytes": 95953,
+      "sha256": "58e9921991d7f991c0e270ddfcaaf8c633e701879ecaacdf5ad18d0cf3a3d3f4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\plugins.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "plugins",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "about",
+      "format": "png",
+      "file": "about.png",
+      "bytes": 39304,
+      "sha256": "f35a4bd3ab67db22bbc40ec90328ba512b7b282cecb03b0b9bd88fa35310e6f4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\about.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "about",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "about",
+      "format": "svg",
+      "file": "about.svg",
+      "bytes": 224804,
+      "sha256": "33f52f710fe0577122fbd44fe3d2166e51cfeb4a71194b564b6cedf9886e7831",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\about.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "about",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "licenses",
+      "format": "png",
+      "file": "licenses.png",
+      "bytes": 30006,
+      "sha256": "e803f2224064a6842a5641afd1601bc06b72bf85be0a6c3d8db234120ecc927c",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\licenses.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "licenses",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "licenses",
+      "format": "svg",
+      "file": "licenses.svg",
+      "bytes": 171872,
+      "sha256": "7bc81304abfde910d1285f51550304110760d08147d5720d31587055e7e1430b",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\licenses.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "licenses",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "logs",
+      "format": "png",
+      "file": "logs.png",
+      "bytes": 20697,
+      "sha256": "0c9d595a1226adaa3db384c1c245590bd2d057cfce1c1dfa56ca6c6a4b71aee6",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\logs.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "logs",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "logs",
+      "format": "svg",
+      "file": "logs.svg",
+      "bytes": 123696,
+      "sha256": "d2802d0b3309c60fee997d0b1a5be43b3f216a974d054fbf8823aa2d7893a1b4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\logs.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "logs",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "clipboard-edit",
+      "format": "png",
+      "file": "clipboard-edit.png",
+      "bytes": 38301,
+      "sha256": "5e255857df93ac1b10a269653fa355abf4e314421f3704682ea487296470bf5b",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\clipboard-edit.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "clipboard-edit",
+      "format": "svg",
+      "file": "clipboard-edit.svg",
+      "bytes": 261671,
+      "sha256": "ff75686fda05d15865c3918e184f6a20e0257ae1be4e5217902efdf78e3222a7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\clipboard-edit.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-alpha",
+      "format": "png",
+      "file": "ime-alpha.png",
+      "bytes": 38792,
+      "sha256": "5214be056ac7ee4873361f99bb28804d9da728e0de3eec53ec3bc3f59dca925a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-alpha.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-alpha",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-alpha",
+      "format": "svg",
+      "file": "ime-alpha.svg",
+      "bytes": 268479,
+      "sha256": "56ebe120244396029c356763ca012e0ae87f5381b056e11b5455f518fc0400a2",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-alpha.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-alpha",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-number",
+      "format": "png",
+      "file": "ime-number.png",
+      "bytes": 32436,
+      "sha256": "b172d2014114ac47db62d333e2fd7b309e28f6871115b08cfdc7b3cb055041ae",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-number.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-number",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-number",
+      "format": "svg",
+      "file": "ime-number.svg",
+      "bytes": 216859,
+      "sha256": "2c8a71de425fccf78d5fe5671c5e6af2114342ead1033d50876fa2226955bbb8",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-number.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-number",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-candidates",
+      "format": "png",
+      "file": "ime-candidates.png",
+      "bytes": 34805,
+      "sha256": "269bad0f44f72fd6d64a171e0497568e9c0ed779aad7f7076e8d9e1b2b772ba9",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-candidates.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-candidates",
+      "format": "svg",
+      "file": "ime-candidates.svg",
+      "bytes": 204306,
+      "sha256": "9173b6e73ad8c8507b2948b10bf4faba595d9f3b72ccbd29955b4b415772ce6b",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-candidates.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-clipboard",
+      "format": "png",
+      "file": "ime-clipboard.png",
+      "bytes": 36467,
+      "sha256": "5cb08fa7a438254da3d589719dc86fbbf3f77b18844758b2e595009f8ef069b0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-clipboard.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-clipboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-clipboard",
+      "format": "svg",
+      "file": "ime-clipboard.svg",
+      "bytes": 197958,
+      "sha256": "f1a0389765386802a038de447ddbfdb293745bcf33a8c74ba32573b90ac07bb2",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-clipboard.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-clipboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-symbols",
+      "format": "png",
+      "file": "ime-symbols.png",
+      "bytes": 29234,
+      "sha256": "85b36f0aaea2037bf31d393d5e8634bac74d871eadb08ed9f9ae1a5a99c6c9b7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-symbols.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-symbols",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-symbols",
+      "format": "svg",
+      "file": "ime-symbols.svg",
+      "bytes": 174142,
+      "sha256": "34d6c6c0b98047245bf43f01682f866c3b81734d30c7330f234399959749b86b",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-symbols.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-symbols",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-emoji",
+      "format": "png",
+      "file": "ime-emoji.png",
+      "bytes": 32277,
+      "sha256": "381719e7610b500fb321bde6c9629ed550df1df8cc98c2b4f0d3415bb6ac6389",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-emoji.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-emoji",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-emoji",
+      "format": "svg",
+      "file": "ime-emoji.svg",
+      "bytes": 214610,
+      "sha256": "a7b968048fd0f4275a42359b87702c7b166600d23abc3da3ebc5c9ac60a361bb",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-emoji.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-emoji",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-editing",
+      "format": "png",
+      "file": "ime-editing.png",
+      "bytes": 35625,
+      "sha256": "46cff88fe311cb28b608fbde1b446ecf000ca90accc74fbd1a77ae5654cf4f12",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-editing.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-editing",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-editing",
+      "format": "svg",
+      "file": "ime-editing.svg",
+      "bytes": 201653,
+      "sha256": "80387113e3e30e14818b6fe1866e17d17b0edfa7e9829c9ae17362cc664e018a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-editing.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-editing",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-status",
+      "format": "png",
+      "file": "ime-status.png",
+      "bytes": 34470,
+      "sha256": "1bb3af009d7e7e825d82556329c0b4a5e7fe5276be95976b43e189fc73587441",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-status.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-status",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-status",
+      "format": "svg",
+      "file": "ime-status.svg",
+      "bytes": 180091,
+      "sha256": "1ac290724e66adfdfaa5ec9438b3857521ba77e78a86d657806b83f1c7406acb",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-status.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-status",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-info",
+      "format": "png",
+      "file": "ime-info.png",
+      "bytes": 40235,
+      "sha256": "a92884c7a22faa94bb6d4cc37ff98d8c9638f057c4a834ffcc78bbd043c0ac71",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-info.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-info",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-info",
+      "format": "svg",
+      "file": "ime-info.svg",
+      "bytes": 216128,
+      "sha256": "afc17b79996194ec0fc4747b1c76b739ff92a52ecad710ae51278ebc028be8a3",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-info.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-info",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-popup",
+      "format": "png",
+      "file": "ime-popup.png",
+      "bytes": 41704,
+      "sha256": "ae584b3f4def1a250fb6817b452f7e482b145c9ab9f1d2655ef519d5ced17946",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-popup.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-popup",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-popup",
+      "format": "svg",
+      "file": "ime-popup.svg",
+      "bytes": 279631,
+      "sha256": "44373d63f6e33048e0bbe9884431d9c9e74f20926defe12c421498995b25c113",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-popup.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-popup",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "ime-floating",
+      "format": "png",
+      "file": "ime-floating.png",
+      "bytes": 45428,
+      "sha256": "a498721c269f1940fc6ff0d901582032c1350669a6b0726543582aacc0f60528",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-floating.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-floating",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "ime-floating",
+      "format": "svg",
+      "file": "ime-floating.svg",
+      "bytes": 300503,
+      "sha256": "3e17999123ae68db1579c7fe7f583c1cb2b325bbf218de46fc8d2bb79a5620f7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\ime-floating.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "ime-floating",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "dialog-value",
+      "format": "png",
+      "file": "dialog-value.png",
+      "bytes": 19641,
+      "sha256": "ba61ba238c75574b6ea5b33a2ce85a06902e29cdf2b20ab84d780a7a55a63680",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-value.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-value",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "dialog-value",
+      "format": "svg",
+      "file": "dialog-value.svg",
+      "bytes": 83871,
+      "sha256": "ad9d4d22da99be04e882ee56cd8f59dd52c0a708fbe0d4251d8f4f94c8f3584d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-value.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-value",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "dialog-list",
+      "format": "png",
+      "file": "dialog-list.png",
+      "bytes": 21088,
+      "sha256": "6ab926bf0898db3622e94d0e10079aa11e76ca47aebbcf79802a407c22a31c91",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-list.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "dialog-list",
+      "format": "svg",
+      "file": "dialog-list.svg",
+      "bytes": 98704,
+      "sha256": "603650819d2fd2d91688032e4c7a6867b2566ebfeaf4d5d1b2e2c08afc6dfbf0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-list.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-list",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "dialog-edit",
+      "format": "png",
+      "file": "dialog-edit.png",
+      "bytes": 20864,
+      "sha256": "1ba849d224399a9ea034236ab25e331886f2f427832fcd5cf1206eecab82b2ae",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-edit.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "dialog-edit",
+      "format": "svg",
+      "file": "dialog-edit.svg",
+      "bytes": 100065,
+      "sha256": "07d3c0eba8dbdcc3a81e57e95c7f6131f78447234566ad896261e98d7d489404",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-edit.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-edit",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "dialog-confirm",
+      "format": "png",
+      "file": "dialog-confirm.png",
+      "bytes": 24084,
+      "sha256": "f0857e948a5d97f8e0468ec3835b72c62fe6301cbf7e49a75f762ef9128be260",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-confirm.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-confirm",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "dialog-confirm",
+      "format": "svg",
+      "file": "dialog-confirm.svg",
+      "bytes": 102574,
+      "sha256": "707209f4971244bf1bfdc08d9e3673213493690ebe999a055d5278d028a31359",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\dialog-confirm.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "dialog-confirm",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-mode-dialog",
+      "format": "png",
+      "file": "theme-mode-dialog.png",
+      "bytes": 52056,
+      "sha256": "0a622e3c1ff9b284c7dce983f9578703fed2357a9acb271274c8d50dbf752e7a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-dialog.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-dialog",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-mode-dialog",
+      "format": "svg",
+      "file": "theme-mode-dialog.svg",
+      "bytes": 465235,
+      "sha256": "12ebd41e0ae60afcd7c04c0b78df15a488419c50033505a8655bf47b18b6421f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-dialog.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-dialog",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-config-light-view",
+      "format": "png",
+      "file": "theme-config-light-view.png",
+      "bytes": 54343,
+      "sha256": "a167cff45b9ea57a819bef5fdfd4690ad6535a1ecb72499760569f09653fc28d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config-light-view.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-light-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-config-light-view",
+      "format": "svg",
+      "file": "theme-config-light-view.svg",
+      "bytes": 373982,
+      "sha256": "72713545db830dbd3ced46a075720903bf1ad7f3aa8424ce16f936c7ef015080",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config-light-view.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-light-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-mode-picker-1-view",
+      "format": "png",
+      "file": "theme-mode-picker-1-view.png",
+      "bytes": 52049,
+      "sha256": "6fad522be4a7844e1fb1bcfee905939e0e2ec4c23a2917a18f4f97b512812a97",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-picker-1-view.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-1-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-mode-picker-1-view",
+      "format": "svg",
+      "file": "theme-mode-picker-1-view.svg",
+      "bytes": 448998,
+      "sha256": "afede86e14226761ad89bae0ab198806ab6cd241dcce9749863ae74b3f3fc75e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-picker-1-view.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-1-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-config-dark-view",
+      "format": "png",
+      "file": "theme-config-dark-view.png",
+      "bytes": 54624,
+      "sha256": "b1f5702c3258e6179a56103ea256552f4a332fe8b58b442bde3c19e29c8d9645",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config-dark-view.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-dark-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-config-dark-view",
+      "format": "svg",
+      "file": "theme-config-dark-view.svg",
+      "bytes": 377957,
+      "sha256": "39747d9baac5e1cf4cb88784294a2d941129c2dc9459b5093e50c468f82c2f37",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-config-dark-view.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-dark-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "board": "theme-mode-picker-2-view",
+      "format": "png",
+      "file": "theme-mode-picker-2-view.png",
+      "bytes": 51574,
+      "sha256": "9650b3e32b15a4ad6e6065070a53a7f8570760c2399781add46165f8bcbc9657",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-picker-2-view.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-2-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "board": "theme-mode-picker-2-view",
+      "format": "svg",
+      "file": "theme-mode-picker-2-view.svg",
+      "bytes": 452973,
+      "sha256": "533334c1f7938fa78ba13e93f2b1e66fdc88e14dee32c1b5f2537a36d1ace8f0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\theme-mode-picker-2-view.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-2-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "rime-on",
+      "format": "png",
+      "file": "state-rime-on.png",
+      "bytes": 75015,
+      "sha256": "181c205c0d784cf79d31aa5cfa8f104fb31b2b9d5ae40634e6acc2eb561ba2da",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-rime-on.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "rime-on",
+      "format": "svg",
+      "file": "state-rime-on.svg",
+      "bytes": 474131,
+      "sha256": "0b51d44836b4bb6296ed4320d1088919591424641c184b9f4f264c7560ee07b0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-rime-on.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "rime-off",
+      "format": "png",
+      "file": "state-rime-off.png",
+      "bytes": 74902,
+      "sha256": "645b8d37c32d468b7b84aac25982248e44383330fd1dbd7f652c777ce15786e8",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-rime-off.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "rime-off",
+      "format": "svg",
+      "file": "state-rime-off.svg",
+      "bytes": 472444,
+      "sha256": "6965265488f401223dc99e61a8d7e926ce1abc2a0dab0518f274b8087200a162",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-rime-off.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "extensions",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "home",
+      "format": "png",
+      "file": "state-home.png",
+      "bytes": 56575,
+      "sha256": "d08a8c0a2926d7a0a434dd1d1dbcbc769dc173235303350c8d85748080e9c28e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-home.png",
+        "format": "png",
+        "width": 360,
+        "height": 1008,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "home",
+      "format": "svg",
+      "file": "state-home.svg",
+      "bytes": 336293,
+      "sha256": "4e53fca5978bce75e846a4e5c2b581d5b1ea29a6177f1999b9088249a2d877a4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-home.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 1008,
+        "scale": 1.0,
+        "board": "home",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme",
+      "format": "png",
+      "file": "state-theme.png",
+      "bytes": 37530,
+      "sha256": "a37f372cdccd3d3ecf811e17c810b823ac9d501b320313003a192021a80f6164",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme",
+      "format": "svg",
+      "file": "state-theme.svg",
+      "bytes": 499792,
+      "sha256": "c95579342de1202a18a84a971b449d13c2f29aa8b3196db5a41ce5e708c04187",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "im",
+      "format": "png",
+      "file": "state-im.png",
+      "bytes": 33992,
+      "sha256": "04b6c7298ab6274abb8d59f5a5bed760039d8cda20f0d62465a1ee486d4129ce",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-im.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "im",
+      "format": "svg",
+      "file": "state-im.svg",
+      "bytes": 188043,
+      "sha256": "57a324dc0345735736660651e9aa2c0e642fe3dc94599ce48006ba83cd4fb8f3",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-im.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "im",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "keyboard",
+      "format": "png",
+      "file": "state-keyboard.png",
+      "bytes": 53532,
+      "sha256": "0ec2e54b4794d7bb086288cd42d926256f83d72c5559f489d8ffb5761b540a67",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-keyboard.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "keyboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "keyboard",
+      "format": "svg",
+      "file": "state-keyboard.svg",
+      "bytes": 317706,
+      "sha256": "0ed67f2fe34a6ab94abed449348f50de909c60db25617f6766a8a9ec4bc37916",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-keyboard.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "keyboard",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "candidates",
+      "format": "png",
+      "file": "state-candidates.png",
+      "bytes": 38661,
+      "sha256": "b0a9d22ca977d55bc3959d5d73c8b7eb5ad5c7def3a5556c255667e34945d9b7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-candidates.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "candidates",
+      "format": "svg",
+      "file": "state-candidates.svg",
+      "bytes": 223596,
+      "sha256": "59ecae935812e6c9eebbc836c81dedeafbb15171d730c913deff48c9aef247ad",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-candidates.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "candidates",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "clipboard-settings",
+      "format": "png",
+      "file": "state-clipboard-settings.png",
+      "bytes": 38244,
+      "sha256": "5d23b9ae280bd5f725a3346157158dc799c21c640bc6ae4922b675329f966c79",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-clipboard-settings.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "clipboard-settings",
+      "format": "svg",
+      "file": "state-clipboard-settings.svg",
+      "bytes": 210087,
+      "sha256": "d345ff0188d2623f1fa5427a64566aa7c19e5cdd884cb2f1b6786dfda08e929d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-clipboard-settings.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "clipboard-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "symbols-settings",
+      "format": "png",
+      "file": "state-symbols-settings.png",
+      "bytes": 18885,
+      "sha256": "634444f5fbeda33ea86fd871265c33a404859c970caed722d42e2507cbac1cff",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-symbols-settings.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "symbols-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "symbols-settings",
+      "format": "svg",
+      "file": "state-symbols-settings.svg",
+      "bytes": 94918,
+      "sha256": "795885ef3d3504820af266f8f7a1a35657a5a8c66e75785d6ccab2b6b0d6cf90",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-symbols-settings.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "symbols-settings",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "advanced",
+      "format": "png",
+      "file": "state-advanced.png",
+      "bytes": 37985,
+      "sha256": "1b80f81f8379556a16f51cb7c51e6a8b9a4218cbb6c7287bd94817fbb641630e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-advanced.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "advanced",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "advanced",
+      "format": "svg",
+      "file": "state-advanced.svg",
+      "bytes": 205910,
+      "sha256": "75652a7332bcf03793041b9227f5c38f8b2bbd2adab774673b973faea68d8a3a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-advanced.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "advanced",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "global",
+      "format": "png",
+      "file": "state-global.png",
+      "bytes": 34682,
+      "sha256": "edca39dbe539488ce74d27fe8ed8163b59b2b565fcef8424aeb6915a0dc7d95e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-global.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "global",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "global",
+      "format": "svg",
+      "file": "state-global.svg",
+      "bytes": 202459,
+      "sha256": "9b49d1e27d7ca10f68b8e6e1df70185e293694ddb30255bb012d6013dbf23c3e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-global.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "global",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "addons",
+      "format": "png",
+      "file": "state-addons.png",
+      "bytes": 29768,
+      "sha256": "cf210cf2a15b6c0183a3db3903174f76e3c9b6dd51a31f7159d16cbf22fcb58a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-addons.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addons",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "addons",
+      "format": "svg",
+      "file": "state-addons.svg",
+      "bytes": 180290,
+      "sha256": "7d34bedd0a7eab7d9179cd0d351f58c54b89f0d64fc99952bfcf14d3e751938a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-addons.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "addons",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "about",
+      "format": "png",
+      "file": "state-about.png",
+      "bytes": 39304,
+      "sha256": "f35a4bd3ab67db22bbc40ec90328ba512b7b282cecb03b0b9bd88fa35310e6f4",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-about.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "about",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "about",
+      "format": "svg",
+      "file": "state-about.svg",
+      "bytes": 224804,
+      "sha256": "33f52f710fe0577122fbd44fe3d2166e51cfeb4a71194b564b6cedf9886e7831",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-about.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "about",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-config",
+      "format": "png",
+      "file": "state-theme-config.png",
+      "bytes": 55898,
+      "sha256": "1227aa2603287af85bd3e09af5cdd3f8ee22490a5140ee368190f5d534a76c42",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-config",
+      "format": "svg",
+      "file": "state-theme-config.svg",
+      "bytes": 390207,
+      "sha256": "9d095a4ce84e5b872c0767e0d9bf983626a1dbe73e72245154a066ac72bb38b7",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-mode-picker-0",
+      "format": "png",
+      "file": "state-theme-mode-picker-0.png",
+      "bytes": 52056,
+      "sha256": "0a622e3c1ff9b284c7dce983f9578703fed2357a9acb271274c8d50dbf752e7a",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-0.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-dialog",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-mode-picker-0",
+      "format": "svg",
+      "file": "state-theme-mode-picker-0.svg",
+      "bytes": 465235,
+      "sha256": "12ebd41e0ae60afcd7c04c0b78df15a488419c50033505a8655bf47b18b6421f",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-0.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-dialog",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-config-light",
+      "format": "png",
+      "file": "state-theme-config-light.png",
+      "bytes": 54343,
+      "sha256": "a167cff45b9ea57a819bef5fdfd4690ad6535a1ecb72499760569f09653fc28d",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config-light.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-light-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-config-light",
+      "format": "svg",
+      "file": "state-theme-config-light.svg",
+      "bytes": 373982,
+      "sha256": "72713545db830dbd3ced46a075720903bf1ad7f3aa8424ce16f936c7ef015080",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config-light.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-light-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-mode-picker-1",
+      "format": "png",
+      "file": "state-theme-mode-picker-1.png",
+      "bytes": 52049,
+      "sha256": "6fad522be4a7844e1fb1bcfee905939e0e2ec4c23a2917a18f4f97b512812a97",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-1.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-1-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-mode-picker-1",
+      "format": "svg",
+      "file": "state-theme-mode-picker-1.svg",
+      "bytes": 448998,
+      "sha256": "afede86e14226761ad89bae0ab198806ab6cd241dcce9749863ae74b3f3fc75e",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-1.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-1-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-config-dark",
+      "format": "png",
+      "file": "state-theme-config-dark.png",
+      "bytes": 54624,
+      "sha256": "b1f5702c3258e6179a56103ea256552f4a332fe8b58b442bde3c19e29c8d9645",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config-dark.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-dark-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-config-dark",
+      "format": "svg",
+      "file": "state-theme-config-dark.svg",
+      "bytes": 377957,
+      "sha256": "39747d9baac5e1cf4cb88784294a2d941129c2dc9459b5093e50c468f82c2f37",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-config-dark.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-config-dark-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "state": "theme-mode-picker-2",
+      "format": "png",
+      "file": "state-theme-mode-picker-2.png",
+      "bytes": 51574,
+      "sha256": "9650b3e32b15a4ad6e6065070a53a7f8570760c2399781add46165f8bcbc9657",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-2.png",
+        "format": "png",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-2-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": false
+      }
+    },
+    {
+      "state": "theme-mode-picker-2",
+      "format": "svg",
+      "file": "state-theme-mode-picker-2.svg",
+      "bytes": 452973,
+      "sha256": "533334c1f7938fa78ba13e93f2b1e66fdc88e14dee32c1b5f2537a36d1ace8f0",
+      "render": {
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Haoke\\DesignWorkbench\\exports\\ebe4bbdb50dda9de2c8506e9\\r10-bf4d644eb45b\\state-theme-mode-picker-2.svg",
+        "format": "svg",
+        "width": 360,
+        "height": 816,
+        "scale": 1.0,
+        "board": "theme-mode-picker-2-view",
+        "font": {
+          "family": "Noto Sans SC",
+          "path": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-VF.ttf",
+          "license": "SIL OFL 1.1; commercial use allowed",
+          "licensePath": "C:\\Users\\Administrator\\.claude\\skills\\ui-design-prompts\\assets\\local-design\\NotoSansSC-OFL.txt"
+        },
+        "textAsPaths": true
+      }
+    },
+    {
+      "file": "prototype.html",
+      "format": "prototype",
+      "bytes": 1335,
+      "sha256": "31790d68849650d212616727326a75a6f42d925c3822d3e09cdeb371b11b3ff7"
+    },
+    {
+      "file": "prototype-data.js",
+      "format": "prototype",
+      "bytes": 1192181,
+      "sha256": "b214adf8a01537114fbfa2da628489ae8341a3e16314f87c0ce16a4971485e38"
+    },
+    {
+      "file": "prototype-app.js",
+      "format": "prototype",
+      "bytes": 839,
+      "sha256": "229594a97d9824fb4461bb61890a00287736ce89b91f1940128c8e4971f1edee"
+    },
+    {
+      "file": "motion-runtime.js",
+      "format": "prototype",
+      "bytes": 12589,
+      "sha256": "0766e401a89976844601f247af5af611970e3489018441a27d342fb6bb284d69"
+    },
+    {
+      "file": "anime.js",
+      "format": "prototype",
+      "bytes": 118043,
+      "sha256": "8d5b3a58a1f64023a04a4cedeef135a2263b18da04b35177ac13438a0bad033b"
+    },
+    {
+      "file": "xstate.js",
+      "format": "prototype",
+      "bytes": 47486,
+      "sha256": "0c0886f61d9ba134d096ef0aa5b6b0baaff1c3e2cca934f4ff253109826310fb"
+    },
+    {
+      "file": "prototype.css",
+      "format": "prototype",
+      "bytes": 823,
+      "sha256": "576d3b8e73a6c8a3bba2c573aa6422b91808a503420a96b8320e9eaf02cba0e9"
+    },
+    {
+      "file": "NotoSansSC-VF.ttf",
+      "format": "prototype",
+      "bytes": 17773244,
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "file": "NotoSansSC-OFL.txt",
+      "format": "prototype",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "file": "animejs-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1075,
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+    },
+    {
+      "file": "xstate-LICENSE.txt",
+      "format": "prototype",
+      "bytes": 1083,
+      "sha256": "542d926d7bbb099785e322d1d5574c539d51942e52ec8adce2be4629ba81fc7f"
+    },
+    {
+      "file": "motion-spec.json",
+      "format": "prototype",
+      "bytes": 19089,
+      "sha256": "30d9ecf4cda1a8c77ef86ed5afc5a7304104ac3e84b58bfa81c30c06a6c2d651"
+    },
+    {
+      "file": "MotionTokens.kt",
+      "format": "kotlin",
+      "bytes": 6004,
+      "sha256": "e7cef59ea0a0e614de372d5a0eae74a462ea1e6b4f225920903a01231d1701a7"
+    }
+  ],
+  "handoff": "handoff.json",
+  "note": "SVG/PNG 是实际渲染；可编辑源是 .haoke-ui.json。目标程序仍需独立运行验证。"
+}
