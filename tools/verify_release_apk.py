@@ -89,7 +89,7 @@ with zipfile.ZipFile(apk) as z:
     result['zipIntegrity'] = 'PASS'
 badging = run([tools / 'aapt2.exe', 'dump', 'badging', apk])
 result['badging'] = [s for s in badging.splitlines() if re.match(r'package:|(?:minS|s)dkVersion:|targetSdkVersion:|native-code:|uses-feature:|uses-library', s)]
-assert "minSdkVersion:'23'" in badging and "versionCode='11301'" in badging and "versionName='0.1.3-haoke.1'" in badging
+assert "minSdkVersion:'23'" in badging and "versionCode='11302'" in badging and "versionName='0.1.3-haoke.2'" in badging
 assert "name='org.fcitx.fcitx5.android.haoke'" in badging
 result['signatureAllSupportedApis'] = run([tools / 'apksigner.bat', 'verify', '--verbose', '--print-certs', apk])
 assert 'a455f0d17ec4f31972c9a1dc7d9e3c8f5a7c31dd1e101765d25827780a917bf3' in result['signatureAllSupportedApis']

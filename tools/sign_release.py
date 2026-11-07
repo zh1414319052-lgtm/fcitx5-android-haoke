@@ -79,7 +79,7 @@ def main():
     if hashlib.sha256(public).hexdigest() != CERT:
         raise RuntimeError('Actual key certificate differs from established release identity.')
     badging = run([tools/'aapt2.exe', 'dump', 'badging', incoming])
-    for expected in (f"name='{APP_ID}'", "versionCode='11301'", f"versionName='{args.version}'", "minSdkVersion:'23'"):
+    for expected in (f"name='{APP_ID}'", "versionCode='11302'", f"versionName='{args.version}'", "minSdkVersion:'23'"):
         if expected not in badging:
             raise RuntimeError('Unsigned APK identity/version mismatch: ' + expected)
     if re.search(r'^application-debuggable', badging, re.M):
@@ -95,7 +95,7 @@ def main():
     with output.open('rb') as file:
         digest = hashlib.file_digest(file, 'sha256').hexdigest()
     print(json.dumps({'signedApk': str(output), 'applicationId': APP_ID, 'versionName': args.version,
-                      'versionCode': 11301, 'bytes': output.stat().st_size, 'sha256': digest, 'certificateSha256': CERT}))
+                      'versionCode': 11302, 'bytes': output.stat().st_size, 'sha256': digest, 'certificateSha256': CERT}))
 
 if __name__ == '__main__':
     main()

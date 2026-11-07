@@ -11,8 +11,13 @@ import android.view.inputmethod.EditorInfo
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.transition.Slide
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 import org.fcitx.fcitx5.android.R
 import org.fcitx.fcitx5.android.core.CapabilityFlags
+import org.fcitx.fcitx5.android.core.Action
 import org.fcitx.fcitx5.android.core.InputMethodEntry
 import org.fcitx.fcitx5.android.data.prefs.AppPrefs
 import org.fcitx.fcitx5.android.input.bar.KawaiiBarComponent
@@ -32,6 +37,7 @@ import splitties.views.dsl.core.add
 import splitties.views.dsl.core.frameLayout
 import splitties.views.dsl.core.lParams
 import splitties.views.dsl.core.matchParent
+import timber.log.Timber
 
 class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), EssentialWindow,
     InputBroadcastReceiver {
@@ -72,6 +78,10 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
         )
     }
     private var currentKeyboardName = ""
+    private val languageLayouts by lazy { LanguageLayoutResolver(context) }
+    private var languageLayoutJob: Job? = null
+    private var languageLayoutGeneration = 0L
+    private var punctuationMapping: Map<String, String> = emptyMap()
     private var lastSymbolType: String by AppPrefs.getInstance().internal.lastSymbolLayout
 
     private val currentKeyboard: BaseKeyboard? get() = keyboards[currentKeyboardName]
@@ -113,6 +123,7 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
             it.onAttach()
             it.onReturnDrawableUpdate(returnKeyDrawable.resourceId)
             it.onInputMethodUpdate(fcitx.runImmediately { inputMethodEntryCached })
+            it.onPunctuationUpdate(punctuationMapping)
         }
     }
 
@@ -149,9 +160,49 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
 
     override fun onImeUpdate(ime: InputMethodEntry) {
         currentKeyboard?.onInputMethodUpdate(ime)
+        refreshLanguageLayout()
+    }
+
+    // Typing-method and layout settings can change without changing the engine name.
+    override fun onStatusAreaUpdate(actions: Array<Action>) {
+        refreshLanguageLayout()
+    }
+
+    private fun refreshLanguageLayout() {
+        val generation = ++languageLayoutGeneration
+        languageLayoutJob?.cancel()
+        languageLayoutJob = service.lifecycleScope.launch {
+            try {
+                val (ime, layout) = fcitx.runOnReady {
+                    val entry = inputMethodEntryCached
+                    entry to languageLayouts.resolve(this, entry)
+                }
+                if (generation != languageLayoutGeneration ||
+                    ime != fcitx.runImmediately { inputMethodEntryCached }) return@launch
+                val old = keyboards[TextKeyboard.Name] as TextKeyboard
+                if (old.languageLayout == layout) return@launch
+                popup.dismissAll()
+                val visible = currentKeyboardName == TextKeyboard.Name
+                if (visible) detachCurrentLayout()
+                keyboards[TextKeyboard.Name] = TextKeyboard(context, theme, layout)
+                if (visible) attachLayout(TextKeyboard.Name)
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (failure: Exception) {
+                Timber.w(failure, "Unable to resolve input method keyboard layout")
+                // Never leave the previous language's letters on a different engine.
+                if (generation == languageLayoutGeneration) {
+                    val visible = currentKeyboardName == TextKeyboard.Name
+                    if (visible) detachCurrentLayout()
+                    keyboards[TextKeyboard.Name] = TextKeyboard(context, theme)
+                    if (visible) attachLayout(TextKeyboard.Name)
+                }
+            }
+        }
     }
 
     override fun onPunctuationUpdate(mapping: Map<String, String>) {
+        punctuationMapping = mapping
         currentKeyboard?.onPunctuationUpdate(mapping)
     }
 
@@ -166,6 +217,7 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
             it.onAttach()
         }
         notifyBarLayoutChanged()
+        refreshLanguageLayout()
     }
 
     override fun onDetached() {

@@ -13,22 +13,39 @@ import org.fcitx.fcitx5.android.R
 import org.fcitx.fcitx5.android.core.InputMethodEntry
 import org.fcitx.fcitx5.android.core.KeyState
 import org.fcitx.fcitx5.android.core.KeyStates
+import org.fcitx.fcitx5.android.core.KeySym
 import org.fcitx.fcitx5.android.data.prefs.AppPrefs
 import org.fcitx.fcitx5.android.data.prefs.ManagedPreference
 import org.fcitx.fcitx5.android.data.theme.Theme
 import org.fcitx.fcitx5.android.input.popup.PopupAction
+import org.fcitx.fcitx5.android.input.ScriptTypeface
 import splitties.views.imageResource
 
 @SuppressLint("ViewConstructor")
 class TextKeyboard(
     context: Context,
-    theme: Theme
-) : BaseKeyboard(context, theme, Layout) {
+    theme: Theme,
+    val languageLayout: LanguageLayout = LanguageLayout.Latin
+) : BaseKeyboard(context, theme, layoutFor(languageLayout)) {
 
     enum class CapsState { None, Once, Lock }
 
     companion object {
         const val Name = "Text"
+
+        private fun layoutFor(profile: LanguageLayout): List<List<KeyDef>> {
+            if (!profile.isScript || profile.rows.size == 3) return Layout
+            val rows = profile.rows.map { row ->
+                row.map { c ->
+                    val raw = c.toString()
+                    KeyDef(KeyDef.Appearance.AltText(raw, "", 21f, percentWidth = 1f / row.length),
+                        setOf(KeyDef.Behavior.Press(KeyAction.FcitxKeyAction(raw))),
+                        arrayOf(KeyDef.Popup.Preview(raw), KeyDef.Popup.Keyboard.Preset(raw)))
+                }
+            }
+            return rows + listOf(listOf(CapsKey(), LayoutSwitchKey("?123", percentWidth = 0.15f),
+                LanguageKey(), SpaceKey(), BackspaceKey(), ReturnKey()))
+        }
 
         val Layout: List<List<KeyDef>> = listOf(
             listOf(
@@ -114,6 +131,19 @@ class TextKeyboard(
     private fun transformPunctuation(p: String) = punctuationMapping.getOrDefault(p, p)
 
     override fun onAction(action: KeyAction, source: KeyActionListener.Source) {
+        if (languageLayout.isScript && action is KeyAction.FcitxKeyAction) {
+            val shifted = capsState != CapsState.None
+            val raw = if (source == KeyActionListener.Source.Keyboard)
+                languageLayout.key(action.act, shifted) else action.act
+            val needsShift = if (source == KeyActionListener.Source.Keyboard) shifted
+                else raw.length == 1 && raw[0].isUpperCase()
+            val mapped = action.copy(act = raw,
+                states = if (needsShift) KeyStates(KeyState.Virtual, KeyState.Shift) else KeyStates.Virtual)
+            if (capsState == CapsState.Once) switchCapsState()
+            val symbol = languageLayout.symbols[raw]
+            super.onAction(if (symbol != null) KeyAction.SymAction(KeySym(symbol), KeyStates.Virtual) else mapped, source)
+            return
+        }
         var transformed = action
         when (action) {
             is KeyAction.FcitxKeyAction -> when (source) {
@@ -175,6 +205,7 @@ class TextKeyboard(
     }
 
     private fun transformPopupPreview(c: String): String {
+        if (languageLayout.isScript) return languageLayout.label(c, capsState != CapsState.None)
         if (c.length != 1) return c
         if (c[0].isLetter()) return transformAlphabet(c)
         return transformPunctuation(c)
@@ -188,13 +219,18 @@ class TextKeyboard(
                 when (action.keyboard) {
                     is KeyDef.Popup.Keyboard.Preset -> {
                         val label = action.keyboard.label
-                        if (label.length == 1 && label[0].isLetter())
+                        if (languageLayout.isScript && languageLayout.rows.any { label.lowercase() in it }) {
+                            val keys = listOf(languageLayout.key(label, false), languageLayout.key(label, true)).distinct()
+                            action.copy(keyboard = KeyDef.Popup.Keyboard.Labeled(keys.toTypedArray(),
+                                keys.map { languageLayout.labels[it] ?: it }.toTypedArray()))
+                        } else if (label.length == 1 && label[0].isLetter())
                             action.copy(
                                 keyboard = action.keyboard.copy(label = transformAlphabet(label))
                             )
                         else action
                     }
                     is KeyDef.Popup.Keyboard.Explicit -> action
+                    is KeyDef.Popup.Keyboard.Labeled -> action
                 }
             }
             else -> action
@@ -236,6 +272,12 @@ class TextKeyboard(
     private fun updateAlphabetKeys() {
         textKeys.forEach {
             if (it.def !is KeyDef.Appearance.AltText) return
+            if (languageLayout.isScript) {
+                it.mainText.text = languageLayout.label(it.def.displayText, capsState != CapsState.None)
+                ScriptTypeface.apply(it.mainText, it.mainText.text)
+                it.contentDescription = it.mainText.text
+                return@forEach
+            }
             it.mainText.text = it.def.displayText.let { str ->
                 if (str.length != 1 || !str[0].isLetter()) return@forEach
                 if (keepLettersUppercase) str.uppercase() else transformAlphabet(str)

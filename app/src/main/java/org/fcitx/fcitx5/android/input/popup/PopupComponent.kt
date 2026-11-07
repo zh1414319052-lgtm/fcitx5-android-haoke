@@ -130,6 +130,10 @@ class PopupComponent :
                 keys = keyboard.items
                 labels = keyboard.items
             }
+            is KeyDef.Popup.Keyboard.Labeled -> {
+                keys = keyboard.keys
+                labels = keyboard.labels
+            }
         }
         // clear popup preview text         OR create empty popup preview
         showingEntryUi[viewId]?.setText("") ?: showPopup(viewId, "", bounds)

@@ -1,9 +1,10 @@
 param(
     [string]$BuildDirectory = 'D:\haoke-build\fcitx5-source-20261106',
-    [string]$Version = '0.1.3-haoke.1',
+    [string]$Version = '0.1.3-haoke.2',
     [string]$Identity = "$env:LOCALAPPDATA\Haoke\AndroidSigning\fcitx5-haoke-release\signing-identity.json",
     [bool]$UpdatesEnabled = $true,
     [switch]$Unsigned,
+    [switch]$SkipTests,
     [string]$SignedOutput = ''
 )
 $ErrorActionPreference = 'Stop'
@@ -28,7 +29,11 @@ $env:ECM_DIR = "$hostTools/share/ECM/cmake"
 $env:PATH = "$jbr\bin;$hostTools\bin;$env:PATH"
 Push-Location $BuildDirectory
 try {
-    & .\gradlew.bat :app:testDebugUnitTest :app:assembleRelease :app:lintRelease '-PbuildABI=armeabi-v7a,arm64-v8a,x86,x86_64' '-PbuildUniversalApk=true' '-PcmakeVersion=3.22.1' '-PbuildTools=36.0.0' "-PbuildVersionName=$Version" "-PhaokeCertificateSha256=$CertificateSha256" "-PhaokeUpdatesEnabled=$($UpdatesEnabled.ToString().ToLowerInvariant())" --console=plain
+    # An explicit release-only request may skip tests/lint; signing and artifact
+    # identity checks remain mandatory. Ordinary builds retain the existing checks.
+    $buildTasks = @(':app:assembleRelease')
+    if (-not $SkipTests) { $buildTasks = @(':app:testDebugUnitTest', ':app:assembleRelease', ':app:lintRelease') }
+    & .\gradlew.bat @buildTasks '-PbuildABI=armeabi-v7a,arm64-v8a,x86,x86_64' '-PbuildUniversalApk=true' '-PcmakeVersion=3.22.1' '-PbuildTools=36.0.0' "-PbuildVersionName=$Version" "-PhaokeCertificateSha256=$CertificateSha256" "-PhaokeUpdatesEnabled=$($UpdatesEnabled.ToString().ToLowerInvariant())" --console=plain
     if ($LASTEXITCODE -ne 0) { throw "Formal preparation/check failed: $LASTEXITCODE" }
     if ($Unsigned) {
         Write-Output 'UNSIGNED preparation only; not a formal distributable.'

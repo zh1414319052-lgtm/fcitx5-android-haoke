@@ -1,20 +1,21 @@
 {
   "scope": "Application/JNI/resources/tests and actual library, build convention, Gradle wrapper and generation inputs; caches excluded; dependency source archives pinned separately",
-  "version": "0.1.3-haoke.1",
-  "versionCode": 11301,
-  "treeSha256": "c5983f632a0db1bcb4973e202d597c4746bba893b48135eaa8aaee0fddbe6d17",
+  "version": "0.1.3-haoke.2",
+  "versionCode": 11302,
+  "treeSha256": "f45418502753aa80f6c3ecbc53d1c73a9bc21d58aaf2c0e52014f766036c36b7",
+  "treeHashFormat": "UTF-8 concatenation of sorted sha256 + two spaces + relative path + LF",
   "files": [
     {
       "path": "Build-Formal.ps1",
-      "sha256": "f0a19f3c07e28fa8e190adff197d49f65821a17d8b8af08c1af00383af1ed5ed"
+      "sha256": "15bf698491aafb645c5cf1702c7ef6ac8ae4c3458515131cbd77b1cec8755895"
     },
     {
       "path": "Build-QA.ps1",
-      "sha256": "0a75884428df1da8335763b27e25ca3fee31f8c7be7819c21a19447199c8599f"
+      "sha256": "7442c865106b3a666c8abbaf692b9a161c753943803201b6fec69ba13c62c057"
     },
     {
       "path": "app/build.gradle.kts",
-      "sha256": "216860352bfb11c1e6461ece73b4d49e8a02a363f3ef685df89a08a62ec67db4"
+      "sha256": "d83331ce5a95adc9e4cba5eeb575d92e0077505613830d33ed94437cd05ba7f8"
     },
     {
       "path": "app/licenses/NotoSansCJK-OFL.txt",
@@ -205,6 +206,10 @@
       "sha256": "206eb7a6b6666f1c4d6f40298793c263e5e6a8938b1303331e3a1cb95eb7c813"
     },
     {
+      "path": "app/src/androidTest/java/org/fcitx/fcitx5/android/LanguageKeyboardTest.kt",
+      "sha256": "ebdb4628e2085b2b948bb06b44fbffb21677dae71ff19029f120f434564a2179"
+    },
+    {
       "path": "app/src/androidTest/java/org/fcitx/fcitx5/android/UiLanguageTest.kt",
       "sha256": "8001c63042b54f1bb8392c42e018d6c899553c7ad9cdffa6ff9b6afd5a2b2f40"
     },
@@ -233,6 +238,10 @@
       "sha256": "0938c5b9aaf5466e7f1d9c28c017a0ac123d2a4bb25fd73fc33dfe251aae9fac"
     },
     {
+      "path": "app/src/main/assets/keyboard-labels.json",
+      "sha256": "aca90ad318aee0de539a7c9adcb7ff2c23d53d550e7affba11924fd386135ae4"
+    },
+    {
       "path": "app/src/main/assets/licenses/NotoSansCJK-OFL.txt",
       "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
     },
@@ -259,6 +268,10 @@
     {
       "path": "app/src/main/assets/licenses/bundled/jyutping-libime-jyutping-LGPL-2.1-or-later.txt",
       "sha256": "bcbc481adfd93219dd88d0ed7940cf534867d2df1f1734b5b39646477b8c8665"
+    },
+    {
+      "path": "app/src/main/assets/licenses/bundled/noto-sans-sinhala-OFL.txt",
+      "sha256": "2d6f7c43bce61f4b1919379f901bc613484f5285f520b6d29bb7c1f31b17e841"
     },
     {
       "path": "app/src/main/assets/licenses/bundled/rime-fcitx5-rime-LGPL-2.1-or-later.txt",
@@ -773,6 +786,10 @@
       "sha256": "1b70d95274cbea0a8599a908dd06bbcd7d98f690d32eac71e03cdf53d4594533"
     },
     {
+      "path": "app/src/main/java/org/fcitx/fcitx5/android/input/ScriptTypeface.kt",
+      "sha256": "ff19455e5a29efcbd9cc5729259785b8bbad04ac1b65e3fbe242a77abff21ada"
+    },
+    {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/StatusIconMapping.kt",
       "sha256": "dfcb00bec36458f21a157b11b369ac2c1a172512741202551c9d67456204e7f0"
     },
@@ -1054,7 +1071,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/KeyDef.kt",
-      "sha256": "a2afbdfa7626b8db7a75d828a4c383c96f3c435a05574bfe6dbc82fe3c9ef70d"
+      "sha256": "4b50518b9dd350550311e91bfdada4dbcce8f5ce2321efa0fc24b31e48f95539"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/KeyDefPreset.kt",
@@ -1074,11 +1091,15 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/KeyboardWindow.kt",
-      "sha256": "166e57c9c159655170f89f68ddf7a47ce3cd3adabfee2dde62937151ae66e538"
+      "sha256": "d0234e32eeef9dff8722f3e506cb458a9e15a95970aa272e8743c0bf3bd2e919"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/LangSwitchBehavior.kt",
       "sha256": "14330b4ef0055c9a8c20e4cc0506118c8dcca822ad86d1b145b4f50e4c3ff214"
+    },
+    {
+      "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/LanguageLayout.kt",
+      "sha256": "85f389a3921176f5062b48c4ebc9b459488556c693ada61ee3614c42d3ccedf3"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/NumberKeyboard.kt",
@@ -1094,7 +1115,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/TextKeyboard.kt",
-      "sha256": "760269052f977bbc2105a6e0e029e9fe9e733e965becb61c5ac91ac04b5e0086"
+      "sha256": "5ff141b1ab69046fd116234cbcaa00bc8d7723541da44816650d5d2f5191072a"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/picker/PickerData.kt",
@@ -1146,7 +1167,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/popup/PopupComponent.kt",
-      "sha256": "ccf4a34219e663a3fc19f182a6cbd8fc9b7c9f7c08837d93e6e3c47daa0c5bdd"
+      "sha256": "29d728a6a6834bc71489cadb9677473f69f5a960dd792d595fd19d5108c9b9e9"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/popup/PopupContainerUi.kt",
@@ -1154,11 +1175,11 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/popup/PopupEntryUi.kt",
-      "sha256": "e4dde2c4959753fc19f56291312eaddd054f2bcd0c4cb7aea4a820789a9ce09b"
+      "sha256": "bc4efbf126cbbae337ce135481099e9644d75b36fdbaa1cc58fe5bc954e4af90"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/popup/PopupKeyboardUi.kt",
-      "sha256": "19c38a92c6b802e8328856b3325437fc9dcc9b576b18b6e0be5d9b0f53e36285"
+      "sha256": "fca5c59aabbc1756a5ab0b701b63b8b51f9775ef9a45c95ab89e5046e478fcbf"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/popup/PopupMenuUi.kt",
@@ -2395,6 +2416,10 @@
     {
       "path": "app/src/main/res/font/noto_sans_sc.otf",
       "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "path": "app/src/main/res/font/noto_sans_sinhala.ttf",
+      "sha256": "0683dd4c38aa049859f31b78f3b86b23e7a875616ccbdf93d917136a16907ae2"
     },
     {
       "path": "app/src/main/res/layout/activity_clipboard_edit.xml",
@@ -7171,6 +7196,10 @@
     {
       "path": "app/src/test/java/org/fcitx/fcitx5/android/ClipboardPreviewTest.kt",
       "sha256": "2f8f4b72c4115f4c1da4287a2cee8dbda41c65d2b1c4368111c9f1a9aa08ab2e"
+    },
+    {
+      "path": "app/src/test/java/org/fcitx/fcitx5/android/LanguageLayoutTest.kt",
+      "sha256": "e6d64b99aad6bfda1bf9adf8a8aac0aaa559a8df8adf862ff5d381c1b9cfd71f"
     },
     {
       "path": "app/src/test/java/org/fcitx/fcitx5/android/PrimaryLanguageTest.kt",
@@ -78773,16 +78802,20 @@
       "sha256": "7d1789e020bf0095fdd3f144669badb32fba0e51eb0a5a28b6a3fa96f5b24550"
     },
     {
+      "path": "tools/generate_keyboard_labels.py",
+      "sha256": "74ab21afa1ae4aa3afc20cee3ee30bee912782f18c084c8d41b8bbfef53145b2"
+    },
+    {
       "path": "tools/generate_ui_language_resources.py",
       "sha256": "48af6870dd914d263db50afd59957d44db6c40a1b8ab90dd686efd30fde94e8e"
     },
     {
       "path": "tools/sign_release.py",
-      "sha256": "8c0fa55773b04254633e46a7f80e60b797edd3b86753411507782b3b662a1b0e"
+      "sha256": "bfce9f45ae875868be63bfc884b596b93a1c60610777aeeefa1f39b68c97d8a6"
     },
     {
       "path": "tools/verify_release_apk.py",
-      "sha256": "d0fb0617df49b2566b6ac2ca31103a6b43c0ede1436c10ec55e5ac6022299adb"
+      "sha256": "a797fab5af09a3bc337837eab55a9bb4bcc838255d0023471cfe11fa88fda5d4"
     }
   ]
 }

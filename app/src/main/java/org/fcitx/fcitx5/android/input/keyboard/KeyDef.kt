@@ -122,6 +122,11 @@ open class KeyDef(
                 Keyboard()
 
             class Explicit(val items: Array<String>) : Keyboard()
+
+            /** Raw engine keys and visible script legends must travel together. */
+            class Labeled(val keys: Array<String>, val labels: Array<String>) : Keyboard() {
+                init { require(keys.isNotEmpty() && keys.size == labels.size) }
+            }
         }
 
         class Menu(val items: Array<Item>) : Popup() {

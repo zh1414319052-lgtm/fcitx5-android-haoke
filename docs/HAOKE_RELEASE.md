@@ -1,6 +1,8 @@
 # 小企鹅输入法：浩科整合发行版
 
-目标版本：0.1.3-haoke.1（Android versionCode 11301）。上游：Fcitx5 Android 0.1.3，提交 `048f581c652367567b8ee5c28c5163b805288895`。本版是独立维护版本，与原作者没有官方合作或背书关系。
+目标版本：0.1.3-haoke.2（Android versionCode 11302）。上游：Fcitx5 Android 0.1.3，提交 `048f581c652367567b8ee5c28c5163b805288895`。本版是独立维护版本，与原作者没有官方合作或背书关系。
+
+本版修复语言切换时固定显示英文键盘的问题；韩文、日文假名、注音和僧伽罗文按键、Shift、预览和长按标签跟随对应引擎与配置。具体支持范围和历史 QA 验证见 [本版发行记录](RELEASE_0.1.3-haoke.2.md)。按用户明确要求，本次正式构建使用 `Build-Formal.ps1 -SkipTests`，未重跑单元测试、完整 lint 或设备测试；常规构建默认仍执行原检查，正式签名和产物身份校验不能跳过。
 
 ## 许可与归属
 
@@ -28,4 +30,4 @@
 
 主题预览按卡片宽度铺满；主题图库使用紧凑示意布局，图片主题编辑保持真实键盘和裁剪比例。设置中的“键盘配色模式”提供跟随系统、手动日间和手动深色；沿用现有偏好，不重置自定义主题。跟随系统以手机外观配置为准，不根据时间推测。应用设置界面继续跟随系统外观。
 
-`design/icon/penguin-keyboard-foreground-v1.png` 是实际 AI 生成的透明 PNG 原件，没有伪造矢量源文件；`tools/build_launcher_icon.py` 生成传统、自适应及单色启动图标。它不含文字。界面商用字体为 Noto Sans SC / Noto Sans CJK SC，SIL OFL 1.1；保留源工程中的字体许可。原有全页面设计基准与原栈实现继续维护。
+`design/icon/penguin-keyboard-foreground-v1.png` 是实际 AI 生成的透明 PNG 原件，没有伪造矢量源文件；`tools/build_launcher_icon.py` 生成传统、自适应及单色启动图标。它不含文字。界面商用字体为 Noto Sans SC / Noto Sans CJK SC，以及本版加入的 Noto Sans Sinhala，均为 SIL OFL 1.1；保留源工程中的字体许可。原有全页面设计基准与原栈实现继续维护。
