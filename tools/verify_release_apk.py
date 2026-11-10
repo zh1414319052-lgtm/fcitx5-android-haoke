@@ -63,6 +63,9 @@ def elf_details(data):
 
 with zipfile.ZipFile(apk) as z:
     assert z.testzip() is None
+    for asset in ('usr/share/fcitx5/inputmethod/haoke-pinyin-t9.conf',
+                  'usr/share/rime-data/haoke_pinyin_t9.schema.yaml'):
+        assert 'assets/' + asset in z.namelist(), asset
     native = {}
     for name in z.namelist():
         if name.startswith('lib/') and name.endswith('.so'):
@@ -89,8 +92,9 @@ with zipfile.ZipFile(apk) as z:
     result['zipIntegrity'] = 'PASS'
 badging = run([tools / 'aapt2.exe', 'dump', 'badging', apk])
 result['badging'] = [s for s in badging.splitlines() if re.match(r'package:|(?:minS|s)dkVersion:|targetSdkVersion:|native-code:|uses-feature:|uses-library', s)]
-assert "minSdkVersion:'23'" in badging and "versionCode='11302'" in badging and "versionName='0.1.3-haoke.2'" in badging
+assert "minSdkVersion:'23'" in badging and "versionCode='11303'" in badging and "versionName='0.1.3-haoke.3'" in badging
 assert "name='org.fcitx.fcitx5.android.haoke'" in badging
+assert not re.search(r'^application-debuggable', badging, re.M)
 result['signatureAllSupportedApis'] = run([tools / 'apksigner.bat', 'verify', '--verbose', '--print-certs', apk])
 assert 'a455f0d17ec4f31972c9a1dc7d9e3c8f5a7c31dd1e101765d25827780a917bf3' in result['signatureAllSupportedApis']
 result['signatureAndroid14'] = run([tools / 'apksigner.bat', 'verify', '--min-sdk-version', '34', '--max-sdk-version', '34', '--verbose', apk])

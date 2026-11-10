@@ -88,102 +88,112 @@ class CommonKeyActionListener :
     }
 
     val listener by lazy {
-        KeyActionListener { action, _ ->
-            when (action) {
-                is FcitxKeyAction -> service.postFcitxJob {
-                    sendKey(action.act, action.states.states, action.code)
-                }
-                is SymAction -> service.postFcitxJob {
-                    sendKey(action.sym, action.states)
-                }
-                is CommitAction -> service.postFcitxJob {
-                    commitAndReset()
-                    service.lifecycleScope.launch { service.commitText(action.text) }
-                }
-                is QuickPhraseAction -> service.postFcitxJob {
-                    commitAndReset()
-                    triggerQuickPhrase()
-                }
-                is UnicodeAction -> service.postFcitxJob {
-                    commitAndReset()
-                    triggerUnicode()
-                }
-                is LangSwitchAction -> {
-                    when (langSwitchKeyBehavior) {
-                        LangSwitchBehavior.Enumerate -> {
-                            service.postFcitxJob {
-                                if (enabledIme().size < 2) {
-                                    service.lifecycleScope.launch {
-                                        service.showDialog(AddMoreInputMethodsPrompt.build(context))
-                                    }
-                                } else {
-                                    enumerateIme()
+        KeyActionListener { action, _ -> onKeyAction(action) }
+    }
+
+    private fun postTypingJob(expectedIme: String?, block: suspend FcitxAPI.() -> Unit) {
+        service.postFcitxJob {
+            if (expectedIme == null || inputMethodEntryCached.uniqueName == expectedIme) {
+                block()
+            }
+        }
+    }
+
+    fun onKeyAction(action: KeyAction, expectedIme: String? = null) {
+        when (action) {
+            is FcitxKeyAction -> postTypingJob(expectedIme) {
+                sendKey(action.act, action.states.states, action.code)
+            }
+            is SymAction -> postTypingJob(expectedIme) {
+                sendKey(action.sym, action.states)
+            }
+            is CommitAction -> postTypingJob(expectedIme) {
+                commitAndReset()
+                service.lifecycleScope.launch { service.commitText(action.text) }
+            }
+            is QuickPhraseAction -> service.postFcitxJob {
+                commitAndReset()
+                triggerQuickPhrase()
+            }
+            is UnicodeAction -> service.postFcitxJob {
+                commitAndReset()
+                triggerUnicode()
+            }
+            is LangSwitchAction -> {
+                when (langSwitchKeyBehavior) {
+                    LangSwitchBehavior.Enumerate -> {
+                        service.postFcitxJob {
+                            if (enabledIme().size < 2) {
+                                service.lifecycleScope.launch {
+                                    service.showDialog(AddMoreInputMethodsPrompt.build(context))
                                 }
-                            }
-                        }
-                        LangSwitchBehavior.ToggleActivate -> {
-                            service.postFcitxJob {
-                                toggleIme()
-                            }
-                        }
-                        LangSwitchBehavior.NextInputMethodApp -> {
-                            service.switchToNextIME()
-                        }
-                    }
-                }
-                is ShowInputMethodPickerAction -> showInputMethodPicker()
-                is MoveSelectionAction -> {
-                    when (backspaceSwipeState) {
-                        Stopped -> {
-                            backspaceSwipeState = if (
-                                preeditState.isEmpty &&
-                                horizontalCandidate.adapter.total <= 0 // total is -1 on initialization
-                            ) {
-                                service.applySelectionOffset(action.start, action.end)
-                                Selection
                             } else {
-                                Reset
+                                enumerateIme()
                             }
                         }
-                        Selection -> {
-                            service.applySelectionOffset(action.start, action.end)
-                        }
-                        Reset -> {}
                     }
-                }
-                is DeleteSelectionAction -> {
-                    when (backspaceSwipeState) {
-                        Stopped -> {}
-                        Selection -> service.deleteSelection()
-                        Reset -> if (action.totalCnt < 0) { // swipe left
-                            service.postFcitxJob { reset() }
-                        }
-                    }
-                    backspaceSwipeState = Stopped
-                }
-                is PickerSwitchAction -> {
-                    // update lastSymbolType only when specified explicitly
-                    val key = action.key?.also { k -> lastPickerType = k.name }
-                        ?: runCatching { PickerWindow.Key.valueOf(lastPickerType) }.getOrNull()
-                        ?: PickerWindow.Key.Emoji
-                    ContextCompat.getMainExecutor(service).execute {
-                        windowManager.attachWindow(key)
-                    }
-                }
-                is SpaceLongPressAction -> {
-                    when (spaceKeyLongPressBehavior) {
-                        SpaceLongPressBehavior.None -> {}
-                        SpaceLongPressBehavior.Enumerate -> service.postFcitxJob {
-                            enumerateIme()
-                        }
-                        SpaceLongPressBehavior.ToggleActivate -> service.postFcitxJob {
+                    LangSwitchBehavior.ToggleActivate -> {
+                        service.postFcitxJob {
                             toggleIme()
                         }
-                        SpaceLongPressBehavior.ShowPicker -> showInputMethodPicker()
+                    }
+                    LangSwitchBehavior.NextInputMethodApp -> {
+                        service.switchToNextIME()
                     }
                 }
-                else -> {}
             }
+            is ShowInputMethodPickerAction -> showInputMethodPicker()
+            is MoveSelectionAction -> {
+                when (backspaceSwipeState) {
+                    Stopped -> {
+                        backspaceSwipeState = if (
+                            preeditState.isEmpty &&
+                            horizontalCandidate.adapter.total <= 0 // total is -1 on initialization
+                        ) {
+                            service.applySelectionOffset(action.start, action.end)
+                            Selection
+                        } else {
+                            Reset
+                        }
+                    }
+                    Selection -> {
+                        service.applySelectionOffset(action.start, action.end)
+                    }
+                    Reset -> {}
+                }
+            }
+            is DeleteSelectionAction -> {
+                when (backspaceSwipeState) {
+                    Stopped -> {}
+                    Selection -> service.deleteSelection()
+                    Reset -> if (action.totalCnt < 0) { // swipe left
+                        service.postFcitxJob { reset() }
+                    }
+                }
+                backspaceSwipeState = Stopped
+            }
+            is PickerSwitchAction -> {
+                // update lastSymbolType only when specified explicitly
+                val key = action.key?.also { k -> lastPickerType = k.name }
+                    ?: runCatching { PickerWindow.Key.valueOf(lastPickerType) }.getOrNull()
+                    ?: PickerWindow.Key.Emoji
+                ContextCompat.getMainExecutor(service).execute {
+                    windowManager.attachWindow(key)
+                }
+            }
+            is SpaceLongPressAction -> {
+                when (spaceKeyLongPressBehavior) {
+                    SpaceLongPressBehavior.None -> {}
+                    SpaceLongPressBehavior.Enumerate -> service.postFcitxJob {
+                        enumerateIme()
+                    }
+                    SpaceLongPressBehavior.ToggleActivate -> service.postFcitxJob {
+                        toggleIme()
+                    }
+                    SpaceLongPressBehavior.ShowPicker -> showInputMethodPicker()
+                }
+            }
+            else -> {}
         }
     }
 }

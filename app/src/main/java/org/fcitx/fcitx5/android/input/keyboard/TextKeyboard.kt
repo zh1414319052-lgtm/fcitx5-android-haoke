@@ -6,6 +6,7 @@ package org.fcitx.fcitx5.android.input.keyboard
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Typeface
 import android.view.View
 import androidx.annotation.Keep
 import androidx.core.view.allViews
@@ -19,6 +20,7 @@ import org.fcitx.fcitx5.android.data.prefs.ManagedPreference
 import org.fcitx.fcitx5.android.data.theme.Theme
 import org.fcitx.fcitx5.android.input.popup.PopupAction
 import org.fcitx.fcitx5.android.input.ScriptTypeface
+import org.fcitx.fcitx5.android.input.picker.PickerWindow
 import splitties.views.imageResource
 
 @SuppressLint("ViewConstructor")
@@ -34,6 +36,7 @@ class TextKeyboard(
         const val Name = "Text"
 
         private fun layoutFor(profile: LanguageLayout): List<List<KeyDef>> {
+            if (profile == LanguageLayout.NineKeyPinyin) return NineKeyLayout
             if (!profile.isScript || profile.rows.size == 3) return Layout
             val rows = profile.rows.map { row ->
                 row.map { c ->
@@ -46,6 +49,31 @@ class TextKeyboard(
             return rows + listOf(listOf(CapsKey(), LayoutSwitchKey("?123", percentWidth = 0.15f),
                 LanguageKey(), SpaceKey(), BackspaceKey(), ReturnKey()))
         }
+
+        private fun nineKey(digit: Char, letters: String): KeyDef {
+            val label = "$digit $letters"
+            return KeyDef(
+                KeyDef.Appearance.Text(label, 20f, Typeface.BOLD, percentWidth = 0.25f),
+                setOf(
+                    KeyDef.Behavior.Press(KeyAction.FcitxKeyAction(
+                        if (digit == '1') "'" else digit.toString()
+                    )),
+                    KeyDef.Behavior.LongPress(KeyAction.CommitAction(digit.toString()))
+                ),
+                arrayOf(KeyDef.Popup.Preview(label))
+            )
+        }
+
+        private val NineKeyLayout = listOf(
+            listOf(nineKey('1', "’"), nineKey('2', "ABC"), nineKey('3', "DEF"), BackspaceKey(0.25f)),
+            listOf(nineKey('4', "GHI"), nineKey('5', "JKL"), nineKey('6', "MNO"),
+                CommaKey(0.25f, KeyDef.Appearance.Variant.Alternative)),
+            listOf(nineKey('7', "PQRS"), nineKey('8', "TUV"), nineKey('9', "WXYZ"),
+                SymbolKey(".", 0.25f, KeyDef.Appearance.Variant.Alternative)),
+            listOf(LayoutSwitchKey("?123", NumberKeyboard.Name),
+                LayoutSwitchKey("!?#", PickerWindow.Key.Symbol.name),
+                LanguageKey(), SpaceKey(), ReturnKey())
+        )
 
         val Layout: List<List<KeyDef>> = listOf(
             listOf(
@@ -93,7 +121,7 @@ class TextKeyboard(
         )
     }
 
-    val caps: ImageKeyView by lazy { findViewById(R.id.button_caps) }
+    val caps: ImageKeyView? by lazy { findViewById(R.id.button_caps) }
     val backspace: ImageKeyView by lazy { findViewById(R.id.button_backspace) }
     val quickphrase: ImageKeyView by lazy { findViewById(R.id.button_quickphrase) }
     val lang: ImageKeyView by lazy { findViewById(R.id.button_lang) }
@@ -183,6 +211,9 @@ class TextKeyboard(
         capsState = CapsState.None
         updateCapsButtonIcon()
         updateAlphabetKeys()
+        if (languageLayout == LanguageLayout.NineKeyPinyin) {
+            textKeys.forEach { ScriptTypeface.apply(it.mainText, it.mainText.text) }
+        }
     }
 
     override fun onReturnDrawableUpdate(returnDrawable: Int) {
@@ -256,7 +287,7 @@ class TextKeyboard(
     }
 
     private fun updateCapsButtonIcon() {
-        caps.img.apply {
+        caps?.img?.apply {
             imageResource = when (capsState) {
                 CapsState.None -> R.drawable.ic_capslock_none
                 CapsState.Once -> R.drawable.ic_capslock_once

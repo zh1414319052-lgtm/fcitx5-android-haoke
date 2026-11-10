@@ -1,6 +1,6 @@
 param(
     [string]$BuildDirectory = 'D:\haoke-build\fcitx5-source-20261106',
-    [string]$Version = '0.1.3-haoke.2',
+    [string]$Version = '0.1.3-haoke.3',
     [string]$Identity = "$env:LOCALAPPDATA\Haoke\AndroidSigning\fcitx5-haoke-release\signing-identity.json",
     [bool]$UpdatesEnabled = $true,
     [switch]$Unsigned,

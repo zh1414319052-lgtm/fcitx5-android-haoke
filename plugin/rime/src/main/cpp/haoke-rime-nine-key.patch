@@ -1,0 +1,314 @@
+diff --git a/src/rimeengine.cpp b/src/rimeengine.cpp
+index cdaaa3d..2871388 100644
+--- a/src/rimeengine.cpp
++++ b/src/rimeengine.cpp
+@@ -175,9 +175,16 @@ private:
+ 
+ bool RimeEngine::firstRun_ = true;
+ 
++namespace {
++constexpr std::string_view nineKeyInputMethod = "haoke-pinyin-t9";
++}
++
+ RimeEngine::RimeEngine(Instance *instance)
+     : instance_(instance), api_(EnsureRimeApi()),
+       factory_([this](InputContext &ic) { return new RimeState(this, ic); }),
++      nineKeyFactory_([this](InputContext &ic) {
++          return new RimeState(this, ic, true);
++      }),
+       sessionPool_(this, getSharedStatePolicy()) {
+     if constexpr (isAndroid() || isApple()) {
+         const auto &sp = StandardPaths::global();
+@@ -235,6 +242,7 @@ RimeEngine::RimeEngine(Instance *instance)
+ }
+ 
+ RimeEngine::~RimeEngine() {
++    nineKeyFactory_.unregister();
+     factory_.unregister();
+     try {
+         api_->finalize();
+@@ -245,6 +253,7 @@ RimeEngine::~RimeEngine() {
+ 
+ void RimeEngine::rimeStart(bool fullcheck) {
+     RIME_DEBUG() << "Rime Start (fullcheck: " << fullcheck << ")";
++    nineKeySchemaReady_ = false;
+ 
+     auto userDir =
+         StandardPaths::global().userDirectory(StandardPathsType::PkgData) /
+@@ -302,6 +311,17 @@ void RimeEngine::rimeStart(bool fullcheck) {
+     }
+ }
+ 
++bool RimeEngine::prepareNineKeySchema() {
++    if (!nineKeySchemaReady_) {
++        const auto path = sharedDataDir_ + "/haoke_pinyin_t9.schema.yaml";
++        nineKeySchemaReady_ = api_->deploy_schema(path.c_str());
++        if (!nineKeySchemaReady_) {
++            RIME_ERROR() << "Could not deploy the bundled 9-key Pinyin schema";
++        }
++    }
++    return nineKeySchemaReady_;
++}
++
+ void RimeEngine::updateAppOptions() {
+     appOptions_.clear();
+     RimeConfig config = {nullptr};
+@@ -340,6 +360,8 @@ void RimeEngine::updateConfig() {
+ 
+     rimeStart(false);
+     instance_->inputContextManager().registerProperty("rimeState", &factory_);
++    instance_->inputContextManager().registerProperty("haokeNineKeyState",
++                                                      &nineKeyFactory_);
+     updateSchemaMenu();
+     refreshSessionPoolPolicy();
+ 
+@@ -411,20 +433,26 @@ void RimeEngine::updateStatusArea(RimeSessionId session) {
+         });
+ }
+ 
+-void RimeEngine::activate(const InputMethodEntry & /*entry*/,
++void RimeEngine::activate(const InputMethodEntry &entry,
+                           InputContextEvent &event) {
+     auto *ic = event.inputContext();
+-    refreshStatusArea(*ic);
+-    if (auto *state = this->state(ic)) {
++    const bool nineKey = entry.uniqueName() == nineKeyInputMethod;
++    if (nineKey) {
++        ic->statusArea().clearGroup(StatusGroup::InputMethod);
++    } else {
++        refreshStatusArea(*ic);
++    }
++    if (auto *state = this->state(ic, nineKey)) {
+         state->activate();
+     }
+ }
+ 
+ void RimeEngine::deactivate(const InputMethodEntry &entry,
+                             InputContextEvent &event) {
+-    if (event.type() == EventType::InputContextSwitchInputMethod) {
++    if (entry.uniqueName() != nineKeyInputMethod &&
++        event.type() == EventType::InputContextSwitchInputMethod) {
+         auto *inputContext = event.inputContext();
+-        auto *state = this->state(inputContext);
++        auto *state = this->state(inputContext, false);
+         switch (*config_.switchInputMethodBehavior) {
+         case SwitchInputMethodBehavior::Clear:
+             break;
+@@ -443,11 +471,11 @@ void RimeEngine::deactivate(const InputMethodEntry &entry,
+ }
+ 
+ void RimeEngine::keyEvent(const InputMethodEntry &entry, KeyEvent &event) {
+-    FCITX_UNUSED(entry);
++    const bool nineKey = entry.uniqueName() == nineKeyInputMethod;
+     RIME_DEBUG() << "Rime receive key: " << event.rawKey() << " "
+                  << event.isRelease();
+     auto *inputContext = event.inputContext();
+-    if (!event.isRelease()) {
++    if (!event.isRelease() && !nineKey) {
+         if (event.key().checkKeyList(*config_.deploy)) {
+             deploy();
+             event.filterAndAccept();
+@@ -459,16 +487,30 @@ void RimeEngine::keyEvent(const InputMethodEntry &entry, KeyEvent &event) {
+             return;
+         }
+     }
+-    auto *state = this->state(inputContext);
++    if (nineKey && !event.isRelease()) {
++        // The first key can arrive before a fresh installation has built Rime's
++        // data. Finish that work on the engine thread before processing it.
++        if (api_->is_maintenance_mode()) {
++            api_->join_maintenance_thread();
++        }
++        // The asynchronous completion notification may still be queued.
++        // Apply its session reset before accepting the first digit.
++        if (needRefreshAppOption_) {
++            api_->deploy_config_file("fcitx5.yaml", "config_version");
++            updateAppOptions();
++            needRefreshAppOption_ = false;
++        }
++    }
++    auto *state = this->state(inputContext, nineKey);
+     currentKeyEventState_ = state;
+     state->keyEvent(event);
+     currentKeyEventState_ = nullptr;
+ }
+ 
+-void RimeEngine::reset(const InputMethodEntry & /*entry*/,
++void RimeEngine::reset(const InputMethodEntry &entry,
+                        InputContextEvent &event) {
+     auto *inputContext = event.inputContext();
+-    auto *state = this->state(inputContext);
++    auto *state = this->state(inputContext, entry.uniqueName() == nineKeyInputMethod);
+     state->clear();
+     instance_->resetCompose(inputContext);
+     inputContext->inputPanel().reset();
+@@ -566,35 +608,49 @@ void RimeEngine::notify(RimeSessionId session, const std::string &messageType,
+ }
+ 
+ RimeState *RimeEngine::state(InputContext *ic) {
+-    if (!factory_.registered()) {
++    return state(ic, instance_->inputMethod(ic) == nineKeyInputMethod);
++}
++
++RimeState *RimeEngine::state(InputContext *ic, bool nineKey) {
++    auto &factory = nineKey ? nineKeyFactory_ : factory_;
++    if (!factory.registered()) {
+         return nullptr;
+     }
+-    return ic->propertyFor(&factory_);
++    return ic->propertyFor(&factory);
+ }
+ 
+-std::string RimeEngine::subMode(const InputMethodEntry & /*entry*/,
++std::string RimeEngine::subMode(const InputMethodEntry &entry,
+                                 InputContext &ic) {
+-    if (auto *rimeState = state(&ic)) {
++    if (entry.uniqueName() == nineKeyInputMethod) {
++        return "";
++    }
++    if (auto *rimeState = state(&ic, false)) {
+         return rimeState->subMode();
+     }
+     return "";
+ }
+ 
+-std::string RimeEngine::subModeLabelImpl(const InputMethodEntry & /*unused*/,
++std::string RimeEngine::subModeLabelImpl(const InputMethodEntry &entry,
+                                          InputContext &ic) {
+-    if (auto *rimeState = state(&ic)) {
++    if (entry.uniqueName() == nineKeyInputMethod) {
++        return "";
++    }
++    if (auto *rimeState = state(&ic, false)) {
+         return rimeState->subModeLabel();
+     }
+     return "";
+ }
+ 
+-std::string RimeEngine::subModeIconImpl(const InputMethodEntry & /*unused*/,
++std::string RimeEngine::subModeIconImpl(const InputMethodEntry &entry,
+                                         InputContext &ic) {
+     std::string result = "fcitx-rime";
++    if (entry.uniqueName() == nineKeyInputMethod) {
++        return entry.icon();
++    }
+     if (!factory_.registered()) {
+         return result;
+     }
+-    auto *state = this->state(&ic);
++    auto *state = this->state(&ic, false);
+     if (state) {
+         state->getStatus([&result](const RimeStatus &status) {
+             if (status.is_disabled) {
+@@ -611,12 +667,15 @@ std::string RimeEngine::subModeIconImpl(const InputMethodEntry & /*unused*/,
+ 
+ void RimeEngine::releaseAllSession(bool snapshot) {
+     instance_->inputContextManager().foreach([&](InputContext *ic) {
+-        if (auto *state = this->state(ic)) {
++        if (auto *state = this->state(ic, false)) {
+             if (snapshot) {
+                 state->snapshot();
+             }
+             state->release();
+         }
++        if (auto *state = this->state(ic, true)) {
++            state->release();
++        }
+         return true;
+     });
+ }
+diff --git a/src/rimeengine.h b/src/rimeengine.h
+index a87c78b..cf3fcc0 100644
+--- a/src/rimeengine.h
++++ b/src/rimeengine.h
+@@ -153,6 +153,7 @@ public:
+     void rimeStart(bool fullcheck);
+ 
+     RimeState *state(InputContext *ic);
++    bool prepareNineKeySchema();
+     RimeSessionPool &sessionPool() { return sessionPool_; }
+ 
+ #ifndef FCITX_RIME_NO_DBUS
+@@ -182,6 +183,7 @@ private:
+     void refreshStatusArea(RimeSessionId session);
+     void updateStatusArea(RimeSessionId session);
+     void refreshSessionPoolPolicy();
++    RimeState *state(InputContext *ic, bool nineKey);
+     PropertyPropagatePolicy getSharedStatePolicy();
+ 
+     bool constructed_ = false;
+@@ -195,6 +197,8 @@ private:
+     uint64_t allowNotificationUntil_ = 0;
+     std::string allowNotificationType_;
+     FactoryFor<RimeState> factory_;
++    FactoryFor<RimeState> nineKeyFactory_;
++    bool nineKeySchemaReady_ = false;
+     bool needRefreshAppOption_ = false;
+ 
+     std::unique_ptr<Action> imAction_;
+diff --git a/src/rimestate.cpp b/src/rimestate.cpp
+index 3f71019..2d07073 100644
+--- a/src/rimestate.cpp
++++ b/src/rimestate.cpp
+@@ -50,13 +50,29 @@ bool emptyExceptAux(const InputPanel &inputPanel) {
+ 
+ } // namespace
+ 
+-RimeState::RimeState(RimeEngine *engine, InputContext &ic)
+-    : engine_(engine), ic_(ic) {}
++RimeState::RimeState(RimeEngine *engine, InputContext &ic, bool nineKey)
++    : engine_(engine), ic_(ic), nineKey_(nineKey) {}
+ 
+ RimeState::~RimeState() {}
+ 
+ RimeSessionId RimeState::session(bool requestNewSession) {
+     if (!session_ && requestNewSession) {
++        if (nineKey_) {
++            if (!engine_->prepareNineKeySchema()) {
++                return 0;
++            }
++            try {
++                auto session = std::make_shared<RimeSessionHolder>(
++                    &engine_->sessionPool(), std::string{});
++                if (engine_->api()->select_schema(session->id(),
++                                                  "haoke_pinyin_t9")) {
++                    session_ = std::move(session);
++                }
++            } catch (const std::exception &error) {
++                RIME_ERROR() << error.what();
++            }
++            return session_ ? session_->id() : 0;
++        }
+         auto [sessionHolder, isNewSession] =
+             engine_->sessionPool().requestSession(&ic_);
+         session_ = sessionHolder;
+@@ -75,7 +91,7 @@ RimeSessionId RimeState::session(bool requestNewSession) {
+ }
+ 
+ void RimeState::clear() {
+-    if (auto session = this->session()) {
++    if (auto session = this->session(!nineKey_)) {
+         engine_->api()->clear_composition(session);
+     }
+ }
+diff --git a/src/rimestate.h b/src/rimestate.h
+index 4c6b2f6..040b2bd 100644
+--- a/src/rimestate.h
++++ b/src/rimestate.h
+@@ -26,7 +26,7 @@ class RimeEngine;
+ 
+ class RimeState : public InputContextProperty {
+ public:
+-    RimeState(RimeEngine *engine, InputContext &ic);
++    RimeState(RimeEngine *engine, InputContext &ic, bool nineKey = false);
+ 
+     virtual ~RimeState();
+ 
+@@ -64,6 +64,7 @@ private:
+     std::string lastMode_;
+     RimeEngine *engine_;
+     InputContext &ic_;
++    const bool nineKey_;
+     std::shared_ptr<RimeSessionHolder> session_;
+ 
+     std::string savedCurrentSchema_;

@@ -81,16 +81,24 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
     private val languageLayouts by lazy { LanguageLayoutResolver(context) }
     private var languageLayoutJob: Job? = null
     private var languageLayoutGeneration = 0L
+    private var displayedTextIme = ""
     private var punctuationMapping: Map<String, String> = emptyMap()
     private var lastSymbolType: String by AppPrefs.getInstance().internal.lastSymbolLayout
 
     private val currentKeyboard: BaseKeyboard? get() = keyboards[currentKeyboardName]
 
-    private val keyActionListener = KeyActionListener { it, source ->
+    private val keyActionListener = KeyActionListener { it, _ ->
         if (it is KeyAction.LayoutSwitchAction) {
             switchLayout(it.act)
+        } else if (currentKeyboardName == TextKeyboard.Name &&
+            displayedTextIme != fcitx.runImmediately { inputMethodEntryCached.uniqueName } &&
+            it != KeyAction.LangSwitchAction && it != KeyAction.ShowInputMethodPickerAction
+        ) {
+            // A script layout may still be resolving. Never send its old keys to the new engine.
+            return@KeyActionListener
         } else {
-            commonKeyActionListener.listener.onKeyAction(it, source)
+            val expectedIme = displayedTextIme.takeIf { currentKeyboardName == TextKeyboard.Name }
+            commonKeyActionListener.onKeyAction(it, expectedIme)
         }
     }
 
@@ -168,34 +176,41 @@ class KeyboardWindow : InputWindow.SimpleInputWindow<KeyboardWindow>(), Essentia
         refreshLanguageLayout()
     }
 
+    private fun replaceTextLayout(ime: InputMethodEntry, layout: LanguageLayout) {
+        displayedTextIme = ime.uniqueName
+        val old = keyboards[TextKeyboard.Name] as TextKeyboard
+        if (old.languageLayout == layout) return
+        popup.dismissAll()
+        val visible = currentKeyboardName == TextKeyboard.Name
+        if (visible) detachCurrentLayout()
+        keyboards[TextKeyboard.Name] = TextKeyboard(context, theme, layout)
+        if (visible) attachLayout(TextKeyboard.Name)
+    }
+
     private fun refreshLanguageLayout() {
         val generation = ++languageLayoutGeneration
         languageLayoutJob?.cancel()
+        val ime = fcitx.runImmediately { inputMethodEntryCached }
+        LanguageLayoutResolver.layoutWithoutConfig(ime)?.let {
+            replaceTextLayout(ime, it)
+            return
+        }
         languageLayoutJob = service.lifecycleScope.launch {
             try {
-                val (ime, layout) = fcitx.runOnReady {
-                    val entry = inputMethodEntryCached
-                    entry to languageLayouts.resolve(this, entry)
+                val layout = fcitx.runOnReady {
+                    languageLayouts.resolve(this, ime)
                 }
                 if (generation != languageLayoutGeneration ||
                     ime != fcitx.runImmediately { inputMethodEntryCached }) return@launch
-                val old = keyboards[TextKeyboard.Name] as TextKeyboard
-                if (old.languageLayout == layout) return@launch
-                popup.dismissAll()
-                val visible = currentKeyboardName == TextKeyboard.Name
-                if (visible) detachCurrentLayout()
-                keyboards[TextKeyboard.Name] = TextKeyboard(context, theme, layout)
-                if (visible) attachLayout(TextKeyboard.Name)
+                replaceTextLayout(ime, layout)
             } catch (cancelled: CancellationException) {
                 throw cancelled
             } catch (failure: Exception) {
                 Timber.w(failure, "Unable to resolve input method keyboard layout")
                 // Never leave the previous language's letters on a different engine.
-                if (generation == languageLayoutGeneration) {
-                    val visible = currentKeyboardName == TextKeyboard.Name
-                    if (visible) detachCurrentLayout()
-                    keyboards[TextKeyboard.Name] = TextKeyboard(context, theme)
-                    if (visible) attachLayout(TextKeyboard.Name)
+                if (generation == languageLayoutGeneration &&
+                    ime == fcitx.runImmediately { inputMethodEntryCached }) {
+                    replaceTextLayout(ime, LanguageLayout.Latin)
                 }
             }
         }

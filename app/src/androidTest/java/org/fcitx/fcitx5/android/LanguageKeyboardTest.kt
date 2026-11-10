@@ -49,6 +49,7 @@ class LanguageKeyboardTest {
     @Before fun start() = runBlocking {
         connection = FcitxDaemon.connect(javaClass.name)
         AppPrefs.getInstance().internal.needNotifications.setValue(false)
+        AppPrefs.getInstance().clipboard.clipboardListening.setValue(false)
         AppPrefs.getInstance().keyboard.showLangSwitchKey.setValue(true)
         AppPrefs.getInstance().keyboard.popupOnKeyPress.setValue(true)
         AppPrefs.getInstance().keyboard.keepLettersUppercase.setValue(false)
@@ -100,21 +101,29 @@ class LanguageKeyboardTest {
     }
 
     @android.annotation.SuppressLint("NewApi")
+    private fun findVisibleView(text: String?, id: String?): View? {
+        fun visit(view: View): View? {
+            if (!view.isShown) return null
+            val name = if (id != null) runCatching { view.resources.getResourceEntryName(view.id) }.getOrNull() else null
+            if ((text != null && (view.contentDescription?.toString() == text ||
+                view is TextView && view.text.toString() == text)) || (id != null && name == id)) {
+                if (view.width > 0 && view.height > 0) return view
+            }
+            if (view is ViewGroup) for (i in 0 until view.childCount) {
+                visit(view.getChildAt(i))?.let { return it }
+            }
+            return null
+        }
+        return WindowInspector.getGlobalWindowViews().firstNotNullOfOrNull(::visit)
+    }
+
     private fun find(text: String? = null, id: String? = null): Rect? {
         var result: Rect? = null
         instrumentation.runOnMainSync {
-            fun visit(view: View) {
-                if (result != null || !view.isShown) return
-                val name = if (id != null) runCatching { view.resources.getResourceEntryName(view.id) }.getOrNull() else null
-                if ((text != null && (view.contentDescription?.toString() == text ||
-                    view is TextView && view.text.toString() == text)) || (id != null && name == id)) {
-                    val location = IntArray(2).also(view::getLocationOnScreen)
-                    if (view.width > 0 && view.height > 0)
-                        result = Rect(location[0], location[1], location[0] + view.width, location[1] + view.height)
-                }
-                if (view is ViewGroup) for (i in 0 until view.childCount) visit(view.getChildAt(i))
+            findVisibleView(text, id)?.let { view ->
+                val (x, y) = IntArray(2).also(view::getLocationOnScreen)
+                result = Rect(x, y, x + view.width, y + view.height)
             }
-            WindowInspector.getGlobalWindowViews().forEach(::visit)
         }
         return result
     }
@@ -193,6 +202,36 @@ class LanguageKeyboardTest {
         var result = ""
         instrumentation.runOnMainSync { result = editor.text.toString() }
         return result
+    }
+
+    private suspend fun selectCandidate(text: String, expected: String) {
+        clickKeyboardControl(text)
+        try {
+            withTimeout(3000) {
+                while (content() != expected) delay(50)
+            }
+        } catch (timeout: TimeoutCancellationException) {
+            screenshot("candidate-selection")
+            throw AssertionError("Tapping $text: expected $expected, got ${content()}", timeout)
+        }
+    }
+
+    private suspend fun clickKeyboardControl(text: String? = null, id: String? = null) {
+        // MuMu can reposition the IME window while coordinate events are queued.
+        // Exercise the actual visible control through its Android accessibility click.
+        withTimeout(12_000) {
+            var clicked = false
+            while (!clicked) {
+                instrumentation.runOnMainSync {
+                    val view = findVisibleView(text, id)
+                    val control = generateSequence(view) { it.parent as? View }
+                        .firstOrNull { it.isClickable }
+                    clicked = control?.performAccessibilityAction(AccessibilityNodeInfo.ACTION_CLICK, null) == true
+                }
+                if (!clicked) delay(75)
+            }
+        }
+        delay(100)
     }
 
     @android.annotation.SuppressLint("NewApi")
@@ -281,6 +320,70 @@ class LanguageKeyboardTest {
         longPressSelect("ㅂ", "ㅃ")
         tap("ㅏ"); tap(id = "button_space")
         assertTrue("Long-press Hangul: ${content()}", content().contains("빠"))
+    }
+
+    @Test fun nineKeyPinyinTypesAndFollowsLanguageSwitches() = runBlocking {
+        BundledExtensions.change(connection, "rime", true)
+        connection.runOnReady {
+            val method = availableIme().first { it.uniqueName == "haoke-pinyin-t9" }
+            assertTrue(method.displayName in setOf("九宫格拼音", "9-key Pinyin"))
+            setEnabledIme(arrayOf("haoke-pinyin-t9", "keyboard-us", "hangul", "anthy",
+                "chewing", "sayura", "pinyin", "rime"))
+        }
+        activate("haoke-pinyin-t9", "6 MNO")
+        assertNull(find(text = "q"))
+        delay(500) // Wait for the synthetic editor's restartInput and window transition.
+
+        // The extra digit is removed before choosing a real phrase candidate.
+        for (key in listOf("6 MNO", "4 GHI", "4 GHI", "2 ABC", "6 MNO", "9 WXYZ")) clickKeyboardControl(key)
+        clickKeyboardControl(id = "button_backspace")
+        assertTrue("Nine-key Pinyin did not start composing", connection.runOnReady {
+            inputPanelCached.preedit.isNotEmpty() || clientPreeditCached.isNotEmpty()
+        })
+        selectCandidate("你好", "你好")
+
+        clickKeyboardControl("?123")
+        clickKeyboardControl("1")
+        assertEquals("你好1", content())
+        clickKeyboardControl("ABC")
+        waitKey("6 MNO")
+        clickKeyboardControl("!?#")
+        clickKeyboardControl("ABC")
+        waitKey("6 MNO")
+
+        for (key in listOf("9 WXYZ", "4 GHI", "6 MNO", "6 MNO", "4 GHI",
+            "1 ’", "4 GHI", "8 TUV", "6 MNO")) clickKeyboardControl(key)
+        selectCandidate("中国", "你好1中国")
+
+        for (key in listOf("6 MNO", "4 GHI", "4 GHI", "2 ABC", "6 MNO")) clickKeyboardControl(key)
+        clickKeyboardControl("?123")
+        clickKeyboardControl("2")
+        assertTrue("Numeric panel with composition: ${content()}", content().endsWith("2"))
+        clickKeyboardControl("ABC")
+        waitKey("6 MNO")
+
+        for ((method, key) in listOf(
+            "keyboard-us" to "q", "hangul" to "ㅂ", "anthy" to "た",
+            "chewing" to "ㄅ", "sayura" to "ක", "pinyin" to "q", "rime" to "q",
+            "haoke-pinyin-t9" to "6 MNO"
+        )) {
+            clickKeyboardControl(id = "button_lang")
+            waitKey(key)
+            assertEquals(method, connection.runOnReady { currentIme().uniqueName })
+            if (method != "haoke-pinyin-t9") assertNull(find(text = "6 MNO"))
+        }
+
+        instrumentation.runOnMainSync {
+            activity.getSystemService(InputMethodManager::class.java)
+                .hideSoftInputFromWindow(editor.windowToken, 0)
+        }
+        delay(300)
+        instrumentation.runOnMainSync {
+            activity.getSystemService(InputMethodManager::class.java)
+                .showSoftInput(editor, InputMethodManager.SHOW_IMPLICIT)
+        }
+        waitKey("6 MNO")
+        screenshot("nine-key-pinyin")
     }
 
     @Test fun nativeConfigurationSelectsTheMatchingKoreanAndZhuyinLayout() = runBlocking {

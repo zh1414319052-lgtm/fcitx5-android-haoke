@@ -1,8 +1,8 @@
 # 小企鹅输入法：浩科整合发行版
 
-目标版本：0.1.3-haoke.2（Android versionCode 11302）。上游：Fcitx5 Android 0.1.3，提交 `048f581c652367567b8ee5c28c5163b805288895`。本版是独立维护版本，与原作者没有官方合作或背书关系。
+目标版本：0.1.3-haoke.3（Android versionCode 11303）。上游：Fcitx5 Android 0.1.3，提交 `048f581c652367567b8ee5c28c5163b805288895`。本版是独立维护版本，与原作者没有官方合作或背书关系。
 
-本版修复语言切换时固定显示英文键盘的问题；韩文、日文假名、注音和僧伽罗文按键、Shift、预览和长按标签跟随对应引擎与配置。具体支持范围和历史 QA 验证见 [本版发行记录](RELEASE_0.1.3-haoke.2.md)。按用户明确要求，本次正式构建使用 `Build-Formal.ps1 -SkipTests`，未重跑单元测试、完整 lint 或设备测试；常规构建默认仍执行原检查，正式签名和产物身份校验不能跳过。
+本版加入独立的离线九宫格拼音输入方案。内置 Rime 使用专用会话和九键词库索引，常规 Rime 及其他语言使用各自的设置。切换输入方案、符号面板返回及重开键盘都根据当前方案恢复键面。详见 [本版发行记录](RELEASE_0.1.3-haoke.3.md)。
 
 ## 许可与归属
 
@@ -16,7 +16,7 @@
 
 主工程及 Git 子模块包含本版修改、JNI、全部八项内置扩展与构建配置；`third-party/corresponding-source/manifest.json` 固定第三方预编译依赖的实际来源、递归子模块、字典原料、原始下载地址、字节数和 SHA-256。源包在同目录，包含 prebuilder 及递归子模块完整源树、Boost、原始词典/模型和 Bouncy Castle 源码。源包中的许可证和补丁保留。此目录是重建输入，不能作为缓存删除。
 
-标准联网重建先获取主工程全部固定 Git 子模块。Java 21、Android SDK 36、Build Tools 36.0.0、NDK 28.0.13004108、CMake 3.22.1 以及 Windows ECM/host tools 需要单独安装。`Build-QA.ps1` 构建测试版；`Build-Formal.ps1 -Unsigned` 构建未签名正式配置，**不能作为正式安装包交付**。本机 `Build-Formal.ps1` 默认从外部受保护身份读取公开证书指纹，完成测试、四 ABI universal release、lint 和外部签名。实际签名私钥不随源码提供；第三方重建应使用自己的新包名、密钥和更新绑定，不能冒用本版稳定更新身份。
+标准联网重建先获取主工程全部固定 Git 子模块。Git、Java 21、Android SDK 36、Build Tools 36.0.0、NDK 28.0.13004108、CMake 3.22.1 以及 Windows ECM/host tools 需要单独安装。九键 Rime 改动见 `plugin/rime/src/main/cpp/haoke-rime-nine-key.patch`，CMake 将其应用到固定上游源码的构建副本。`Build-QA.ps1` 构建测试版；`Build-Formal.ps1 -Unsigned` 构建未签名正式配置，**不能作为正式安装包交付**。本机 `Build-Formal.ps1` 默认从外部受保护身份读取公开证书指纹，完成测试、四 ABI universal release、lint 和外部签名。实际签名私钥不随源码提供；第三方重建应使用自己的新包名、密钥和更新绑定，不能冒用本版稳定更新身份。
 
 依赖预构建仓库固定提交：`86ce2c95d42f1132746fbf60c278193aa1f4b758`。对应 prebuilder：`eb156443de3b387089e51f9bd19df4e3ddce1732`。重建第三方库可联网检出该 prebuilder 并执行 `git submodule update --init --recursive`，按其 README、`build.cfg`、Shake/Cabal 配方和补丁构建；其依赖 CMake 3.31.6，不能与 Android 工程的 CMake 版本混淆。也可解压所附完整源包；无 `.git` 的快照在使用会执行 `git checkout .` 的配方前，需给每个源仓库初始化干净本地 Git 基线并提交源文件，保留 manifest 记录的真实上游提交溯源（不要把临时基线冒充上游提交）。字典/Boost 下载可用所附同名源包和配方 SHA-256 检验。已验证本工程四 ABI 使用固定预构建库编译；未声称在本机重新编译了每一个第三方静态库。
 

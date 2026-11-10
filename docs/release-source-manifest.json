@@ -1,21 +1,21 @@
 {
   "scope": "Application/JNI/resources/tests and actual library, build convention, Gradle wrapper and generation inputs; caches excluded; dependency source archives pinned separately",
-  "version": "0.1.3-haoke.2",
-  "versionCode": 11302,
-  "treeSha256": "f45418502753aa80f6c3ecbc53d1c73a9bc21d58aaf2c0e52014f766036c36b7",
+  "version": "0.1.3-haoke.3",
+  "versionCode": 11303,
+  "treeSha256": "ae6eccc5d229f6230dc5a32335427faa9b6871867e1951772e4f8c0fe022cadb",
   "treeHashFormat": "UTF-8 concatenation of sorted sha256 + two spaces + relative path + LF",
   "files": [
     {
       "path": "Build-Formal.ps1",
-      "sha256": "15bf698491aafb645c5cf1702c7ef6ac8ae4c3458515131cbd77b1cec8755895"
+      "sha256": "2b8ce74843d8a49dced3624b74979f0a05ccddb16be2a01934ac6611aa7f8216"
     },
     {
       "path": "Build-QA.ps1",
-      "sha256": "7442c865106b3a666c8abbaf692b9a161c753943803201b6fec69ba13c62c057"
+      "sha256": "be5d6c9fc32fd9c41b06340bcd3fe35e35326823766d34829132a0b4c0aa630f"
     },
     {
       "path": "app/build.gradle.kts",
-      "sha256": "d83331ce5a95adc9e4cba5eeb575d92e0077505613830d33ed94437cd05ba7f8"
+      "sha256": "b5ea395dc488adfe53bff20b709e0da9e452ed669b3a6b7eb8cf6f82c2da343d"
     },
     {
       "path": "app/licenses/NotoSansCJK-OFL.txt",
@@ -207,7 +207,7 @@
     },
     {
       "path": "app/src/androidTest/java/org/fcitx/fcitx5/android/LanguageKeyboardTest.kt",
-      "sha256": "ebdb4628e2085b2b948bb06b44fbffb21677dae71ff19029f120f434564a2179"
+      "sha256": "2d3b27226038e411cecee4d5d766f4ecc6433020613099ed18c0282f0a0d8639"
     },
     {
       "path": "app/src/androidTest/java/org/fcitx/fcitx5/android/UiLanguageTest.kt",
@@ -1055,7 +1055,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/CommonKeyActionListener.kt",
-      "sha256": "3cced614bd80137c6ae59c82aae5bf0cbbec6c73d2d48330c4123aa256c015bf"
+      "sha256": "2b91f8ef234342472746474820382e8fb0231539acb626eb494aaf4821a076bd"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/CustomGestureView.kt",
@@ -1091,7 +1091,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/KeyboardWindow.kt",
-      "sha256": "d0234e32eeef9dff8722f3e506cb458a9e15a95970aa272e8743c0bf3bd2e919"
+      "sha256": "c50ab4f932d27e160f080ef0ba39726896b9d7d30b569417d5a9964f61682d32"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/LangSwitchBehavior.kt",
@@ -1099,11 +1099,11 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/LanguageLayout.kt",
-      "sha256": "85f389a3921176f5062b48c4ebc9b459488556c693ada61ee3614c42d3ccedf3"
+      "sha256": "5be9c95e5392e4f9068d127df6ddf12751491e295053347536c369d8b5aeb3f1"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/NumberKeyboard.kt",
-      "sha256": "4d99fd49d5ac93f30427fac66c6954d202585815d1513d50f55f66f2313a3a96"
+      "sha256": "2c61a19a90b9a0f0045d89de997a34994f343626bfa7bcda5dc63d9795ffa9e4"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/SpaceLongPressBehavior.kt",
@@ -1115,7 +1115,7 @@
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/keyboard/TextKeyboard.kt",
-      "sha256": "5ff141b1ab69046fd116234cbcaa00bc8d7723541da44816650d5d2f5191072a"
+      "sha256": "4f69ffc0aec26aaa620eaed9830e7eacd7ab7904b0b3e3d82c80e128dbed602f"
     },
     {
       "path": "app/src/main/java/org/fcitx/fcitx5/android/input/picker/PickerData.kt",
@@ -77267,7 +77267,7 @@
     },
     {
       "path": "plugin/rime/src/main/cpp/CMakeLists.txt",
-      "sha256": "9fed79dbc973c304c88a5061c0b3ec888691c4afd499b4a4ca81659814b71c74"
+      "sha256": "5a6746c65754ce14197c373c1212c2cca284de7c5f737d612d431a1384b5e619"
     },
     {
       "path": "plugin/rime/src/main/cpp/default.yaml",
@@ -77560,6 +77560,18 @@
     {
       "path": "plugin/rime/src/main/cpp/fcitx5-rime/src/rimestate.h",
       "sha256": "254659f222a651318ecf0e7e3ff93ec02153a714f191abb029fd6b519d78749c"
+    },
+    {
+      "path": "plugin/rime/src/main/cpp/haoke-pinyin-t9.conf",
+      "sha256": "2e74874c8475b9d7b9de28816392791a638dfc839ddc03902d5d0af2051ba9bf"
+    },
+    {
+      "path": "plugin/rime/src/main/cpp/haoke-rime-nine-key.patch",
+      "sha256": "579bc1353813a845831f8efde50bd3dac47822f3d8f0ca54d0ec1b322d43d289"
+    },
+    {
+      "path": "plugin/rime/src/main/cpp/haoke_pinyin_t9.schema.yaml",
+      "sha256": "48b4d6cb2c9b1a9c3373f55cb5d68185b62e21ea62540abe106cac660e8d2347"
     },
     {
       "path": "plugin/rime/src/main/cpp/rime-essay/.git",
@@ -78811,11 +78823,11 @@
     },
     {
       "path": "tools/sign_release.py",
-      "sha256": "bfce9f45ae875868be63bfc884b596b93a1c60610777aeeefa1f39b68c97d8a6"
+      "sha256": "6b9dff34d2f9e41b7200e01fde540f274bd97519bd3eb2e75edfef60418aef20"
     },
     {
       "path": "tools/verify_release_apk.py",
-      "sha256": "a797fab5af09a3bc337837eab55a9bb4bcc838255d0023471cfe11fa88fda5d4"
+      "sha256": "4278f6a832ca6771dcdc58702bf5bf701ace310db3d4d8ea16c45befeaf16140"
     }
   ]
 }

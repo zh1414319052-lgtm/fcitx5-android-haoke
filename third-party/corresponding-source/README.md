@@ -1,11 +1,11 @@
 # 对应源码与数据 / Corresponding source and data
 
-`manifest.json` 固定本版实际依赖的 12 份源码/字典归档，含原地址、提交、字节数和 SHA-256。归档保留在本地交付目录；公开版本将同样的原始文件作为 [haoke-v0.1.3.2 Release 附件](https://github.com/zh1414319052-lgtm/fcitx5-android-haoke/releases/tag/haoke-v0.1.3.2) 提供，避免把大归档嵌入每次 Git 克隆历史。这些是真实完整文件，不是 Git LFS 指针。
+`manifest.json` 固定本版实际依赖的 12 份源码/字典归档，含原地址、提交、字节数和 SHA-256。归档保留在本地交付目录；公开版本将同样的原始文件作为 [haoke-v0.1.3.3 Release 附件](https://github.com/zh1414319052-lgtm/fcitx5-android-haoke/releases/tag/haoke-v0.1.3.3) 提供，避免把大归档嵌入每次 Git 克隆历史。这些是真实完整文件，不是 Git LFS 指针。
 
 在仓库根目录运行：
 
 ```text
-gh release download haoke-v0.1.3.2 --repo zh1414319052-lgtm/fcitx5-android-haoke --dir third-party/corresponding-source --skip-existing
+gh release download haoke-v0.1.3.3 --repo zh1414319052-lgtm/fcitx5-android-haoke --dir third-party/corresponding-source --skip-existing
 ```
 
 或在 Release 页面逐项下载，按原文件名保存到本目录。核验 Python 3.11+ 示例：

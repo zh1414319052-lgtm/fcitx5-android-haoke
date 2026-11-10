@@ -31,10 +31,23 @@ data class LanguageLayout(
         return labels[key] ?: key
     }
 
-    companion object { val Latin = LanguageLayout("latin") }
+    companion object {
+        val Latin = LanguageLayout("latin")
+        val NineKeyPinyin = LanguageLayout("haoke-pinyin-t9")
+    }
 }
 
 class LanguageLayoutResolver(private val context: Context) {
+    companion object {
+        private val scriptAddons = setOf("hangul", "chewing", "anthy", "sayura")
+
+        fun layoutWithoutConfig(ime: InputMethodEntry): LanguageLayout? = when {
+            ime.uniqueName == LanguageLayout.NineKeyPinyin.id -> LanguageLayout.NineKeyPinyin
+            ime.addon in scriptAddons -> null
+            else -> LanguageLayout.Latin
+        }
+    }
+
     private var profiles: Map<String, LanguageLayout>? = null
 
     private suspend fun profiles(): Map<String, LanguageLayout> = profiles ?: withContext(Dispatchers.IO) {
@@ -51,7 +64,7 @@ class LanguageLayoutResolver(private val context: Context) {
     }
 
     suspend fun resolve(api: FcitxAPI, ime: InputMethodEntry): LanguageLayout {
-        if (ime.addon !in setOf("hangul", "chewing", "anthy", "sayura")) return LanguageLayout.Latin
+        layoutWithoutConfig(ime)?.let { return it }
         val all = profiles()
         if (ime.addon == "sayura") return all.getValue("sayura")
         if (ime.addon == "anthy") return when (ime.subMode.label) {

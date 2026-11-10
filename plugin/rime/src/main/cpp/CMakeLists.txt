@@ -42,10 +42,30 @@ else()
     set(RIME_TARGET $<LINK_LIBRARY:WHOLE_ARCHIVE,Rime_static>)
 endif()
 set(RIME_DATA_DIR "${CMAKE_INSTALL_DATADIR}/rime-data")
-add_subdirectory(fcitx5-rime)
+
+# Build the patch against the pinned upstream tree without modifying the
+# submodule checkout. This also works when each Android ABI configures in parallel.
+find_package(Git REQUIRED)
+set(haoke_rime_patch "${CMAKE_CURRENT_SOURCE_DIR}/haoke-rime-nine-key.patch")
+set(haoke_rime_source "${CMAKE_CURRENT_BINARY_DIR}/fcitx5-rime-source")
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${haoke_rime_patch}")
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/fcitx5-rime/" DESTINATION "${haoke_rime_source}"
+        PATTERN ".git" EXCLUDE)
+execute_process(
+        COMMAND "${CMAKE_COMMAND}" -E env "GIT_CEILING_DIRECTORIES=${CMAKE_CURRENT_BINARY_DIR}"
+                "${GIT_EXECUTABLE}" apply "${haoke_rime_patch}"
+        WORKING_DIRECTORY "${haoke_rime_source}"
+        COMMAND_ERROR_IS_FATAL ANY
+)
+add_subdirectory("${haoke_rime_source}" fcitx5-rime)
+
+install(FILES "haoke-pinyin-t9.conf"
+        DESTINATION "${FCITX_INSTALL_PKGDATADIR}/inputmethod"
+        COMPONENT config)
 
 install(FILES
         "default.yaml"
+        "haoke_pinyin_t9.schema.yaml"
         "rime-essay/essay.txt"
         "rime-prelude/key_bindings.yaml"
         "rime-prelude/punctuation.yaml"

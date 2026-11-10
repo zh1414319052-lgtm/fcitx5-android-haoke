@@ -3,7 +3,7 @@ param(
     [string]$SdkDirectory = 'C:\Users\Administrator\AppData\Local\Android\Sdk',
     [string]$JavaDirectory = 'C:\Program Files\Android\Android Studio\jbr',
     [string]$HostTools = 'D:\haoke-build\fcitx5-toolchain\ucrt64',
-    [string]$Version = '0.1.3-haoke-qa.6'
+    [string]$Version = '0.1.3-haoke-qa.7'
 )
 $ErrorActionPreference = 'Stop'
 if ($BuildDirectory -match '[^\x00-\x7F]') { throw 'Use an ASCII build directory: Windows AIDL does not support this project in a Chinese path.' }
@@ -35,7 +35,9 @@ try {
                 }
             }
         }
-        foreach ($asset in @('bundled/clearurls.json', 'usr/share/rime-data/luna_pinyin.schema.yaml')) {
+        foreach ($asset in @('bundled/clearurls.json', 'usr/share/rime-data/luna_pinyin.schema.yaml',
+                'usr/share/rime-data/haoke_pinyin_t9.schema.yaml',
+                'usr/share/fcitx5/inputmethod/haoke-pinyin-t9.conf')) {
             if (!$archive.GetEntry("assets/$asset")) { throw "Bundled extension data missing: $asset" }
         }
     } finally { $archive.Dispose() }

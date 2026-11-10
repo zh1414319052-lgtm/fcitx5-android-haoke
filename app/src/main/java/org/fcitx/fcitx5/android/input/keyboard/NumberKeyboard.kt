@@ -7,6 +7,8 @@ package org.fcitx.fcitx5.android.input.keyboard
 import android.annotation.SuppressLint
 import android.content.Context
 import org.fcitx.fcitx5.android.R
+import org.fcitx.fcitx5.android.core.FcitxKeyMapping
+import org.fcitx.fcitx5.android.core.InputMethodEntry
 import org.fcitx.fcitx5.android.data.theme.Theme
 import org.fcitx.fcitx5.android.input.picker.PickerWindow
 import org.fcitx.fcitx5.android.input.popup.PopupAction
@@ -58,6 +60,26 @@ class NumberKeyboard(
     val backspace: ImageKeyView by lazy { findViewById(R.id.button_backspace) }
     val space: TextKeyView by lazy { findViewById(R.id.button_mini_space) }
     val `return`: ImageKeyView by lazy { findViewById(R.id.button_return) }
+
+    private var nineKeyPinyin = false
+
+    override fun onInputMethodUpdate(ime: InputMethodEntry) {
+        nineKeyPinyin = ime.uniqueName == LanguageLayout.NineKeyPinyin.id
+    }
+
+    override fun onAction(action: KeyAction, source: KeyActionListener.Source) {
+        val symbol = (action as? KeyAction.SymAction)?.sym?.sym
+        if (nineKeyPinyin && symbol != null &&
+            symbol in FcitxKeyMapping.FcitxKey_KP_0..FcitxKeyMapping.FcitxKey_KP_9
+        ) {
+            // In Rime the keypad digits select candidates. Here the user opened
+            // the number panel, so finish the composition and insert the digit.
+            val digit = '0' + (symbol - FcitxKeyMapping.FcitxKey_KP_0)
+            super.onAction(KeyAction.CommitAction(digit.toString()), source)
+            return
+        }
+        super.onAction(action, source)
+    }
 
     override fun onReturnDrawableUpdate(returnDrawable: Int) {
         `return`.img.imageResource = returnDrawable
